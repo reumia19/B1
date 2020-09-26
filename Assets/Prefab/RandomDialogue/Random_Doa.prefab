@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2541478227965100788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2541478227965100791}
+  - component: {fileID: 2541478227965100790}
+  - component: {fileID: 2541478227965100789}
+  m_Layer: 0
+  m_Name: Random_Doa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2541478227965100791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541478227965100788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 91.36045, y: -17.02, z: -3.578125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2541478227965100790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541478227965100788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a80ce27fc819e0478e358a21cb31248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue1:
+    sentences:
+    - "\uC65C? \uBB34\uC2A8 \uD560 \uB9D0 \uC788\uC5B4?"
+    sprites:
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+  dialogue2:
+    sentences:
+    - "\uC5B4\uC81C \uC18C\uC124\uC744 \uC77D\uC5C8\uC5B4."
+    - "\uC81C\uBAA9\uC740 '\uD638\uAE30\uC2EC\uC5D0 \uB208 \uBA3C \uC774\uC57C\uAE30'\uC600\uB294\uB370..."
+    - "\uC815\uB9D0 \uD5DB\uC18C\uB9AC \uC544\uB2C8\uB2C8? \uD558\uD558\uD558."
+    sprites:
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+  dialogue3:
+    sentences:
+    - "\uB3D9\uD654\uC758 \uBAA9\uC801\uC740 \uC544\uC774\uB4E4\uC5D0\uAC8C \uACBD\uACE0\uD558\uAE30
+      \uC704\uD568\uC774\uB798."
+    - "\uC5B4\uB5BB\uAC8C \uC0DD\uAC01\uD574?"
+    sprites:
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+  dialogue4:
+    sentences:
+    - "\uB098\uB294 \uACE0\uC591\uC774\uAC00 \uC88B\uC544."
+    - "\uC5B8\uC820\uAC00\uB294 '\uD50C\uB8E8\uD1A0;\uB77C\uB294 \uC774\uB984\uC758
+      \uACE0\uC591\uC774\uB97C \uD0A4\uC6B0\uACE0 \uC2F6\uC5B4."
+    sprites:
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+  dialogue5:
+    sentences:
+    - "\uD55C\uB3C4\uC544.. \uD310\uB3C4\uC544... \uD310\uB3C4\uB77C..."
+    - "\uC774\uB984\uC774 \uBE44\uC2B7\uD558\uB2E4. \uADF8\uCE58?"
+    sprites:
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+  dialogue6:
+    sentences:
+    - "\uC624\uB298 \uB108\uBB34 \uBA3C \uAE38\uC744 \uC654\uB098\uBD10. \uD53C\uACE4\uD558\uB2E4."
+    - "\uC774\uC81C \uADF8\uB9CC \uAC00 \uBD10."
+    sprites:
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+  flag: 0
+  count: 0
+--- !u!61 &2541478227965100789
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541478227965100788}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10}
+  m_EdgeRadius: 0

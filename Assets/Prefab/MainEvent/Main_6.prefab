@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7315040708512986674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7315040708512986675}
+  - component: {fileID: 7315040708512986673}
+  - component: {fileID: 7315040708512986672}
+  m_Layer: 0
+  m_Name: Main_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7315040708512986675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315040708512986674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.07506, y: 2.15, z: 0.88442993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7315040708512986673
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315040708512986674}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8, y: 8}
+  m_EdgeRadius: 0
+--- !u!114 &7315040708512986672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315040708512986674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6afca290d25ce448770de171547344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue1:
+    sentences:
+    - ...
+    - "\uC544\uAE4C \uBD88\uCE5C\uC808\uD558\uAC8C \uB9D0\uD574\uC11C \uBBF8\uC548\uD574."
+    - "\uB9C8\uC74C\uC774 \uAE09\uD574\uC11C \uADF8\uB7AC\uC5B4. \n\uC5EC\uAE30\uB294
+      \uC5B8\uC81C\uBD80\uD130 \uC9C0\uB0B8 \uAC70\uC57C?"
+    - "\uC9D1\uC744 \uB098\uC628 \uC774\uD6C4\uB85C \uACE0\uC2DC\uC6D0\uC5D0\uC11C
+      \uC9C0\uB0B4\uB2E4\uAC00 \n6\uAC1C\uC6D4 \uC804\uC5D0 \uC5EC\uAE30 \uC654\uC5B4."
+    - "\uC798 \uC9C0\uB0B4\uACE0 \uC788\uB294 \uAC70 \uAC19\uC544\uC11C \uADF8\uB098\uB9C8
+      \uB2E4\uD589\uC774\uB124."
+    - "\uC5EC\uAE30\uC11C \uC0AC\uB294 \uAC74 \uC5B4\uB54C? \uBC25\uC740 \uC798 \uBA39\uB2C8?"
+    - "\uACFC\uBD84\uD560 \uC815\uB3C4\uB85C \uC88B\uC740 \uC9D1\uC774\uC57C."
+    - "\uC74C..."
+    sprites:
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: d386d4d8e3abf4b4389f563b5489a4cb, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+    - {fileID: 21300000, guid: d386d4d8e3abf4b4389f563b5489a4cb, type: 3}
+    - {fileID: 21300000, guid: d386d4d8e3abf4b4389f563b5489a4cb, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+  dialogue2:
+    sentences:
+    - "\uC800\uAE30.. \uC2E4\uB840\uC9C0\uB9CC \uC9D1\uC8FC\uC778\uBD84... \n\uD639\uC2DC
+      \uC790\uB9AC\uB97C \uBE44\uCF1C\uC8FC\uC2E4 \uC218 \uC788\uC73C\uC2E4\uAE4C\uC694?"
+    - "\uBC24\uC774 \uB2A6\uC5C8\uC796\uC544\uC694. \uC774\uC81C \uC2AC\uC2AC \uBC29\uC73C\uB85C
+      \uB4E4\uC5B4\uAC00\uC2DC\uC8E0."
+    - "\uC544, \uD55C\uB3C4\uC544\uC528\uB294 \uCC98\uC74C \uC624\uC168\uC73C\uB2C8
+      \uBAA8\uB974\uC2DC\uACA0\uAD70\uC694."
+    - "\uCCAB\uBC88\uC9F8, \uC9C0\uD558\uC2E4\uC744 \uB4E4\uC5B4\uAC00\uC9C0 \uC54A\uB294\uB2E4."
+    - "\uB450\uBC88\uC9F8, \uBC24 \uB2A6\uAC8C \uB3CC\uC544\uB2E4\uB2C8\uC9C0 \uC54A\uB294\uB2E4."
+    - "\uC774 \uB450\uAC00\uC9C0\uB9CC \uC9C0\uCF1C\uC8FC\uC2DC\uBA74 \uB429\uB2C8\uB2E4.
+      \n\uB2E4\uB978 \uAC74 \uBAA8\uB450 \uAD1C\uCC2E\uC544\uC694."
+    sprites:
+    - {fileID: 21300000, guid: 99d46984fdf6e414a913dfd3819136da, type: 3}
+    - {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76, type: 3}
+    - {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76, type: 3}
+    - {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76, type: 3}
+    - {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76, type: 3}
+    - {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+    - {fileID: 21300000, guid: 666bc48a7d287d943a0880b2aa762096, type: 3}
+  theBlue: {fileID: 0}
+  Del: {fileID: 0}
+  flag: 0
+  animDir: 
+  dir: 0
