@@ -36,7 +36,7 @@ public class DatabaseManager : MonoBehaviour
             if (this.switch_name[i] == _name)
             {
                 state = switches[i];
-                print(_name + " : " + state);
+                //print(_name + " : " + state);
             }
         }
         return state;
