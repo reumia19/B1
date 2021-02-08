@@ -124,6 +124,7 @@
     <Compile Include="Assets\Script\FadeManager.cs" />
     <Compile Include="Assets\Script\Follow.cs" />
     <Compile Include="Assets\Script\Hide.cs" />
+    <Compile Include="Assets\Script\PlayerMovingTest.cs" />
     <Compile Include="Assets\Script\PlayerNPC\MovingObject.cs" />
     <Compile Include="Assets\Script\PlayerNPC\NPCManager.cs" />
     <Compile Include="Assets\Script\PlayerNPC\OrderManager.cs" />

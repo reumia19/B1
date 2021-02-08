@@ -62,7 +62,7 @@ public class PlayerManager : MovingObject
 
         animator.SetBool("Walking",true);
 
-             theAudio.Play(walkSound_1);
+            // theAudio.Play(walkSound_1);
 
             while (currentWalkCount <walkCount){
 
