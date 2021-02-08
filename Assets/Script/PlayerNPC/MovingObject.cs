@@ -106,7 +106,7 @@ public class MovingObject : MonoBehaviour {
     {
         RaycastHit2D hit; // a지점과 b지점 사이에 뭐가 있으면 그 방해물을 리턴
         Vector2 start = transform.position; //캐릭터 위치값
-        Vector2 end = start + new Vector2(vector.x*speed*2, vector.y*speed*2);
+        Vector2 end = start + new Vector2(vector.x*speed, vector.y*speed);
         //boxCollider.enabled = false;   클리닉에서 없어도 되게 했음
         hit = Physics2D.Linecast(start,end,layerMask);
         //boxCollider.enabled = true; 클리닉에서 없어도 되게 했음

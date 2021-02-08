@@ -41,15 +41,17 @@ public class Main_13 : MonoBehaviour
 
             theOrder.PreloadCharacter();
             theOrder.NotMove();
-
+            // 라이트와 열쇠를 모두 찾았을 때
             if (theDB.Find("Light") && theDB.Find("Key"))
             {
                 StartCoroutine(Event1Coroutine());
             }
+            // 불만 찾았을 때
             else if (theDB.Find("Light") && !theDB.Find("Key"))
             {
                 StartCoroutine(Event1Coroutine());
             }
+            //
             else if (!theDB.Find("Light") && theDB.Find("Key"))
             {
                 StartCoroutine(Event3Coroutine());

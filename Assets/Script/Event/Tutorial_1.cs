@@ -22,7 +22,8 @@ public class Tutorial_1 : MonoBehaviour
         theDM = FindObjectOfType<DialogueManager>();
         theDB = FindObjectOfType<DatabaseManager>();
     }
-    private void OnTriggerStay2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!flag)
         {
@@ -31,6 +32,7 @@ public class Tutorial_1 : MonoBehaviour
             theDB.Change("T1");
         }
     }
+ 
     IEnumerator Event1Coroutine()
     {
         //theOrder.PreloadCharacter();
