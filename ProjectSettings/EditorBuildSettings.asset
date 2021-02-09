@@ -6,78 +6,81 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/NewScenes/TestMap.unity
+    guid: 408ec7acdb58f1947a605487b6234a3c
+  - enabled: 0
     path: Assets/Scenes/Title.unity
     guid: 84547e04fdded48ee8f665a5ebc36132
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1-Tutorial.unity
     guid: 37750323b957b1146a2bb9ec977d08a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1-Corridor.unity
     guid: eeeb6a4eda45f204491fdb9157981110
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1-Elevator.unity
     guid: ed8d25f10ff86446bbc94e225727b8a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/B1-Corridor.unity
     guid: 2089a99b513776d40b94fd4e2a931a3f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1-Guest.unity
     guid: 69cccb9c75618b74faea31ffee37952f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/B1.unity
     guid: c52ca00eb3439435a9f98e6ff44756b2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/2-Restaurant.unity
     guid: b38c7c4a09aa9234ca5f593fddb1207b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1-Ryang 1.unity
     guid: ff90daab28bebd54a92e5bf96aaf85c5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/3-Corridor.unity
     guid: 65e037b6d131719498b12f81b459fc6a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N1-Guest.unity
     guid: f36737ea6afd0da48993a95d960cc976
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sia.unity
     guid: 65d629e7ae69f436e814c3bf6462a792
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1-Laco.unity
     guid: f9a09ff3deb24314389206d98f83f6b1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/3-Studyroom.unity
     guid: 3ba8b3139cfa98845afc38dccb8fbcbe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/2-Corridor.unity
     guid: 5699de68a130c3f4db12270530792902
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/3-Blue.unity
     guid: 0e8e69e8c3fae4942ae228f436138eb9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/2-Gallery.unity
     guid: 5833397142e10c64cb775794f18a249c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N1-Corridor.unity
     guid: 6e58b5cc7d8cdae4eabde1a8575a5ec5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N1-Elevator.unity
     guid: 05ddc03692626d94893250032b4d6637
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N1-Ryang.unity
     guid: 75f26e722e5e5154183e97c38648e37e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N2-Corridor.unity
     guid: ce73266947123414594f0de3249a4510
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N2-Gallery.unity
     guid: 0db762c0b1a5ff941bcdd772a13012a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N2-Restaurant.unity
     guid: 57a27c26f2c20604887df43be5aa1699
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N3-Corridor.unity
     guid: bbae965dcdcfa6d4fb998f01ef066acf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Night/N3-Studyroom.unity
     guid: cee32de4c3422eb46a274aa92bb78135
   m_configObjects: {}

@@ -16,7 +16,8 @@ public class MovingObject : MonoBehaviour {
     protected Vector3 vector;
 
     public BoxCollider2D boxCollider;
-    public LayerMask layerMask; //통과 불가능한 레이어 설정
+    public LayerMask noPassingLayer; //통과 불가능한 레이어 설정
+
     public  Animator animator;
 
 
@@ -104,14 +105,14 @@ public class MovingObject : MonoBehaviour {
     //충돌하면 멈추게 하는 함수
     protected bool CheckCollision()
     {
-        RaycastHit2D hit; // a지점과 b지점 사이에 뭐가 있으면 그 방해물을 리턴
+        
         Vector2 start = transform.position; //캐릭터 위치값
         Vector2 end = start + new Vector2(vector.x*speed, vector.y*speed);
         //boxCollider.enabled = false;   클리닉에서 없어도 되게 했음
-        hit = Physics2D.Linecast(start,end,layerMask);
+        RaycastHit2D hitWall = Physics2D.Linecast(start,end,noPassingLayer);
         //boxCollider.enabled = true; 클리닉에서 없어도 되게 했음
 
-        if (hit.transform != null)
+        if (hitWall.transform != null)
         {
             return true;
         }
