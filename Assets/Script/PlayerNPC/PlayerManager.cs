@@ -44,7 +44,7 @@ public class PlayerManager : MovingObject
         {
             Destroy(this.gameObject);
         }
-
+       // Debug.Log(this.gameObject.name);
     }
 
     IEnumerator MoveCoroutine()

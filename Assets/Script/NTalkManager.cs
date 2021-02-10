@@ -10,20 +10,41 @@ public class NTalkManager : MonoBehaviour
 
     public Sprite[] portaritArr;
 
+    private NTalkManager instance;
+
     private void Awake()
     {
+        if (instance == null)
+            DontDestroyOnLoad(this.gameObject);
+        else
+            Destroy(this.gameObject);
+
         talkData = new Dictionary<int, string[]>();
         nameData = new Dictionary<int, string>();
         portraitData = new Dictionary<int, Sprite>();
         GenerateData();
+
+
     }
 
     void GenerateData()
     {
+        //일반대사
         talkData.Add(2000, new string[] { "안녕:0", "디버깅이 끝나면 나는 사라지겠지:1","한 번 쓰고 버려지는 게 내 운명인걸:2" });
         talkData.Add(1000,new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1","이제 꺼져:2" });
         talkData.Add(100, new string[] { "오 캡틴 마이 캡틴?" });
 
+        //QuestTalk (퀘스트 번호, 대사묶음)
+        // 시나리오 1
+        talkData.Add(10 + 1000, new string[] { "어서와:0", "이런 집은.. 처음이지?:0" });
+        talkData.Add(11 + 2000, new string[] { "여기에 오면 어떡해:0", "도망쳐..:0" });
+        //시나리오 2
+        talkData.Add(20 + 1000, new string[] { "이걸로 경고는 두 번째야:0","좋은 말로 할 때 돌아가:2" });
+        talkData.Add(20 + 5000, new string[] {"지하1층 버튼이다"});
+        talkData.Add(21 + 2000, new string[] { "가라구:0", "가..:1" });
+        //시나리오 끗
+
+        //초상화 이미지
         portraitData.Add(1000 + 0,portaritArr[0]);
         portraitData.Add(1000 + 1, portaritArr[1]);
         portraitData.Add(1000 + 2, portaritArr[2]);
@@ -40,10 +61,21 @@ public class NTalkManager : MonoBehaviour
 
      public string GetTalk(int id, int talkIndex)
     {
-        if (talkIndex == talkData[id].Length)
-        { 
-            return null;
+        //예외처리
+        if (!talkData.ContainsKey(id))
+        {
+            if(!talkData.ContainsKey(id - id % 10))
+            {//퀘스트 맨 처음 대사마저 없으면 기본대사.
+                return GetTalk(id - id % 100, talkIndex);
+            }
+            else
+            { //쿼스트 맨 처음 대사가 있긴 있다. 
+                return GetTalk(id - id % 10, talkIndex);
+            }
         }
+
+        if (talkIndex == talkData[id].Length)
+            return null;
         else
             return talkData[id][talkIndex];
     }

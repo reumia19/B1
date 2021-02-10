@@ -31,10 +31,16 @@ public class TransferScene : MonoBehaviour
 
     }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-    	if(collision.gameObject.name == "Player")
+        Debug.Log(collision.gameObject.name);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "Player")
     	{
+            Debug.Log("플레이어 마즘");
             StartCoroutine(TransferCoroutine());
     	}
     }
