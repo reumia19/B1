@@ -5,21 +5,27 @@ using UnityEngine.UI;
 
 public class NDialogueManager : MonoBehaviour
 {
-    public Text TalkText;
+    public NTypeEffect talk;
     public Text NameSpace;
-    public GameObject talkPanel;
+    
     public NTalkManager talkManager;
     public QuestManager questManager;
     public Image portraitImage;
-    public AudioManager audioManager;
+    public Animator portraitAnim;
+    public Animator talkPanel;
 
     private GameObject scanObject;
     private NDialogueManager instance;
 
     public bool isAction;
     public int talkIndex;
-    public string sound;
-    
+    private Sprite prevPortrait;
+
+    private void Start()
+    {
+        questManager.CheckQuest();
+
+    }
 
     private void Awake()
     {
@@ -29,28 +35,32 @@ public class NDialogueManager : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-     void Start()
-    {
-        questManager.CheckQuest();
-        audioManager = GetComponent<AudioManager>();
-    }
-
     public void Action(GameObject scanObj)
     {
         scanObject = scanObj;
-        audioManager.Play(sound);
         NDataBase database = scanObject.GetComponent<NDataBase>();
         Image portraidImage = portraitImage.GetComponent<Image>();
         Talk(database.id, database.isNpc);
-        talkPanel.SetActive(isAction);
+        talkPanel.SetBool("isShow",isAction);
     }
 
     void Talk(int id, bool isNpc)
     {
-        int questTalkIndex = questManager.GetQuestTalkIndex(id);//10,11,20,21
+        int questTalkIndex = 0;
+        string talkData = "";
 
-        string talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
-//                                                   id            , 0에서 ++ 
+        if (talk.isAnim)
+        {
+            talk.setMSG("");
+            return;
+        }
+        else
+        {
+            questTalkIndex = questManager.GetQuestTalkIndex(id);//10,11,20,21
+             talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
+            //                                     id            , 0에서 ++ 
+        }
+
         //EndTalk
         if (talkData == null)
         {
@@ -58,25 +68,31 @@ public class NDialogueManager : MonoBehaviour
             talkIndex = 0;
             isAction = false;
             Debug.Log(questManager.CheckQuest(id));
-            // 작동안함 Debug.Log("ㄴㅇㄴ");
             return;
         }
 
         //Talk NPC
         if (isNpc)
         {
-            Debug.Log(talkData);
-            Debug.Log("id : " + id + "        questTalkIndex : "+questTalkIndex + "       talkIndex :"+talkIndex );
-            TalkText.text = talkData.Split(':')[0];
+            talk.setMSG(talkData.Split(':')[0]);
+
             portraitImage.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
             portraitImage.color = new Color(1, 1, 1, 1);
+
+            if(prevPortrait != portraitImage.sprite)
+            {
+                portraitAnim.SetTrigger("doEffect");
+                prevPortrait = portraitImage.sprite;
+            }
+            
             NameSpace.text = talkManager.GetName(id);
+         
 
         }
         else//Talk Obj
         {
             NameSpace.text = "";
-            TalkText.text = talkData;
+            talk.setMSG(talkData);
             portraitImage.color = new Color(1, 1, 1, 0);
         }
 

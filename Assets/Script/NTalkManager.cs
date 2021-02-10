@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class NTalkManager : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class NTalkManager : MonoBehaviour
     public Sprite[] portaritArr;
 
     private NTalkManager instance;
+    //const string URL = "https://docs.google.com/spreadsheets/d/1ezu6SwtRKRhPwIq2cW92QUN2HOQGTbQKvg13g80Deyc/export?format=tsv";
+    const string URL = "https://docs.google.com/spreadsheets/d/1ezu6SwtRKRhPwIq2cW92QUN2HOQGTbQKvg13g80Deyc/export?format=tsv&gid=1201976522&rangeA1:C5";
+
+    int lineSize, rowSize;
+    string[,] sentence;
 
     private void Awake()
     {
@@ -23,15 +29,36 @@ public class NTalkManager : MonoBehaviour
         nameData = new Dictionary<int, string>();
         portraitData = new Dictionary<int, Sprite>();
         GenerateData();
+        StartCoroutine(loadData());
+    }
 
 
+    IEnumerator loadData()
+    {
+        UnityWebRequest www = UnityWebRequest.Get(URL);
+        yield return www.SendWebRequest();
+    
+        string data = www.downloadHandler.text;
+        Debug.Log(data);
+        string[] line = data.Split('\n');
+        lineSize = line.Length;
+        rowSize = line[0].Split('\t').Length;
+        sentence = new string[lineSize, rowSize];
+
+        for (int i = 0; i <lineSize; i++)
+        {
+            string[] row = line[i].Split('\t');
+            for (int j = 0; j < rowSize; j++) sentence[i, j] = row[j];
+        }
+//Debug.Log(sentence);    
     }
 
     void GenerateData()
     {
+        
         //일반대사
-        talkData.Add(2000, new string[] { "안녕:0", "디버깅이 끝나면 나는 사라지겠지:1","한 번 쓰고 버려지는 게 내 운명인걸:2" });
-        talkData.Add(1000,new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1","이제 꺼져:2" });
+       // talkData.Add(2000, new string[] { "안녕:0", "디버깅이 끝나면 나는 사라지겠지:1","한 번 쓰고 버려지는 게 내 운명인걸:2" });
+        //talkData.Add(1000,new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1","이제 꺼져:2" });
         talkData.Add(100, new string[] { "오 캡틴 마이 캡틴?" });
 
         //QuestTalk (퀘스트 번호, 대사묶음)

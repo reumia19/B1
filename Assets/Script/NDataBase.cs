@@ -6,6 +6,4 @@ public class NDataBase : MonoBehaviour
 {
     public int id;
     public bool isNpc;
-
-
 }

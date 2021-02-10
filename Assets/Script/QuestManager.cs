@@ -19,7 +19,7 @@ public class QuestManager : MonoBehaviour
     {//       questId ▽                       questActionIndex    0    1
         questList.Add(10, new QuestData("시나리오_1", new int[] {1000, 2000}));
         questList.Add(20, new QuestData("시나리오_2", new int[] { 1000, 5000, 2000 }));
-        questList.Add(20, new QuestData("시나리오_끗", new int[] {0}));
+        questList.Add(30, new QuestData("시나리오_끗", new int[] {0}));
         Debug.Log(questList[10].npcId[0]);
     }
 

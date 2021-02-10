@@ -128,6 +128,7 @@
     <Compile Include="Assets\Script\NDialogueManager.cs" />
     <Compile Include="Assets\Script\NTalkManager.cs" />
     <Compile Include="Assets\Script\NTransfer.cs" />
+    <Compile Include="Assets\Script\NTypeEffect.cs" />
     <Compile Include="Assets\Script\PlayerMovingTest.cs" />
     <Compile Include="Assets\Script\PlayerNPC\MovingObject.cs" />
     <Compile Include="Assets\Script\PlayerNPC\NPCManager.cs" />
