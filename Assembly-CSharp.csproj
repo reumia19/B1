@@ -118,11 +118,15 @@
      <Compile Include="Assets\Script\NDataBase.cs" />
      <Compile Include="Assets\Script\NDialogueManager.cs" />
      <Compile Include="Assets\Script\NTalkManager.cs" />
+     <Compile Include="Assets\Script\NTransfer.cs" />
+     <Compile Include="Assets\Script\NTypeEffect.cs" />
      <Compile Include="Assets\Script\PlayerMovingTest.cs" />
      <Compile Include="Assets\Script\PlayerNPC\MovingObject.cs" />
      <Compile Include="Assets\Script\PlayerNPC\NPCManager.cs" />
      <Compile Include="Assets\Script\PlayerNPC\OrderManager.cs" />
      <Compile Include="Assets\Script\PlayerNPC\PlayerManager.cs" />
+     <Compile Include="Assets\Script\QuestData.cs" />
+     <Compile Include="Assets\Script\QuestManager.cs" />
      <Compile Include="Assets\Script\Restart.cs" />
      <Compile Include="Assets\Script\Sc_Camera\Bound.cs" />
      <Compile Include="Assets\Script\Sc_Camera\CameraManager.cs" />

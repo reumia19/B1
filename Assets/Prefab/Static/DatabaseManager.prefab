@@ -45,10 +45,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   var_name:
   - mainPlot
-  - 
+  - tutorial
   var:
   - 0
   - 0
   switch_name:
   - basement
-  switches: 00
+  - T1
+  - T2
+  - T3
+  - M1
+  - M2
+  - M3
+  - M4
+  - M5
+  - M6
+  - M7
+  - M8
+  - M9
+  - M10
+  - M11
+  - Blue
+  - Doa
+  - Laco
+  - Key
+  - Light
+  - SmallLight
+  - End
+  - Pin
+  - 
+  switches: 000000000000000000000000000000000000000000000000
+  state: 0

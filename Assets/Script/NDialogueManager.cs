@@ -5,16 +5,35 @@ using UnityEngine.UI;
 
 public class NDialogueManager : MonoBehaviour
 {
-    public Text TalkText;
+    public NTypeEffect talk;
     public Text NameSpace;
-    public GameObject talkPanel;
-    public GameObject scanObject;
+    
     public NTalkManager talkManager;
+    public QuestManager questManager;
     public Image portraitImage;
+    public Animator portraitAnim;
+    public Animator talkPanel;
 
+    private GameObject scanObject;
+    private NDialogueManager instance;
 
     public bool isAction;
     public int talkIndex;
+    private Sprite prevPortrait;
+
+    private void Start()
+    {
+        questManager.CheckQuest();
+
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+            DontDestroyOnLoad(this.gameObject);
+        else
+            Destroy(this.gameObject);
+    }
 
     public void Action(GameObject scanObj)
     {
@@ -22,32 +41,58 @@ public class NDialogueManager : MonoBehaviour
         NDataBase database = scanObject.GetComponent<NDataBase>();
         Image portraidImage = portraitImage.GetComponent<Image>();
         Talk(database.id, database.isNpc);
-        talkPanel.SetActive(isAction);
+        talkPanel.SetBool("isShow",isAction);
     }
 
     void Talk(int id, bool isNpc)
     {
-        string talkData = talkManager.GetTalk(id, talkIndex);
+        int questTalkIndex = 0;
+        string talkData = "";
 
-        if (talkData == null)
+        if (talk.isAnim)
         {
-            talkIndex = 0;
-            isAction = false;
+            talk.setMSG("");
             return;
-        }
-
-        if (isNpc)
-        {
-            TalkText.text = talkData.Split(':')[0];
-            portraitImage.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
-            portraitImage.color = new Color(1, 1, 1, 1);
-            NameSpace.text = talkManager.GetName(id);
-
         }
         else
         {
+            questTalkIndex = questManager.GetQuestTalkIndex(id);//10,11,20,21
+             talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
+            //                                     id            , 0에서 ++ 
+        }
+
+        //EndTalk
+        if (talkData == null)
+        {
+
+            talkIndex = 0;
+            isAction = false;
+            Debug.Log(questManager.CheckQuest(id));
+            return;
+        }
+
+        //Talk NPC
+        if (isNpc)
+        {
+            talk.setMSG(talkData.Split(':')[0]);
+
+            portraitImage.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
+            portraitImage.color = new Color(1, 1, 1, 1);
+
+            if(prevPortrait != portraitImage.sprite)
+            {
+                portraitAnim.SetTrigger("doEffect");
+                prevPortrait = portraitImage.sprite;
+            }
+            
+            NameSpace.text = talkManager.GetName(id);
+         
+
+        }
+        else//Talk Obj
+        {
             NameSpace.text = "";
-            TalkText.text = talkData;
+            talk.setMSG(talkData);
             portraitImage.color = new Color(1, 1, 1, 0);
         }
 

@@ -8,6 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NewScenes/TestMap.unity
     guid: 408ec7acdb58f1947a605487b6234a3c
+  - enabled: 1
+    path: Assets/NewScenes/Day/F1_Corridor.unity
+    guid: c1ed767ddb586464c8156efa17ecc013
+  - enabled: 1
+    path: Assets/NewScenes/Day/F1_Guest.unity
+    guid: 2331c1e7377d088499bb2d8018f5f03c
+  - enabled: 1
+    path: Assets/NewScenes/Day/F1_Laco.unity
+    guid: ab52eaec882b4644b87b768679d9921d
+  - enabled: 1
+    path: Assets/NewScenes/Day/F1_Ryang.unity
+    guid: c7a0d2f7f7dcd3b45b431e55f2a28d79
+  - enabled: 1
+    path: Assets/NewScenes/Day/D_Elevator.unity
+    guid: 204fddf825de290408aeca7798b859e9
   - enabled: 0
     path: Assets/Scenes/Title.unity
     guid: 84547e04fdded48ee8f665a5ebc36132
