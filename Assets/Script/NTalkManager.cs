@@ -8,7 +8,7 @@ public class NTalkManager : MonoBehaviour
     Dictionary<int, string[]> talkData;//실질적인 데이ㅣ터베이스..?
     Dictionary<int, string> nameData;
     Dictionary<int, Sprite> portraitData;
-
+    Choice newChoice;
     public Sprite[] portaritArr;
 
     private NTalkManager instance;
@@ -28,38 +28,54 @@ public class NTalkManager : MonoBehaviour
         talkData = new Dictionary<int, string[]>();
         nameData = new Dictionary<int, string>();
         portraitData = new Dictionary<int, Sprite>();
+        
         GenerateData();
-        StartCoroutine(loadData());
+        //StartCoroutine(loadData());
     }
 
 
-    IEnumerator loadData()
+    IEnumerator loadData()//스프레드시트의 데이터 로드 테스트 
     {
         UnityWebRequest www = UnityWebRequest.Get(URL);
         yield return www.SendWebRequest();
     
         string data = www.downloadHandler.text;
-        Debug.Log(data);
-        string[] line = data.Split('\n');
-        lineSize = line.Length;
+       // Debug.Log(data);
+        string[] line = data.Split('\n');// line에는 한 줄의 데이터가 들어있다. 
+        lineSize = line.Length; 
         rowSize = line[0].Split('\t').Length;
         sentence = new string[lineSize, rowSize];
 
-        for (int i = 0; i <lineSize; i++)
+        for (int i = 0; i < lineSize; i++)
         {
             string[] row = line[i].Split('\t');
-            for (int j = 0; j < rowSize; j++) sentence[i, j] = row[j];
+            for (int j = 1; j < rowSize; j++)
+            {
+                int id = int.Parse(row[0]);
+
+                sentence[i, j] = row[j];
+                //talkData.Add(id, row);
+              //  Debug.Log(talkData[id]);
+            }
         }
-//Debug.Log(sentence);    
+   
+          
+        /*for(int i = 0; i )
+        {
+
+        }*/
     }
 
     void GenerateData()
     {
         
         //일반대사
-       // talkData.Add(2000, new string[] { "안녕:0", "디버깅이 끝나면 나는 사라지겠지:1","한 번 쓰고 버려지는 게 내 운명인걸:2" });
-        //talkData.Add(1000,new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1","이제 꺼져:2" });
-        talkData.Add(100, new string[] { "오 캡틴 마이 캡틴?" });
+        talkData.Add(2000, new string[] { "안녕:0", "디버깅이 끝나면 나는 사라지겠지:1","한 번 쓰고 버려지는 게 내 운명인걸:2" });
+        talkData.Add(1000,new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1","이제 꺼져:2" });
+        talkData.Add(3000, new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1", "이제 꺼져:2" });
+        talkData.Add(4000, new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1", "이제 꺼져:2" });
+        talkData.Add(5000, new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1", "이제 꺼져:2" });
+        talkData.Add(8000, new string[] { "오 캡틴 마이 캡틴?" });
 
         //QuestTalk (퀘스트 번호, 대사묶음)
         // 시나리오 1
@@ -84,6 +100,7 @@ public class NTalkManager : MonoBehaviour
         nameData.Add(2000, "한량");
         nameData.Add(3000, "라코스테");
         nameData.Add(4000, "푸른수염");
+        nameData.Add(5000, "어쩌구");
     }
 
      public string GetTalk(int id, int talkIndex)

@@ -9,9 +9,9 @@ public class NTypeEffect : MonoBehaviour
     public int CharPerSeconds;
     public GameObject EndCursor;
     public AudioSource audioSource;
-
+    public Text msgText;
     string targetMsg;
-    Text msgText;
+   
     int index;
     float interval;
     public bool isAnim;
