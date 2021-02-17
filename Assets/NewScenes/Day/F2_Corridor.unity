@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadb4359e78e44bdea7257335e6b9ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beforeMap: F1_Ryang
+  beforeMap: F2_Gall
   doorSound: door
 --- !u!1001 &1065299157
 PrefabInstance:
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beforeMap: F1_Laco
-  doorSound: door
+  doorSound: F2_Restaurante
 --- !u!1 &1458917225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,7 +1928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadb4359e78e44bdea7257335e6b9ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beforeMap: F1_Laco
+  beforeMap: D_Elevator
   doorSound: door
 --- !u!1 &208057200568191451
 GameObject:
@@ -2192,7 +2192,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 55, y: 15}
+  m_Size: {x: 55, y: 21}
   m_EdgeRadius: 0
 --- !u!114 &5067881854837283123
 MonoBehaviour:
