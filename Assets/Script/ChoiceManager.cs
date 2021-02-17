@@ -5,11 +5,23 @@ using UnityEngine.UI;
 
 public class ChoiceManager : MonoBehaviour
 {
+    public static ChoiceManager instance;
+    // Start is called before the first frame update
+    #region Singleton
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    #endregion Singleton
 
-
-
-    //2021.02.17 추가 
-    Dictionary<int, Choice> choiceList;
     private string question;
     private List<string> answerList;
 
@@ -34,16 +46,10 @@ public class ChoiceManager : MonoBehaviour
 
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
 
-    void GenerateChoiceData()
-    {
-        choiceList.Add(4100, new Choice ("알랄라",new string[]{ "선택지 테스트!!!", "선택지 테스트!!!", "선택지 테스트!!!" }));
-    }
     void Start()
     {
         theAudio = FindObjectOfType<AudioManager>();
-        choiceList = new Dictionary<int, Choice>();
         answerList = new List<string>();
-        GenerateChoiceData();
         for (int i =0; i<=2; i++)
         {
             answer_Text[i].text = "";

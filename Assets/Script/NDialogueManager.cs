@@ -27,7 +27,7 @@ public class NDialogueManager : MonoBehaviour
 
     }
 
-    private void Awake() 
+    private void Awake()
     {
         if (instance == null)
             DontDestroyOnLoad(this.gameObject);
@@ -42,7 +42,6 @@ public class NDialogueManager : MonoBehaviour
         Image portraidImage = portraitImage.GetComponent<Image>();
         Talk(database.id, database.isNpc);
         talkPanel.SetBool("isShow",isAction);
-        
     }
 
     void Talk(int id, bool isNpc)
@@ -50,7 +49,7 @@ public class NDialogueManager : MonoBehaviour
         int questTalkIndex = 0;
         string talkData = "";
 
-        if (talk.isAnim) //대화 애니메이션 중일 때
+        if (talk.isAnim)
         {
             talk.setMSG("");
             return;
@@ -63,7 +62,7 @@ public class NDialogueManager : MonoBehaviour
         }
 
         //EndTalk
-        if (talkData == null) // 
+        if (talkData == null)
         {
 
             talkIndex = 0;

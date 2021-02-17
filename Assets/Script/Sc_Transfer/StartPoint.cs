@@ -21,14 +21,7 @@ public class StartPoint : MonoBehaviour
     		thePlayer.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, thePlayer.transform.position.z);
             theCamera.transform.position = new Vector3(this.transform.position.x,this.transform.position.y,theCamera.transform.position.z);
             theAudio.Play(doorSound);
-        }
-        else if(beforeMap =="")
-        {
-            thePlayer.transform.position = new Vector3(0,0,0);
-            theCamera.transform.position = new Vector3(0,0,0);
-            theAudio.Play(doorSound);
-        }
-
+    	}
 
     }
 }
