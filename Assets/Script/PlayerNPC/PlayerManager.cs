@@ -146,7 +146,6 @@ public class PlayerManager : MovingObject
             //Scan Object
             if (Input.GetKeyDown(KeyCode.Z) && scanObject != null)
             {
-                Debug.Log("this is :" + scanObject.name);
                 nDialogueManager.Action(scanObject);
             }
 

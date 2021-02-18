@@ -50,6 +50,10 @@ public class QuestManager : MonoBehaviour
     {
         return questList[questId].questName;
     }
+    public void SkipQuest(int answerNum)
+    {
+        questId += answerNum;
+    }
 
     void NextQuest()
     {

@@ -9,5 +9,10 @@ public class Choice
     public string question;
     public string[] answers;//최대 4개
 
+    public Choice( string q, string[] a)
+    {
+        question = q;
+        answers = a;
+    }
 
 }

@@ -10,6 +10,7 @@ public class NDialogueManager : MonoBehaviour
     
     public NTalkManager talkManager;
     public QuestManager questManager;
+    public ChoiceManager choiceManager;
     public Image portraitImage;
     public Animator portraitAnim;
     public Animator talkPanel;
@@ -20,6 +21,7 @@ public class NDialogueManager : MonoBehaviour
     public bool isAction;
     public int talkIndex;
     private Sprite prevPortrait;
+    public bool answerTurn;
 
     private void Start()
     {
@@ -49,28 +51,47 @@ public class NDialogueManager : MonoBehaviour
         int questTalkIndex = 0;
         string talkData = "";
 
-        if (talk.isAnim)
+        if (talk.isAnim) // 대화창이 떠있을 때
         {
-            talk.setMSG("");
+            talk.setMSG(""); // 공백을 쏴준다. 그럼 모든 텍스트를 한 번에 띄울거임
             return;
         }
         else
         {
-            questTalkIndex = questManager.GetQuestTalkIndex(id);//10,11,20,21
-             talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
-            //                                     id            , 0에서 ++ 
+            if (choiceManager.choicing) //초이스 중이면 나가기
+            {
+                Debug.Log("선택중");
+                return;
+            }
+                
+            int answerNum = 0;
+            if (answerTurn) //대답할 차례인지 체크
+            {
+                answerNum = (choiceManager.GetResult() + 1) * 100;
+                //Debug.Log("answerNum : " + answerNum);
+            }
+            questTalkIndex = questManager.GetQuestTalkIndex(id);
+            talkData = talkManager.GetTalk(id + questTalkIndex +answerNum, talkIndex); //  대사 호출하기 
+            
         }
 
-        //EndTalk
-        if (talkData == null)
+        //EndTalk 끝나는 부분에만 실행
+        if (talkData == null) //대사를 호출했는데 없다? 널 값이 들어온다? 
         {
-
+            answerTurn = false;
+            if (talkManager.GetChoice(id+questTalkIndex) != null)//선택지가 있는지 확인해서 있으면 실행
+            {
+                choiceManager.ShowChoice(talkManager.GetChoice(id+questTalkIndex));
+                answerTurn = true;
+            }
             talkIndex = 0;
             isAction = false;
-            Debug.Log(questManager.CheckQuest(id));
+            //이거 지우면 안 됨..!!! 다음 퀘스트로 안 넘어감
+            Debug.Log(questManager.CheckQuest(id) +questManager.questActionIndex);
+            
             return;
         }
-
+        
         //Talk NPC
         if (isNpc)
         {
@@ -98,5 +119,6 @@ public class NDialogueManager : MonoBehaviour
 
         isAction = true;
         talkIndex ++;
+        
     }
 }

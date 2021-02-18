@@ -28,6 +28,7 @@ public class ChoiceManager : MonoBehaviour
     public AudioManager theAudio;
 
     public GameObject go; //평소에 초이스매니저를 비활성화시킬 목적으로 사용
+    public PlayerManager thePlayer;
 
     public Text question_Text;
     public Text[] answer_Text;
@@ -48,6 +49,7 @@ public class ChoiceManager : MonoBehaviour
 
     void Start()
     {
+        thePlayer = FindObjectOfType<PlayerManager>();
         theAudio = FindObjectOfType<AudioManager>();
         answerList = new List<string>();
         for (int i =0; i<=2; i++)
@@ -56,11 +58,11 @@ public class ChoiceManager : MonoBehaviour
             answer_Panel[i].SetActive(false);
         }
         question_Text.text = "";
-        question_Text.text = "";
     }
 
     public void ShowChoice(Choice _choice)
     {
+        thePlayer.notMove = true;
         choicing = true;
         go.SetActive(true);
         result = 0;
@@ -94,6 +96,8 @@ public class ChoiceManager : MonoBehaviour
         anim.SetBool("Appear",false);
         choicing = false;
         go.SetActive(false);
+        thePlayer.notMove = false;
+        Debug.Log("선택 끝");
     }
     IEnumerator ChoiceCoroutine()
     {
@@ -189,7 +193,7 @@ public class ChoiceManager : MonoBehaviour
                 theAudio.Play(enterSound);
                 keyInput = false;
                 ExitChoice();
-                print(result);
+                
             }
 
         }
@@ -206,5 +210,6 @@ public class ChoiceManager : MonoBehaviour
         color.a = 1f;
         answer_Panel[result].GetComponent<Image>().color = color;
     }
+
 
 }

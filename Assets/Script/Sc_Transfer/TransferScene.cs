@@ -15,6 +15,8 @@ public class TransferScene : MonoBehaviour
     private FadeManager theFade;
     private OrderManager theOrder;
 
+    bool flag;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,17 +35,17 @@ public class TransferScene : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        
         Debug.Log(collision.gameObject.name);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "Player")
-    	{
+
+        if (!flag &&collision.gameObject.name == "Player")
+        {
+            flag = true;
             Debug.Log("플레이어 마즘");
             StartCoroutine(TransferCoroutine());
-    	}
+        }
     }
+
 
     IEnumerator TransferCoroutine()
     {
@@ -58,5 +60,6 @@ public class TransferScene : MonoBehaviour
         SceneManager.LoadScene(transferMapName);
         theFade.FadeIn();
         theOrder.Move();
+        flag = false;
     }
 }
