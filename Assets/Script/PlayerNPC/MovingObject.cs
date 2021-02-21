@@ -19,7 +19,7 @@ public class MovingObject : MonoBehaviour {
     public LayerMask noPassingLayer; //통과 불가능한 레이어 설정
 
     public  Animator animator;
-
+    public bool stop = true;
 
     public void Move(string _dir, int _frequency = 5)
     {
@@ -35,6 +35,10 @@ public class MovingObject : MonoBehaviour {
     {
         while(queue.Count !=0)
         {
+            if (stop)
+            {
+                yield return new WaitUntil(()=> !stop);
+            }
             string direction =queue.Dequeue();
             vector.Set(0,0,vector.z);
 

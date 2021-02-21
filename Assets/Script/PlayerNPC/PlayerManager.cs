@@ -165,9 +165,9 @@ public class PlayerManager : MovingObject
 
             if (findTopObj.collider != null)
             {
-                render.sortingOrder = 3;
+                render.sortingOrder = 7;
             }else
-                render.sortingOrder = 1;
+                render.sortingOrder = 5;
 
         }
     }
