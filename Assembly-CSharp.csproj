@@ -124,6 +124,7 @@
     <Compile Include="Assets\Script\FadeManager.cs" />
     <Compile Include="Assets\Script\Follow.cs" />
     <Compile Include="Assets\Script\Hide.cs" />
+    <Compile Include="Assets\Script\Intro.cs" />
     <Compile Include="Assets\Script\NDataBase.cs" />
     <Compile Include="Assets\Script\NDialogueManager.cs" />
     <Compile Include="Assets\Script\NTalkManager.cs" />

@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class NDialogueManager : MonoBehaviour
 {
-    public NTypeEffect talk;
+    
     public Text NameSpace;
     
-    public NTalkManager talkManager;
-    public QuestManager questManager;
-    public ChoiceManager choiceManager;
+    NTalkManager talkManager;
+    QuestManager questManager;
+    ChoiceManager choiceManager;
+    NTypeEffect talk;
+
     public Image portraitImage;
     public Animator portraitAnim;
     public Animator talkPanel;
@@ -23,8 +25,14 @@ public class NDialogueManager : MonoBehaviour
     private Sprite prevPortrait;
     public bool answerTurn;
 
+    private int portraitNumber;
+
     private void Start()
     {
+        choiceManager = FindObjectOfType<ChoiceManager>();
+        questManager = FindObjectOfType<QuestManager>();
+        talkManager = FindObjectOfType<NTalkManager>();
+        talk = FindObjectOfType<NTypeEffect>();
         questManager.CheckQuest();
 
     }
@@ -87,17 +95,18 @@ public class NDialogueManager : MonoBehaviour
             talkIndex = 0;
             isAction = false;
             //이거 지우면 안 됨..!!! 다음 퀘스트로 안 넘어감
-            Debug.Log(questManager.CheckQuest(id) +questManager.questActionIndex);
+            questManager.CheckQuest(id);
+            Debug.Log(questManager.CheckQuest() +questManager.questActionIndex);
             
             return;
         }
         
         //Talk NPC
-        if (isNpc)
+        if (isNpc) // 초상화 이미지는 캐릭터 번호 + 표정번호    // 이름은 캐릭터 번호만을 사용함
         {
             talk.setMSG(talkData.Split(':')[0]);
-
-            portraitImage.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
+            portraitNumber = int.Parse(talkData.Split(':')[1]);
+            portraitImage.sprite = talkManager.GetPortrait(portraitNumber);
             portraitImage.color = new Color(1, 1, 1, 1);
 
             if(prevPortrait != portraitImage.sprite)
@@ -105,8 +114,8 @@ public class NDialogueManager : MonoBehaviour
                 portraitAnim.SetTrigger("doEffect");
                 prevPortrait = portraitImage.sprite;
             }
-            
-            NameSpace.text = talkManager.GetName(id);
+            Debug.Log((portraitNumber / 10) * 10);
+            NameSpace.text = talkManager.GetName((portraitNumber/10)*10);
          
 
         }

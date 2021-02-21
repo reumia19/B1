@@ -29,7 +29,7 @@ public class Elevator : MonoBehaviour
         theTransfer = FindObjectOfType<TransferScene>();
         theDB = FindObjectOfType<DatabaseManager>();
 
-        for(int i =0; i < theDB.switch_name.Length; i++)
+      /*  for(int i =0; i < theDB.switch_name.Length; i++)
         {
             if(theDB.switch_name[i] == "basement")
             {
@@ -37,7 +37,7 @@ public class Elevator : MonoBehaviour
                 b1 = theDB.switches[i];
                 print(b1);
             }
-        }
+        }*/
     }
 
     private void OnTriggerStay2D(Collider2D collision)

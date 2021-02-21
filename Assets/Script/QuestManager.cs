@@ -17,8 +17,8 @@ public class QuestManager : MonoBehaviour
     }
     void GenerateData()
     {//       questId ▽                       questActionIndex    0    1
-        questList.Add(10, new QuestData("시나리오_1", new int[] {1000, 2000}));
-        questList.Add(20, new QuestData("시나리오_2", new int[] { 1000, 5000, 2000 }));
+        questList.Add(10, new QuestData("intro_0", new int[] {1000}));
+        questList.Add(20, new QuestData("시나리오_1", new int[] { 1000, 5000, 2000 }));
         questList.Add(30, new QuestData("시나리오_끗", new int[] {0}));
         Debug.Log(questList[10].npcId[0]);
     }
@@ -38,18 +38,20 @@ public class QuestManager : MonoBehaviour
             
         }
 
-        ControlObject();
+        //ControlObject();
 
         //퀘스트 액션 인덱스가 현제 시나리오의 npcid 수와 같을 때
         if (questActionIndex == questList[questId].npcId.Length)
+        {
             NextQuest();
-
+        }
         return questList[questId].questName;
     }
     public string CheckQuest()
     {
         return questList[questId].questName;
     }
+
     public void SkipQuest(int answerNum)
     {
         questId += answerNum;
@@ -59,6 +61,7 @@ public class QuestManager : MonoBehaviour
     {
         questId += 10;
         questActionIndex = 0;
+        Debug.Log(questId + " " + questActionIndex);
     }
 
     void ControlObject()

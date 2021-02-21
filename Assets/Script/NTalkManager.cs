@@ -60,17 +60,26 @@ public class NTalkManager : MonoBehaviour
 
     void GenerateData()
     {
-        
+
         //일반대사
-        talkData.Add(2000, new string[] { "안녕:0", "디버깅이 끝나면 나는 사라지겠지:1","한 번 쓰고 버려지는 게 내 운명인걸:2" });
-        talkData.Add(1000,new string[] { "안녕 나는 쓰레기야:0", "디버깅을 위해 만들어졌지:1","이제 꺼져:2" });
+        talkData.Add(1000, new string[] { "안녕 나는 쓰레기야:11", "디버깅을 위해 만들어졌지:11", "이제 꺼져:12" });
         talkData.Add(100, new string[] { "오 캡틴 마이 캡틴?" });
 
-        //QuestTalk (퀘스트 번호, 대사묶음)
-        // 시나리오 1
-        talkData.Add(10 + 1000, new string[] { "어서와:0", "이런 집은.. 처음이지?:0" });
+        //QuestTalk (퀘스트 번호, 오브젝트 번호)
+       // 인트로
+        talkData.Add(1000 + 10, new string[] { 
+            "동생과 연락이 끊긴 지 벌써 1년이 지났다.:10",
+            "수소문해서 알게 된 이 저택. 부디 이곳에서는 동생을 찾을 수 있기를.....:11",
+            "들어오시죠. 2층으로 안내하겠습니다.:20",
+            "(내가 누군지 말하지도 않았는데...? 모든 일이 익숙한 듯 보인다.):11" 
+        });
+
+
+        // 인트로
+        talkData.Add(1000 + 20, new string[] { "동생과 연락이 끊긴 지 벌써 1년이 지났다.:1", "수소문해서 알게 된 이 저택. 부디 이곳에서는 동생을 찾을 수 있기를.....:0" });
+
         //시나리오 1 질문
-        choiceData.Add(10 + 1000, new Choice("이런 집은 처음이지?", new string[] { "응", "아니", "어쩌라고" }));
+        choiceData.Add(20 + 1000, new Choice("이런 집은 처음이지?", new string[] { "응", "아니", "어쩌라고" }));
         // 시나리오 1 응답 
         talkData.Add(10 + 1000+100, new string[] { "환영해:0" });
         talkData.Add(10 + 1000 + 200, new string[] { "어.. 그래:0" });
@@ -81,24 +90,25 @@ public class NTalkManager : MonoBehaviour
 
         talkData.Add(11 + 2000, new string[] { "여기에 오면 어떡해:0", "도망쳐..:0" });
         //시나리오 2
-        talkData.Add(20 + 1000, new string[] { "이걸로 경고는 두 번째야:0","좋은 말로 할 때 돌아가:2" });
+       /* talkData.Add(20 + 1000, new string[] { "이걸로 경고는 두 번째야:0","좋은 말로 할 때 돌아가:2" });
         talkData.Add(20 + 5000, new string[] {"지하1층 버튼이다"});
         talkData.Add(21 + 2000, new string[] { "가라구:0", "가..:1" });
+        */
         //시나리오 끗
 
         //초상화 이미지
-        portraitData.Add(1000 + 0,portaritArr[0]);
-        portraitData.Add(1000 + 1, portaritArr[1]);
-        portraitData.Add(1000 + 2, portaritArr[2]);
-        portraitData.Add(2000 + 0, portaritArr[3]);
-        portraitData.Add(2000 + 1, portaritArr[4]);
-        portraitData.Add(2000 + 2, portaritArr[5]);
-        portraitData.Add(2000 + 3, portaritArr[5]);
+        portraitData.Add(10+0,portaritArr[0]);
+        portraitData.Add(10+1, portaritArr[1]);
+        portraitData.Add(10+2, portaritArr[2]);
+        portraitData.Add(20+0, portaritArr[3]);
+        portraitData.Add(20+1, portaritArr[4]);
+        portraitData.Add(20+2, portaritArr[5]);
+        portraitData.Add(30+0, portaritArr[6]);
 
-        nameData.Add(1000, "한도아");
-        nameData.Add(2000, "한량");
-        nameData.Add(3000, "라코스테");
-        nameData.Add(4000, "푸른수염");
+        nameData.Add(10, "한도아");
+        nameData.Add(20, "푸른수염");
+        nameData.Add(30, "라코스테");
+        nameData.Add(40, "오필리어");
 
         
     }
@@ -128,9 +138,9 @@ public class NTalkManager : MonoBehaviour
             return talkData[id][talkIndex];
     }
 
-    public Sprite GetPortrait(int id, int portraitIndex)
+    public Sprite GetPortrait(int portraitIndex)
     {
-        return portraitData[id + portraitIndex];
+        return portraitData[portraitIndex];
     }
     
     public string GetName(int id)

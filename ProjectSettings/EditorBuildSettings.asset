@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/NewScenes/TestMap.unity
     guid: 408ec7acdb58f1947a605487b6234a3c
   - enabled: 1
+    path: Assets/NewScenes/Intro.unity
+    guid: f504eed66a752a14aa07cc185c470d5a
+  - enabled: 1
     path: Assets/NewScenes/Day/F1_Corridor.unity
     guid: c1ed767ddb586464c8156efa17ecc013
   - enabled: 1
