@@ -69,6 +69,9 @@ public class NTalkManager : MonoBehaviour
         //물건 조사
         talkData.Add(100, new string[] { "오 캡틴 마이 캡틴?" });
         talkData.Add(10000, new string[] { "너무 멀리 온 것 같다","...","되돌아가자" });
+        talkData.Add(20000, new string[] { "고급지고 푹신해보이는 소파다.","음...", "앉기엔 너무 하얗다." });
+        talkData.Add(20001, new string[] { "음...", "앉기엔 너무 하얗다." });
+        talkData.Add(30000, new string[] { "빛이 너무 강해서 밖이 보이지 않는다","..?", "그게 가능한가?" });
 
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
         // 인트로

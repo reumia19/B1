@@ -151,6 +151,7 @@
     <Compile Include="Assets\Script\Sc_Transfer\TransferScene.cs" />
     <Compile Include="Assets\Script\Sc_Translate\Translate.cs" />
     <Compile Include="Assets\Script\Test.cs" />
+    <Compile Include="Assets\Script\Timer.cs" />
     <Compile Include="Assets\Script\Title.cs" />
     <Compile Include="Assets\Script\Warning.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
