@@ -76,7 +76,8 @@ public class NDialogueManager : MonoBehaviour
             if (answerTurn) //대답할 차례인지 체크
             {
                 answerNum = (choiceManager.GetResult() + 1) * 100;
-                //Debug.Log("answerNum : " + answerNum);
+                Debug.Log("answerNum : " + answerNum);
+               // questManager.CheckQuest(id); // 대답하면 퀘스트 체크하기
             }
             questTalkIndex = questManager.GetQuestTalkIndex(id);
             talkData = talkManager.GetTalk(id + questTalkIndex +answerNum, talkIndex); //  대사 호출하기 
@@ -86,17 +87,32 @@ public class NDialogueManager : MonoBehaviour
         //EndTalk 끝나는 부분에만 실행
         if (talkData == null) //대사를 호출했는데 없다? 널 값이 들어온다? 
         {
-            answerTurn = false;
+            if (answerTurn) // 응답차례였으면 그냥 무조건 끝낸다. 
+            {
+                answerTurn = false;
+                isAction = false;
+                //이거 지우면 안 됨..!!! 다음 퀘스트로 안 넘어감
+                questManager.CheckQuest(id);
+                Debug.Log(questManager.CheckQuest() + questManager.questActionIndex);
+                talkIndex = 0;
+                return;
+            }
+            
+
             if (talkManager.GetChoice(id+questTalkIndex) != null)//선택지가 있는지 확인해서 있으면 실행
             {
                 choiceManager.ShowChoice(talkManager.GetChoice(id+questTalkIndex));
                 answerTurn = true;
             }
+            else
+            {
+                isAction = false;
+                //이거 지우면 안 됨..!!! 다음 퀘스트로 안 넘어감
+                questManager.CheckQuest(id);
+                Debug.Log(questManager.CheckQuest() + questManager.questActionIndex);
+            }
             talkIndex = 0;
-            isAction = false;
-            //이거 지우면 안 됨..!!! 다음 퀘스트로 안 넘어감
-            questManager.CheckQuest(id);
-            Debug.Log(questManager.CheckQuest() +questManager.questActionIndex);
+            
             
             return;
         }

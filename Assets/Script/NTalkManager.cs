@@ -61,13 +61,17 @@ public class NTalkManager : MonoBehaviour
     void GenerateData()
     {
 
+
         //일반대사
-        talkData.Add(1000, new string[] { "안녕 나는 쓰레기야:11", "디버깅을 위해 만들어졌지:11", "이제 꺼져:12" });
-        talkData.Add(2000, new string[] { "날이 쬐까 덥군.:21", "자네는 옷을 왜 그리 껴입었는감:21", "이제 꺼져:22" });
+        talkData.Add(1000, new string[] { "....." });
+        talkData.Add(2000, new string[] { "오늘따라 꽃향기가 좋군요:20" });
+
+        //물건 조사
         talkData.Add(100, new string[] { "오 캡틴 마이 캡틴?" });
+        talkData.Add(10000, new string[] { "너무 멀리 온 것 같다","...","되돌아가자" });
 
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
-       // 인트로
+        // 인트로
         talkData.Add(1000 + 10, new string[] { 
             "동생과 연락이 끊긴 지 벌써 1년이 지났다.:10",
             "수소문해서 알게 된 이 저택. 부디 이곳에서는 동생을 찾을 수 있기를.....:11",

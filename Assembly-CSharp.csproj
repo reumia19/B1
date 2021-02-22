@@ -96,6 +96,7 @@
     <Compile Include="Assets\Script\Choice.cs" />
     <Compile Include="Assets\Script\ChoiceManager.cs" />
     <Compile Include="Assets\Script\DatabaseManager.cs" />
+    <Compile Include="Assets\Script\Disposable.cs" />
     <Compile Include="Assets\Script\Elevator.cs" />
     <Compile Include="Assets\Script\Ending.cs" />
     <Compile Include="Assets\Script\Event\AddItem.cs" />
