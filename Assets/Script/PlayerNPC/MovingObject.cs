@@ -23,6 +23,9 @@ public class MovingObject : MonoBehaviour {
 
     public void Move(string _dir, int _frequency = 5)
     {
+        if (stop)
+            return;
+
         queue.Enqueue(_dir);
         if(!notCoroutine){
             notCoroutine = true;
@@ -33,12 +36,14 @@ public class MovingObject : MonoBehaviour {
   
     IEnumerator MoveCoroutine(string _dir, int _frequency)
     {
-        while(queue.Count !=0)
+        //if (stop)
+        //{
+            
+          //  yield return new WaitUntil(() => !stop);
+        //}
+        while (queue.Count !=0)
         {
-            if (stop)
-            {
-                yield return new WaitUntil(()=> !stop);
-            }
+            
             string direction =queue.Dequeue();
             vector.Set(0,0,vector.z);
 

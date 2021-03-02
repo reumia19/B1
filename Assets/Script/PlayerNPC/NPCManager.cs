@@ -7,7 +7,7 @@ using UnityEngine;
 public class NPCMove
 {
 	[Tooltip("체크하면 NPC움직임")]
-	public bool NPCmove;
+	public bool NpcMove;
 
 	public string[] direction;
 
@@ -26,7 +26,7 @@ public class NPCManager : MovingObject
     string currentDirection;
     Animator theAnim;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         queue = new Queue<string>();
         nDialogueManager = FindObjectOfType<NDialogueManager>();
@@ -120,7 +120,8 @@ public class NPCManager : MovingObject
 
     IEnumerator MoveCoroutine()
     {
-        if(npc.direction.Length != 0)
+        
+        if(npc.direction.Length != 0 && npc.NpcMove)
         {
             for(int i = 0; i < npc.direction.Length;i++)
             {

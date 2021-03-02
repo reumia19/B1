@@ -18,6 +18,7 @@ public class NTalkManager : MonoBehaviour
 
     int lineSize, rowSize;
     string[,] sentence;
+    public bool kor;
 
     private void Awake()
     {
@@ -30,7 +31,10 @@ public class NTalkManager : MonoBehaviour
         nameData = new Dictionary<int, string>();
         portraitData = new Dictionary<int, Sprite>();
         choiceData = new Dictionary<int, Choice>();
-        GenerateData();
+        if (kor)
+            GenerateKorData();
+        else
+        GenerateEngData();
         //StartCoroutine(loadData());
     }
 
@@ -57,13 +61,124 @@ public class NTalkManager : MonoBehaviour
         }
 //Debug.Log(sentence);    
     }
+    void GenerateEngData()
+    {
+        //QuestTalk (퀘스트 번호, 오브젝트 번호)
+        // 인트로
+        talkData.Add(1000 + 10, new string[] {
+            "It's been a year since I lost contact with my sister.:11",
+            "After asking around, I found this mansion. Hope she's here....:11",
+            "Please, come on in. I'll take you to the second-floor lobby.:20",
+            "(That's weird. Everything seems familiar to him. Like he knows who I am...):11"
+        });
+        //시나리오1
+        talkData.Add(2000 + 20, new string[] {
+            "Nice to meet you. I'm Pandora. :10",
+            "I know it's sudden, but have you happen to see my sister?:10",
+            "Her name is Mollie. She looks very much like me.:10",
+            "Well...stayed here for a while a few years ago.:20",
+            "But, I had no contact with her ever since then.:20",
+            "(Lying. She's been missing for only half a year. Something's suspicious.):10",
+            "(This is the only place where I can trace her. It's my only hope.):10",
+            "(Should I ask him if I could stay here for a while?):10"
+        });
+        //시나리오1 질문
+        choiceData.Add(20 + 2000, new Choice("(Should I ask him if I could stay here for a while?)", new string[] { "Ask him.", "Don't ask" }));
+        //시나리오1 응답1
+        talkData.Add(20 + 2000 + 100, new string[] {
+            "Is it okay for me to stay here for a while?:10",
+            "I know it's a nuisance, but I'm desperate to find my sister. :10",
+            "....:20",
+            "Sure yes. There are plenty of guest rooms. :20",
+            "The more flowers, the better it is. Don't you agree?:20",
+            "Sebasitian will guide you through the mansion. :20",
+            "Make yourself at home.:20"
+        });
+        //시나리오1 응답2
+        talkData.Add(20 + 2000 + 200, new string[] {
+            "(What now...I can't give up on her like this.):11",
+            "If you don't mind, you can stay here.:20",
+            "We'll do our best to help you, my lady. Whatever that you need, just tell us.:20",
+            "Thanks. That's so nice of you.:10",
+            "It's my pleasure. The more flowers, the better it is.                              :20",
+            "Have a seat. Sebatiain will be here soon.:20",
+        });
 
-    void GenerateData()
+        //시나리오 2
+        talkData.Add(30 + 3000, new string[] {
+            "Hi! You must be the one looking for...:30",
+            "I'm Pandora. Good to see you.:10",
+            "Hey, anyway,:30",
+            "........?:11",
+            "Isn't this mansion so nice? as well as the house owner.  :30"
+        });
+        choiceData.Add(30 + 3000, new Choice("Isn't this mansion so nice? as well as the house owner.  ",
+            new string[] { "Well...", "Indeed." }));
+        talkData.Add(100 + 30 + 3000, new string[] {
+            "You don't know anything, huh? :30",
+            "When will we ever have a chance to stay in this such magnificent house without his generosity?:30",
+            "You'll understand what I mean when you get older.:30",
+            "Why don't you thank him, now ey?:30",
+            "...........:10",
+            "크흠... 궁금한 게 있으면 물어봐도 좋아.:30"
+
+        });
+
+        talkData.Add(200 + 30 + 3000, new string[] {
+            "You're right. I would do anything to live in a mansion like this.:30",
+            "Have you seen through the mansion yet?:30",
+            "You'll be using the room in the middle on the 1st floor. 한량 stayed in the next room.:30",
+            "There is a lobby, a dining room, and a gallery on the 2nd floor.:30",
+            "The house-owner uses the third floor alone. There should be a library and a bedroom.:30",
+            "명심하자. 집주인이 사용하는 3층은 각별히 조심해야겠어. :10",
+            "So, what is this house-owner like? :10",
+            "OMG. I can't believe I left out the most important part. :30",
+            " He is the most important being for the mansion and even the world.:30",
+            "There are rumors that he was a royal or a member of a mafia. :30",
+            "Well, I think, it’s more that he was a German spy during the war. :30",
+            "(쓸모있는 대답은 아니군.):10",
+            "하하. 농담이야. :30",
+            "가끔 무섭지만 대체로 자상하고, 규칙을 중요하게 여기지.:30",
+            "너도 그를 사랑하게 될거야. :30",
+            "자! 한 번 둘러봐봐. 궁금한 게 있다면 언제든지 물어봐도 좋아! :30"
+        });
+
+        talkData.Add(3000, new string[] { "저 벽에 액자 보이지? 읽어보는게 좋을걸.:30" }); //라코스테 기본(고유)대사
+
+        talkData.Add(40 + 30000, new string[] { "'첫번째, 지하실에 들어가지 않는다.'", "'두번째, 밤 늦게 돌아다니지 않는다.'라고 적혀있다." });
+
+        talkData.Add(40 + 3000, new string[] {
+            "벽에 규칙이 적혀있던데, 규칙을 어기면 어떻게 되는거야?:10",
+            "규칙을 어겨본 적이 없어서 잘 모르겠네. :30",
+            "설마 집주인을 배신할 생각은 아니지?:30",
+            "푸른수염은 생각보다 더 무서운 사람이거든.:30",
+            "벽에 적힌 규칙을 명심해!:30",
+            "1층의 네 방으로 가봐. 엘레베이터는 나가서 왼쪽에 있어. :30",
+
+        });
+
+
+
+        portraitData.Add(10 + 0, portaritArr[0]);
+        portraitData.Add(10 + 1, portaritArr[1]);
+        portraitData.Add(10 + 2, portaritArr[2]);
+        portraitData.Add(20 + 0, portaritArr[3]);
+        portraitData.Add(20 + 1, portaritArr[4]);
+        portraitData.Add(20 + 2, portaritArr[5]);
+        portraitData.Add(30 + 0, portaritArr[6]);
+
+        nameData.Add(10, "한도아");
+        nameData.Add(20, "푸른수염");
+        nameData.Add(30, "라코스테");
+        nameData.Add(40, "오필리어");
+    }
+    
+    void GenerateKorData()
     {
 
 
         //일반대사
-        talkData.Add(1000, new string[] { "..... :10" });
+        talkData.Add(1000, new string[] { "..... :10" }); //없으면 오류나서 넣어둔 것..
         talkData.Add(2000, new string[] { "오늘따라 꽃향기가 좋군요:20" });
 
         //물건 조사
@@ -71,7 +186,8 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000, new string[] { "너무 멀리 온 것 같다","...","되돌아가자" });
         talkData.Add(20000, new string[] { "고급지고 푹신해보이는 소파다.","음...", "앉기엔 너무 하얗다." });
         talkData.Add(20001, new string[] { "음...", "앉기엔 너무 하얗다." });
-        talkData.Add(30000, new string[] { "빛이 너무 강해서 밖이 보이지 않는다","..?", "그게 가능한가?" });
+        talkData.Add(25000, new string[] { "빛이 너무 강해서 밖이 보이지 않는다","..?", "그게 가능한가?" });
+        talkData.Add(30000, new string[] { "'첫번째, 지하실에 들어가지 않는다.'", "'두번째, 밤 늦게 돌아다니지 않는다.'라고 적혀있다." });
 
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
         // 인트로
@@ -140,30 +256,124 @@ public class NTalkManager : MonoBehaviour
             "넌 아마 1층 가운데 방을 쓰게 되겠지. 네방 옆에 한량이 쓰던 방도 있어.:30",
             "2층은 로비와 다이닝룸, 갤러리가 있어.:30",
             "3층은 푸른수염이 단독으로 사용해. 서재랑 침실이 있을거야.:30",
-            "궁금한 게 있으면 얼마든 물어봐. 이 집에 대해선 내가 가장 잘 아니까 :30"
+            "명심하자. 집주인이 사용하는 3층은 각별히 조심해야겠어. :10",
+            "집주인은 어떤 사람이야? :10",
+            "맙소사. 가장 중요한 걸 잊어버리다니. :30",
+            " 그는 이 저택에서,  그리고 이 세계에서 제일 중요한 사람이지.:30",
+            "그가 왕족이었다는 소문도 있고, 누구는 그가 마피아라고도 해. :30",
+            "(쓸모있는 대답은 아니군.):10",
+            "하하. 농담이야. :30",
+            "가끔 무섭지만 대체로 자상하고, 규칙을 중요하게 여기지.:30",
+            "너도 그를 사랑하게 될거야. :30",
+            "자! 한 번 둘러봐봐. 궁금한 게 있다면 언제든지 물어봐도 좋아! :30"
         });
 
-        talkData.Add(3000, new string[] { "저 벽에 액자 보이지? 읽어보는게 좋을걸.:30" }); //라코스테 기본대사
+        talkData.Add(40 + 3000, new string[] { "저 벽에 액자 보이지? 읽어보는게 좋을걸.:30" }); //라코스테 기본(고유)대사
 
-        talkData.Add(30 + 30001, new string[] { "암어 규칙쓰 >.0" });
-        
+        talkData.Add(40 + 30000, new string[] { "'첫번째, 지하실에 들어가지 않는다.'","'두번째, 밤 늦게 돌아다니지 않는다.'라고 적혀있다."});
+
+        talkData.Add(50 + 3000, new string[] {
+            "벽에 규칙이 적혀있던데, 규칙을 어기면 어떻게 되는거야?:10",
+            "규칙을 어겨본 적이 없어서 잘 모르겠네. :30",
+            "설마 집주인을 배신할 생각은 아니지?:30",
+            "푸른수염은 생각보다 더 무서운 사람이거든.:30",
+            "벽에 적힌 규칙을 명심해!:30",
+            "1층의 네 방으로 가봐. 엘레베이터는 나가서 왼쪽에 있어. :30",
+
+        });
+
+        //장소별 대사
+        talkData.Add(40 +1000, new string[] {
+            "(여기서 지내게 되겠구나):10",
+            "(예상보다는 더 괜찮은데.):10"
+        });
+        talkData.Add(41 + 1000, new string[] {
+            "(이럴 시간이 없어. 동생의 흔적을 찾아보자):10"
+        });
+
+        talkData.Add(52 + 1000, new string[] {
+            "(여긴 라코스테의 방이겠구나.):10"
+        });
+
+        talkData.Add(51 + 1000, new string[] {
+            "(여기가 동생이 지내던 방인가?):10",
+            "(단서가 있을지도 몰라. 어서 찾아보자):10"
+        });
+
+        //저택 조사 
+
+        //라코스테 분홍색 시나리오는 다 50번 데이터베이스 모두 채우면 한꺼번에 체크할것
+        talkData.Add(60 + 3000, new string[] {
+            "안녕! 규칙을 잊어버리지는 않았지? 이 저택의 첫번째 규칙은.....:30",
+            "기억하고 있어.:10"
+        });
+
+        choiceData.Add(60 + 3000, new Choice("이 집의 첫 번째 규칙은...", new string[] { "지하실에 들어가지 않는다.", "이 저택에 대해 말하지 않는다." }));
+
+        talkData.Add(60 + 3000 + 100, new string[] {
+            "지하실에 들어가지 않는다.:10",
+            "맞지?:10",
+            "역시 정확해.:30",
+            "두번째 규칙도 혹시 기억해?:30"
+        });
+
+        choiceData.Add(60 + 3000 +100, new Choice("이 집의 두 번째 규칙은...", new string[] { "시끄럽게 굴지 않는다.", "밤에 돌아다니지 않는다." }));
+
+        talkData.Add(60 + 3000 + 400, new string[] { ///이거 수정해야한다. 선택 중첩의 경우 만들것.
+            "시끄럽게 굴지 않는다:10",
+            "아쉽네. 즐거운 대화였어. 안녕:30"
+        });
+        talkData.Add(60 + 3000 + 500, new string[] { ///이거 수정해야한다. 선택 중첩의 경우 만들것.
+            "밤에 돌아다니지 않는다.:10",
+            "와! 정답이야.:30",
+            "네 동생도 너와 닮았다면 참 좋았을텐데.:30",
+            "그게 무슨 소리야?:10",
+            "......:30",
+            "아무것도 아니야.:30",
+            "난 네가 정말 마음에 드니까 힌트를 줄게.:30",
+            "집 구조를 잘 외워두는 게 좋을거야. 몇 층에 누구 방이 있는지..그런 것들 말이야.:30",
+            "즐거운 대화였어. 안녕.:30",
+
+        });
+
+        talkData.Add(60 + 3000 + 200, new string[] {
+            "이 저택에 대해 말하지 않는다.:10",
+            "아쉽네. 덕분에 즐거웠어. 안녕.:30",
+            "내 방에 찾을 건 없겠지만, 뒤져는 보시던가.:30"
+        });
+
+        //푸른수염 갤러리 대사
+        talkData.Add(60 + 2001 , new string[] {
+            "이 그림으로 말할 것 같으면, 라파엘 전파 대표적 화가 존 에머렛 밀레이가 그린 그림으로....:20",
+            "셰익스피어의 작품 햄릿을 모티브로 한 작품이죠. 그렇지 않나요?:10",
+            "...이 그림, 어떤 것 같아요?:20"
+        });
+        choiceData.Add(60 + 2001, new Choice("(뭐라고 말해야 할까)", new string[] { "글쎄요.", "아름다워요." }));
+        talkData.Add(60 + 2001 + 100, new string[] {
+            "글쎄요.",
+            "절박해 보여요. 불행해보이고. 금방이라도 녹을 것 같아요.:10",
+            "원작에서는 아무 비중 없던 오필리어가 죽음의 순간에야 그림으로 남겨졌다는 것도.:10",
+            "비극이 따로 없죠.:10",
+            "........:20",
+            "흥미로운 접근이군요. 잘 들었습니다.:20"
+        });
+
+        talkData.Add(60 + 2001 + 200, new string[] {
+            "아름다워요.:10",
+            "유명한 작품이잖아요. 엄청 비쌀테고.:10",
+            "마음에 드신다니 다행이네요. 저는 저 표정을 아주 사랑해요.:20",
+            "모든 걸 체념하고 자신의 운명을 받아들이는..숭고함이라니.:20"
+        });
+
+        //푸른수염 서재 대사
+        talkData.Add(60 + 2000, new string[] {
+            "책이 아주 많네요. 혹시 무슨 일을 하시는지 여쭤도 될까요?:10",
+            "저는 조향사입니다.:20",
+            "완벽한 향을 찾기위해 하나 둘 공부하다보니..이렇게 큰 서재가 만들어졌네요.:20",
+            "(조향사라니.. 꽤나 특이한 직업이네):10"
+        });
 
 
-
-        // 시나리오 1 응답 
-        talkData.Add(10 + 1000+100, new string[] { "환영해:0" });
-        talkData.Add(10 + 1000 + 200, new string[] { "어.. 그래:0" });
-        talkData.Add(10 + 1000 + 300, new string[] { "뭐야 꺼져:0" });
-        //시나리오 이후 기본대사
-        talkData.Add(10 + 1000 +9, new string[] { "여기서 나가:0" });
-
-
-        talkData.Add(11 + 2000, new string[] { "여기에 오면 어떡해:0", "도망쳐..:0" });
-        //시나리오 2
-       /* talkData.Add(20 + 1000, new string[] { "이걸로 경고는 두 번째야:0","좋은 말로 할 때 돌아가:2" });
-        talkData.Add(20 + 5000, new string[] {"지하1층 버튼이다"});
-        talkData.Add(21 + 2000, new string[] { "가라구:0", "가..:1" });
-        */
         //시나리오 끗
 
         //초상화 이미지
@@ -180,10 +390,29 @@ public class NTalkManager : MonoBehaviour
         nameData.Add(30, "라코스테");
         nameData.Add(40, "오필리어");
 
-        
+        //오브젝트 조사
+        talkData.Add(10000 + 10 + 1, new string[] {"앗! 서랍 안에 벌레가 있잖아. 빨리 닫자."});
+        talkData.Add(10000 + 10 + 2, new string[] { "가짜 나무야. 이 집에 진짜 식물은 없는걸까?." });
+        talkData.Add(10000 + 20 + 1, new string[] { "라코스테는 게임을 좋아하는구나" });
+        talkData.Add(10000 + 20 + 2, new string[] { "라코스테 방에는 덩굴들이 많구나." });
+        talkData.Add(10000 + 30 + 1, new string[] { "화장대야. 특별한 건 없어." });
+        talkData.Add(10000 + 30 + 2, new string[] { "진짜같은 조화야." });
+        talkData.Add(10000 + 30 + 3, new string[] { "아까는 못 본 종이야. Night, Hamlet이라고 적혀있어. 무슨 의미일까?" });
+        talkData.Add(10000 + 40 + 1, new string[] { "라코스테 방에는 덩굴들이 많구나." });
+        talkData.Add(10000 + 40 + 2, new string[] { "라코스테 방에는 덩굴들이 많구나." });
+
+        talkData.Add(10000 + 40 + 3, new string[] { "라코스테 방에는 덩굴들이 많구나." });
+
+        //길 막는 특수 오브젝트
+        talkData.Add(20000 + 50 + 1, new string[] { "여기서 너무 멀어지는 건 실례일 것 같아." });
+        talkData.Add(20000 + 50 + 2, new string[] { "여기는 아닌 거 같아." });
+        talkData.Add(20000 + 50 + 3, new string[] { "라코스테 방에는 덩굴들이 많구나." });
+        talkData.Add(20000 + 50 + 4, new string[] { "라코스테 방에는 덩굴들이 많구나." });
+
     }
 
-     public string GetTalk(int id, int talkIndex)
+
+    public string GetTalk(int id, int talkIndex)
     {
         //예외처리
         if (!talkData.ContainsKey(id))

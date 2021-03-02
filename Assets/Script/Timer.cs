@@ -9,31 +9,33 @@ public class Timer : MonoBehaviour
     public bool startState;
     public float loadingTime;
     public string toggleSeneName;
+    public GameObject theGameObject;
 
-    private float startTime;
-    private bool run;
+    private bool run = true;
     QuestManager theQuest;
     
     void Start()
     {
         theQuest = FindObjectOfType<QuestManager>();
-        startTime = 0;
+        theGameObject.SetActive(startState);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.deltaTime);
+
         if (run)
         {
             if (toggleSeneName == theQuest.CheckQuest())  //시작 조건이 만족하면
             {
-                if(startTime == 0)  // 
-                    startTime = Time.deltaTime;
-                else if(startTime +loadingTime < Time.deltaTime)
+                Debug.Log("카운트다운" + loadingTime);
+                if (loadingTime > 0)  // 
+                    loadingTime -= Time.deltaTime;
+
+                else
                 {
                     run = false;
-                    this.gameObject.SetActive(!startState);
+                    theGameObject.SetActive(!startState);
                 }
 
             }

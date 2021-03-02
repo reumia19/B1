@@ -28,15 +28,10 @@ public class Intro : MonoBehaviour
         
         Debug.Log(nextQuestName + " / " + quest.CheckQuest() );
         //다음 씬으로 가기
-        if (quest.CheckQuest() == nextQuestName)
+        if (quest.CheckQuest() == nextQuestName) { 
             transferOBJ.SetActive(true);
-        else if(quest.questActionIndex == 1)
-        {
-            data.id = 2000;   
         }
-
-
-        if (Input.GetKeyDown(KeyCode.Z))
+        else if (Input.GetKeyDown(KeyCode.Z))
             nDialogueManager.Action(this.gameObject);
         
         

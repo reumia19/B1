@@ -52,7 +52,7 @@ public class ChoiceManager : MonoBehaviour
         thePlayer = FindObjectOfType<PlayerManager>();
         theAudio = FindObjectOfType<AudioManager>();
         answerList = new List<string>();
-        for (int i =0; i<=2; i++)
+        for (int i =0; i<=3; i++)
         {
             answer_Text[i].text = "";
             answer_Panel[i].SetActive(false);
@@ -112,6 +112,10 @@ public class ChoiceManager : MonoBehaviour
         {
             StartCoroutine(TypingAnswer_2());
         }
+        if (count >= 3)
+        {
+            StartCoroutine(TypingAnswer_3());
+        }
         yield return new WaitForSeconds(0.5f);
 
         keyInput = true;
@@ -152,6 +156,15 @@ public class ChoiceManager : MonoBehaviour
         for (int i = 0; i < answerList[2].Length; i++)
         {
             answer_Text[2].text += answerList[2][i];
+            yield return waitTime;
+        }
+    }
+    IEnumerator TypingAnswer_3()
+    {
+        yield return new WaitForSeconds(0.6f);
+        for (int i = 0; i < answerList[3].Length; i++)
+        {
+            answer_Text[3].text += answerList[3][i];
             yield return waitTime;
         }
     }
