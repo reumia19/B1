@@ -132,6 +132,8 @@
     <Compile Include="Assets\Script\NTransfer.cs" />
     <Compile Include="Assets\Script\NTypeEffect.cs" />
     <Compile Include="Assets\Script\NewEvent\NpcMoveOrder.cs" />
+    <Compile Include="Assets\Script\NewEvent\StartandShow.cs" />
+    <Compile Include="Assets\Script\NewEvent\StepAndShow.cs" />
     <Compile Include="Assets\Script\PlayerMovingTest.cs" />
     <Compile Include="Assets\Script\PlayerNPC\MovingObject.cs" />
     <Compile Include="Assets\Script\PlayerNPC\NPCManager.cs" />

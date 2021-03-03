@@ -5,6 +5,7 @@ using UnityEngine;
 public class DatabaseManager : MonoBehaviour
 {
     static public DatabaseManager instance;
+    QuestManager theQuest;
     public string[] var_name;
     public float[] var;
 
@@ -23,9 +24,11 @@ public class DatabaseManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
+        theQuest = FindObjectOfType<QuestManager>();
     }
-    private void Start()
+    private void Update()
     {
+        CheckDataBase();
     }
     public bool Find(string _name)
     {
@@ -52,6 +55,21 @@ public class DatabaseManager : MonoBehaviour
                 switches[i] = true;
                 print(_name + " = " + state +"changed");
             }
+        }
+    }
+
+    public void CheckDataBase()
+    {
+        bool a = true;
+
+        for (int i = 0; i < this.switches.Length; i++)
+            if (!this.switches[i])
+                a = false;
+
+        if (a && theQuest.CheckQuest() == "시나리오_5")
+        {
+            theQuest.CheckQuest(0);
+            Debug.Log("핑크색 퀘스트 완료");
         }
     }
 }

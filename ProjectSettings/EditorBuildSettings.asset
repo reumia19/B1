@@ -39,12 +39,15 @@ EditorBuildSettings:
     path: Assets/NewScenes/Day/F2_Corridor.unity
     guid: 05c7f135be3723b49944d16305cee1f7
   - enabled: 1
+    path: Assets/NewScenes/Day/F3_Studyroom 1.unity
+    guid: 22192263a9db0bc4495b99b045316726
+  - enabled: 1
     path: Assets/NewScenes/Day/F3_Corridor.unity
     guid: 31bac46b331383643906336d57bacbfb
   - enabled: 1
     path: Assets/NewScenes/Day/F3_Blue.unity
     guid: 6e3d145e334d59b4d8254951924125bf
   - enabled: 1
-    path: Assets/NewScenes/Day/F3_Studyroom.unity
+    path: Assets/NewScenes/Day/B1.unity
     guid: 6aed03fc58b448f4388260c117dedd81
   m_configObjects: {}

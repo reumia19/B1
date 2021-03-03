@@ -11,6 +11,7 @@ public class NDialogueManager : MonoBehaviour
     NTalkManager talkManager;
     QuestManager questManager;
     ChoiceManager choiceManager;
+    DatabaseManager theData;
     NTypeEffect talk;
 
     public Image portraitImage;
@@ -24,11 +25,14 @@ public class NDialogueManager : MonoBehaviour
     public int talkIndex;
     private Sprite prevPortrait;
     public bool answerTurn;
+    public int answerNum;
+    public int answerCount;
 
     private int portraitNumber;
 
     private void Start()
     {
+        theData = FindObjectOfType<DatabaseManager>();
         choiceManager = FindObjectOfType<ChoiceManager>();
         questManager = FindObjectOfType<QuestManager>();
         talkManager = FindObjectOfType<NTalkManager>();
@@ -58,6 +62,7 @@ public class NDialogueManager : MonoBehaviour
     {
         int questTalkIndex = 0;
         string talkData = "";
+        int talkNumber = 0;
 
         if (talk.isAnim) // 대화창이 떠있을 때
         {
@@ -72,48 +77,44 @@ public class NDialogueManager : MonoBehaviour
                 return;
             }
                 
-            int answerNum = 0;
+            answerNum = 0;
             if (answerTurn) //대답할 차례인지 체크
             {
-                answerNum = (choiceManager.GetResult() + 1) * 100;
+                answerNum = (choiceManager.GetResult() + 1) * 100 + answerCount * 400;
                 Debug.Log("answerNum : " + answerNum);
                // questManager.CheckQuest(id); // 대답하면 퀘스트 체크하기
             }
             questTalkIndex = questManager.GetQuestTalkIndex(id);
-            talkData = talkManager.GetTalk(id + questTalkIndex +answerNum, talkIndex); //  대사 호출하기 
-            
+            talkNumber = id + questTalkIndex + answerNum;
+             talkData = talkManager.GetTalk(talkNumber, talkIndex); //  대사 호출하기 
+            theData.Change(talkNumber.ToString());
         }
 
         //EndTalk 끝나는 부분에만 실행
         if (talkData == null) //대사를 호출했는데 없다? 널 값이 들어온다? 
         {
-            if (answerTurn) // 응답차례였으면 그냥 무조건 끝낸다. 
+            Debug.Log("null 들어옴");
+            if (talkManager.GetChoice(talkNumber) != null)//선택지가 있는지 확인해서 있으면 실행
             {
-                answerTurn = false;
-                isAction = false;
-                //이거 지우면 안 됨..!!! 다음 퀘스트로 안 넘어감
-                questManager.CheckQuest(id);
-                Debug.Log(questManager.CheckQuest() + questManager.questActionIndex);
-                talkIndex = 0;
-                return;
-            }
-            
-
-            if (talkManager.GetChoice(id+questTalkIndex) != null)//선택지가 있는지 확인해서 있으면 실행
-            {
-                choiceManager.ShowChoice(talkManager.GetChoice(id+questTalkIndex));
-                answerTurn = true;
+                choiceManager.ShowChoice(talkManager.GetChoice(talkNumber));
+                if (answerTurn)
+                {
+                    answerCount++;
+                    Debug.Log("! add answer count !     answerCount :"+ answerCount);
+                }else
+                    answerTurn = true;
             }
             else
             {
+                answerTurn = false;
+                answerCount = 0;
                 isAction = false;
                 //이거 지우면 안 됨..!!! 다음 퀘스트로 안 넘어감
                 questManager.CheckQuest(id);
                 Debug.Log(questManager.CheckQuest() + questManager.questActionIndex);
             }
+
             talkIndex = 0;
-            
-            
             return;
         }
         

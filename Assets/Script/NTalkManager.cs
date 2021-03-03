@@ -176,6 +176,7 @@ public class NTalkManager : MonoBehaviour
     void GenerateKorData()
     {
 
+        TestData();
 
         //일반대사
         talkData.Add(1000, new string[] { "..... :10" }); //없으면 오류나서 넣어둔 것..
@@ -411,7 +412,17 @@ public class NTalkManager : MonoBehaviour
 
     }
 
-
+    void TestData()
+    {
+        talkData.Add(2000 +10, new string[] { "테스트 시작:10" });
+        choiceData.Add(2000 + 10, new Choice("선택 1", new string[] { "A", "B" }));
+        talkData.Add(2110, new string[] { "A:10" });
+        talkData.Add(2210, new string[] { "B:10" });
+        choiceData.Add(2110, new Choice("A", new string[] { "A-1", "A-2" }));
+        talkData.Add(2110 + 300 + 100, new string[] { "A-1:10" });
+        talkData.Add(2110 + 300 + 200, new string[] { "A-2:10" });
+        
+    }
     public string GetTalk(int id, int talkIndex)
     {
         //예외처리
@@ -431,7 +442,7 @@ public class NTalkManager : MonoBehaviour
             }
         }
 
-        if (talkIndex == talkData[id].Length)
+        if (talkIndex >= talkData[id].Length)
             return null;
         else
             return talkData[id][talkIndex];

@@ -9,27 +9,40 @@ public class Disposable : MonoBehaviour
 
     QuestManager theQuest;
     private string beforeQuest;
-    private bool active;
     private void Awake()
     {
         theQuest = FindObjectOfType<QuestManager>();
         beforeQuest = theQuest.CheckQuest()+ theQuest.questActionIndex;
+        disposableObject.SetActive(checkActive(beforeQuest));
+
     }
     private void Update()
     {
         string thisQuest = theQuest.CheckQuest() + theQuest.questActionIndex;
+
         if (beforeQuest != thisQuest) //일회용 오브젝트 && 시나리오 넘어감 
         {
-            active = false;
+            disposableObject.SetActive(checkActive(thisQuest));
+            beforeQuest = thisQuest;
 
-            for (int i = 0; i < activeScene.Length; i++) {
-                if (activeScene[i] == thisQuest) {
-                    active = true;
-                    break;
-                 }
-             }
-
-            disposableObject.SetActive(active);
+            Debug.Log(this.gameObject.name + "   Toggled");
         }
     }
+    private bool checkActive(string quest)
+    {
+        bool act = false;
+
+        for (int i = 0; i < activeScene.Length; i++)
+        {
+            if (activeScene[i] == quest)
+            {
+                act = true;
+                break;
+            }
+        }
+
+        return act;
+    }
+
+
 }

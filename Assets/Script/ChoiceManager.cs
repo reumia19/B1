@@ -52,8 +52,9 @@ public class ChoiceManager : MonoBehaviour
         thePlayer = FindObjectOfType<PlayerManager>();
         theAudio = FindObjectOfType<AudioManager>();
         answerList = new List<string>();
-        for (int i =0; i<=3; i++)
+        for (int i =0; i<=answer_Panel.Length-1; i++)
         {
+           
             answer_Text[i].text = "";
             answer_Panel[i].SetActive(false);
         }

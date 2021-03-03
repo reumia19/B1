@@ -1805,7 +1805,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 48, y: 21}
+  m_Size: {x: 78, y: 21}
   m_EdgeRadius: 0
 --- !u!114 &5067881854837283123
 MonoBehaviour:
@@ -1959,6 +1959,75 @@ Transform:
   m_Father: {fileID: 6158529493224631641}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6844965339767797943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.567062
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7058516
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.0349655
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743889, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844965338560743891, guid: 4ef2edac226ee4c4884ac178d83f5460,
+        type: 3}
+      propertyPath: m_Name
+      value: Scene_41_Active_Checker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ef2edac226ee4c4884ac178d83f5460, type: 3}
 --- !u!4 &7471756542291499378
 Transform:
   m_ObjectHideFlags: 0

@@ -20,6 +20,8 @@ public class Elevator : MonoBehaviour
     public string f3;
     public string f2;
     public string f1;
+    public string b;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,15 +31,6 @@ public class Elevator : MonoBehaviour
         theTransfer = FindObjectOfType<TransferScene>();
         theDB = FindObjectOfType<DatabaseManager>();
 
-      /*  for(int i =0; i < theDB.switch_name.Length; i++)
-        {
-            if(theDB.switch_name[i] == "basement")
-            {
-                print("지하실 ㄱㄱ ");
-                b1 = theDB.switches[i];
-                print(b1);
-            }
-        }*/
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -74,7 +67,9 @@ public class Elevator : MonoBehaviour
             case 2:
                 theTransfer.transferMapName = f1;
                 break;
-
+            case 3:
+                theTransfer.transferMapName = b;
+                break;
         }
         
         theAudio.Play(move);
