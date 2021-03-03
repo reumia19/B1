@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c32671c6e342644b36c87fd39869b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeScene: "\uC2DC\uB098\uB9AC\uC624_20"
+  activeScene: []
   disposableObject: {fileID: 990076292}
 --- !u!4 &58135906
 Transform:
@@ -3588,7 +3588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c32671c6e342644b36c87fd39869b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeScene: "\uC2DC\uB098\uB9AC\uC624_30"
+  activeScene: []
   disposableObject: {fileID: 327006257}
 --- !u!4 &1626259758
 Transform:
@@ -3806,7 +3806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ece2fb998664d2eb46c1a7be5d190e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: F2_Gall
+  transferMapName: F2_Gallery
   thisMapName: F2_Corridor
   doorSound: 
 --- !u!212 &1712554044

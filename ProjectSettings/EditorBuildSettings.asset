@@ -6,20 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/NewScenes/Title_New.unity
+    guid: c3fda07859114f849a0b6ee48bd8354a
+  - enabled: 1
     path: Assets/NewScenes/TestMap.unity
     guid: 408ec7acdb58f1947a605487b6234a3c
   - enabled: 1
     path: Assets/NewScenes/Intro.unity
     guid: f504eed66a752a14aa07cc185c470d5a
   - enabled: 1
+    path: Assets/NewScenes/Day/F1_Laco.unity
+    guid: 411ba5b38492db94d9854d526d3f0da4
+  - enabled: 1
+    path: Assets/NewScenes/Day/F2_Gallery.unity
+    guid: 6f0f12ff767716c4c91d8a454364b686
+  - enabled: 1
+    path: Assets/NewScenes/Day/F2_Restaurante.unity
+    guid: 59629a630ad881e46aebe6b5cbc8e3d4
+  - enabled: 1
     path: Assets/NewScenes/Day/F1_Corridor.unity
     guid: c1ed767ddb586464c8156efa17ecc013
   - enabled: 1
     path: Assets/NewScenes/Day/F1_Guest.unity
     guid: 2331c1e7377d088499bb2d8018f5f03c
-  - enabled: 1
-    path: Assets/NewScenes/Day/F1_Laco.unity
-    guid: ab52eaec882b4644b87b768679d9921d
   - enabled: 1
     path: Assets/NewScenes/Day/F1_Ryang.unity
     guid: c7a0d2f7f7dcd3b45b431e55f2a28d79
@@ -38,7 +47,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NewScenes/Day/F3_Studyroom.unity
     guid: 6aed03fc58b448f4388260c117dedd81
-  - enabled: 0
-    path: Assets/Scenes/Title.unity
-    guid: 84547e04fdded48ee8f665a5ebc36132
   m_configObjects: {}
