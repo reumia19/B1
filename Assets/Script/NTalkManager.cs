@@ -193,6 +193,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(20001, new string[] { "음...", "앉기엔 너무 하얗다." });
         talkData.Add(25000, new string[] { "빛이 너무 강해서 밖이 보이지 않는다","..?", "그게 가능한가?" });
         talkData.Add(30000, new string[] { "'첫번째, 지하실에 들어가지 않는다.'", "'두번째, 밤 늦게 돌아다니지 않는다.'라고 적혀있다." });
+        talkData.Add(30001, new string[] { "파리도 미끄러지겠어." });
 
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
         // 인트로
@@ -450,7 +451,9 @@ public class NTalkManager : MonoBehaviour
 
 
         if (talkIndex >= talkData[id].Length)
+        {
             return null;
+        }
         else
             return talkData[id][talkIndex];
     }

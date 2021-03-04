@@ -50,16 +50,18 @@ public class NDialogueManager : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    public void Action(GameObject scanObj)
+    public string Action(GameObject scanObj)
     {
+        string submit = "";
         scanObject = scanObj;
         NDataBase database = scanObject.GetComponent<NDataBase>();
         Image portraidImage = portraitImage.GetComponent<Image>();
-        Talk(database.id, database.isNpc);
+        submit = Talk(database.id, database.isNpc);
         talkPanel.SetBool("isShow",isAction);
+        return submit;
     }
 
-    void Talk(int id, bool isNpc)
+    string Talk(int id, bool isNpc)
     {
         int questTalkIndex = 0;
         string talkData = "";
@@ -69,14 +71,13 @@ public class NDialogueManager : MonoBehaviour
         if (talk.isAnim) // 대화창이 떠있을 때
         {
             talk.setMSG(""); // 공백을 쏴준다. 그럼 모든 텍스트를 한 번에 띄울거임
-            return;
+            return "텍스트 모두 띄우기";
         }
         else
         {
             if (choiceManager.choicing) //초이스 중이면 나가기
             {
-                Debug.Log("선택중");
-                return;
+                return "선택중";
             }
                 
             answerNum = 0;
@@ -95,7 +96,6 @@ public class NDialogueManager : MonoBehaviour
         //EndTalk 끝나는 부분에만 실행
         if (talkData == null) //대사를 호출했는데 없다? 널 값이 들어온다? 
         {
-            Debug.Log("null 들어옴");
             if (talkManager.GetChoice(talkNumber) != null)//선택지가 있는지 확인해서 있으면 실행
             {
                 choiceManager.ShowChoice(talkManager.GetChoice(talkNumber));
@@ -117,7 +117,7 @@ public class NDialogueManager : MonoBehaviour
             }
 
             talkIndex = 0;
-            return;
+            return "대화 종료";
         }
         
         //Talk NPC
@@ -147,6 +147,6 @@ public class NDialogueManager : MonoBehaviour
 
         isAction = true;
         talkIndex ++;
-        
+        return "대사 출력";
     }
 }
