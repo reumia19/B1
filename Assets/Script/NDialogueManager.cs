@@ -27,8 +27,9 @@ public class NDialogueManager : MonoBehaviour
     public bool answerTurn;
     public int answerNum;
     public int answerCount;
-
+    public bool npc;
     private int portraitNumber;
+
 
     private void Start()
     {
@@ -63,6 +64,7 @@ public class NDialogueManager : MonoBehaviour
         int questTalkIndex = 0;
         string talkData = "";
         int talkNumber = 0;
+        npc = isNpc;
 
         if (talk.isAnim) // 대화창이 떠있을 때
         {

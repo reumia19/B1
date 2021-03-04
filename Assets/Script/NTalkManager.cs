@@ -13,6 +13,8 @@ public class NTalkManager : MonoBehaviour
     public Sprite[] portaritArr;
 
     private NTalkManager instance;
+    private QuestManager theQuest;
+    private NDialogueManager theDialogue;
     //const string URL = "https://docs.google.com/spreadsheets/d/1ezu6SwtRKRhPwIq2cW92QUN2HOQGTbQKvg13g80Deyc/export?format=tsv";
     const string URL = "https://docs.google.com/spreadsheets/d/1ezu6SwtRKRhPwIq2cW92QUN2HOQGTbQKvg13g80Deyc/export?format=tsv&gid=1201976522&rangeA1:C5";
 
@@ -31,6 +33,8 @@ public class NTalkManager : MonoBehaviour
         nameData = new Dictionary<int, string>();
         portraitData = new Dictionary<int, Sprite>();
         choiceData = new Dictionary<int, Choice>();
+        theQuest = FindObjectOfType<QuestManager>();
+        theDialogue = FindObjectOfType<NDialogueManager>();
         if (kor)
             GenerateKorData();
         else
@@ -426,12 +430,9 @@ public class NTalkManager : MonoBehaviour
     public string GetTalk(int id, int talkIndex)
     {
         //예외처리
-        if (!talkData.ContainsKey(id))
+        if (!talkData.ContainsKey(id) && theDialogue.npc)
         {
-            Debug.Log(id - id % 10);
-            //응급조치
-            //return GetTalk(id - id % 100, talkIndex);//기본대사 출력
-
+            
             if (!talkData.ContainsKey(id - id % 10))//퀘스트 맨 처음 대사가 없다.
             {
                 return GetTalk(id - id % 100, talkIndex);//기본대사 출력
@@ -441,6 +442,12 @@ public class NTalkManager : MonoBehaviour
                 return GetTalk(id - id % 10, talkIndex);
             }
         }
+        else if (!talkData.ContainsKey(id))
+        {
+                return GetTalk(id - theQuest.GetQuestTalkIndex(id),talkIndex);//기본대사 출력
+        }
+
+
 
         if (talkIndex >= talkData[id].Length)
             return null;

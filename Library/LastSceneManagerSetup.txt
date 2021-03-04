@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/NewScenes/Title_New.unity
+- path: Assets/NewScenes/Day/F2_Corridor.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
