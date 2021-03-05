@@ -1840,12 +1840,12 @@ PrefabInstance:
     - target: {fileID: 83284543032105301, guid: f899092bb36934e4b800f21bd0286cb8,
         type: 3}
       propertyPath: switch_name.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 83284543032105301, guid: f899092bb36934e4b800f21bd0286cb8,
         type: 3}
       propertyPath: switches.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 83284543032105301, guid: f899092bb36934e4b800f21bd0286cb8,
         type: 3}
@@ -1855,12 +1855,17 @@ PrefabInstance:
     - target: {fileID: 83284543032105301, guid: f899092bb36934e4b800f21bd0286cb8,
         type: 3}
       propertyPath: switch_name.Array.data[1]
-      value: basement
+      value: 3660
       objectReference: {fileID: 0}
     - target: {fileID: 83284543032105301, guid: f899092bb36934e4b800f21bd0286cb8,
         type: 3}
       propertyPath: switch_name.Array.data[0]
-      value: 11
+      value: 3560
+      objectReference: {fileID: 0}
+    - target: {fileID: 83284543032105301, guid: f899092bb36934e4b800f21bd0286cb8,
+        type: 3}
+      propertyPath: switch_name.Array.data[2]
+      value: 3360
       objectReference: {fileID: 0}
     - target: {fileID: 83284543032105302, guid: f899092bb36934e4b800f21bd0286cb8,
         type: 3}
@@ -3203,6 +3208,11 @@ PrefabInstance:
       propertyPath: questObject.Array.data[0]
       value: 
       objectReference: {fileID: 281914544}
+    - target: {fileID: 4010905441718357866, guid: 8f25156f88c239b46a04539c3e180a46,
+        type: 3}
+      propertyPath: questId
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4010905441718357867, guid: 8f25156f88c239b46a04539c3e180a46,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3922,7 +3932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073bcfca23dfb224582408507cd6ecd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3000
+  id: 3100
   isNpc: 1
 --- !u!4 &4645275052425675888
 Transform:
@@ -4184,6 +4194,7 @@ GameObject:
   - component: {fileID: 6364807449590767474}
   - component: {fileID: 6364807449590767485}
   - component: {fileID: 4645275051129601926}
+  - component: {fileID: 6364807449590767482}
   m_Layer: 12
   m_Name: NPC_Laco
   m_TagString: Untagged
@@ -4191,6 +4202,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6364807449590767482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6364807449590767481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140040c925071184fbdca3e47f63a22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkBox:
+  - 3660
+  - 3360
+  - 3760
+  check: 0
+  changeCode: 3800
 --- !u!4 &6364807449590767484
 Transform:
   m_ObjectHideFlags: 0

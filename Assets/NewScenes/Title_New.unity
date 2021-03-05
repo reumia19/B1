@@ -1242,6 +1242,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76,
         type: 3}
+    - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
+        type: 3}
+      propertyPath: portaritArr.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 324bb09c143b2f34285563d599823527,
+        type: 3}
     - target: {fileID: 1304248062778614111, guid: 28a73a8649dc66a409da44c45a660a8e,
         type: 3}
       propertyPath: m_Name
@@ -1608,6 +1614,7 @@ MonoBehaviour:
   answerTurn: 0
   answerNum: 0
   answerCount: 0
+  npc: 0
 --- !u!224 &4777353712092356307
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2429,8 +2436,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -604, y: 38}
-  m_SizeDelta: {x: 420.39294, y: 298.34332}
+  m_AnchoredPosition: {x: -574, y: -1}
+  m_SizeDelta: {x: 205.62549, y: 279.6291}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &4777353713167047853
 GameObject:
@@ -2478,7 +2485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c07a525984e1694eb3dda682695a4cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 324bb09c143b2f34285563d599823527, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

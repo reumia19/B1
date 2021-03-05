@@ -66,6 +66,7 @@ public class PlayerManager : MovingObject
             bool checkCollisionFlag = base.CheckCollision();
             if (checkCollisionFlag)
                 break;
+
             if (nDialogueManager.isAction)
                 break;
 
