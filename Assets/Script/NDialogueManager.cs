@@ -52,6 +52,7 @@ public class NDialogueManager : MonoBehaviour
 
     public string Action(GameObject scanObj)
     {
+        //StopAllCoroutines();
         string submit = "";
         scanObject = scanObj;
         NDataBase database = scanObject.GetComponent<NDataBase>();

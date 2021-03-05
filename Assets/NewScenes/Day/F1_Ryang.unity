@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1051
-  isNpc: 0
+  isNpc: 1
 --- !u!114 &514358345
 MonoBehaviour:
   m_ObjectHideFlags: 0

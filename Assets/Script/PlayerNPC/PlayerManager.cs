@@ -66,6 +66,8 @@ public class PlayerManager : MovingObject
             bool checkCollisionFlag = base.CheckCollision();
             if (checkCollisionFlag)
                 break;
+            if (nDialogueManager.isAction)
+                break;
 
             animator.SetBool("Walking", true);
 
