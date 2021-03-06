@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/NewScenes/Day/D_Elevator.unity
+- path: Assets/NewScenes/Night/NF3_Blue.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
