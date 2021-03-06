@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 5464449127712041337, guid: 85dc1d6192eac7f4d8bc9f64eac12ff8,
         type: 3}
       propertyPath: BGM_Num
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5464449127712041338, guid: 85dc1d6192eac7f4d8bc9f64eac12ff8,
         type: 3}
@@ -2755,27 +2755,32 @@ PrefabInstance:
         type: 3}
       propertyPath: clips.Array.data[5]
       value: 
-      objectReference: {fileID: 8300000, guid: a03d02d9997682b4eafe4161b4a36c8d, type: 3}
+      objectReference: {fileID: 8300000, guid: 3e4ff6730ba78a5479eb37711d808966, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: aeaec48c26c543741bc37fa3a5153a6d, type: 3}
+      objectReference: {fileID: 8300000, guid: 80aa6a18ce88e244982692ecec5d0e6f, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 46a15a35ae6f76e459aee99d3faad47d, type: 3}
+      objectReference: {fileID: 8300000, guid: 23ea3efe472822a46abf8b6551068a16, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: f665552d316b39b40ab2b84519c00826, type: 3}
+      objectReference: {fileID: 8300000, guid: 1d8129aa7fa05654b9073d348491273e, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[4]
       value: 
-      objectReference: {fileID: 8300000, guid: 0ff781f0331acd649bb70fab46e65d92, type: 3}
+      objectReference: {fileID: 8300000, guid: 3e4ff6730ba78a5479eb37711d808966, type: 3}
+    - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
+        type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f67a7d811baffbd48b2fddecd7f6e09a, type: 3}
     - target: {fileID: 6260027814941745931, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: m_Name
