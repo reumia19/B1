@@ -70,6 +70,7 @@ public class PlayerManager : MovingObject
             if (nDialogueManager.isAction)
                 break;
 
+
             animator.SetBool("Walking", true);
 
             // theAudio.Play(walkSound_1);
@@ -92,7 +93,7 @@ public class PlayerManager : MovingObject
                     break;
 
             }
-
+            
             currentWalkCount = 0;
         }
         animator.SetBool("Walking", false);

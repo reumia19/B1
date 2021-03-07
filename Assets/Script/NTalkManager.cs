@@ -293,15 +293,15 @@ public class NTalkManager : MonoBehaviour
             "여기서 지내게 되겠구나:10",
             "예상보다는 더 괜찮은데.:10"
         });
-        talkData.Add(41 + 1000, new string[] {
+        talkData.Add(52 + 1000, new string[] {
             "(이럴 시간이 없어. 동생의 흔적을 찾아보자)"
         });
 
-        talkData.Add(53 + 1000, new string[] {
-            "(여긴 라코스테의 방이겠구나.)"
+        talkData.Add(1063, new string[] {
+            "(여긴 라코스테의 방이겠구나.):10"
         });
 
-        talkData.Add(52 + 1000, new string[] {
+        talkData.Add(1064, new string[] {
             "(여기가 동생이 지내던 방인가?):10",
             "(단서가 있을지도 몰라. 어서 찾아보자):10"
         });
@@ -361,7 +361,7 @@ public class NTalkManager : MonoBehaviour
         });
         choiceData.Add(60 + 2001, new Choice("(뭐라고 말해야 할까)", new string[] { "글쎄요.", "아름다워요." }));
         talkData.Add(60 + 2001 + 100, new string[] {
-            "글쎄요.",
+            "글쎄요.:10",
             "절박해 보여요. 불행해보이고. 금방이라도 녹을 것 같아요.:10",
             "원작에서는 아무 비중 없던 오필리어가 죽음의 순간에야 그림으로 남겨졌다는 것도.:10",
             "비극이 따로 없죠.:10",
