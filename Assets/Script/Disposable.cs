@@ -9,7 +9,7 @@ public class Disposable : MonoBehaviour
 
     QuestManager theQuest;
     private string beforeQuest;
-    private void Awake()
+    private void Start()
     {
         theQuest = FindObjectOfType<QuestManager>();
         beforeQuest = theQuest.CheckQuest()+ theQuest.questActionIndex;

@@ -1315,29 +1315,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2569284182528050697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4288814372300728053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd887ac3fd134e48a81e1953c937df4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction:
-  - RIGHT
-  - RIGHT
-  - RIGHT
-  - RIGHT
-  - RIGHT
-  - RIGHT
-  - RIGHT
-  - RIGHT
-  - RIGHT
-  - RIGHT
 --- !u!114 &2569284182528050698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,7 +1327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073bcfca23dfb224582408507cd6ecd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3000
+  id: 3100
   isNpc: 1
 --- !u!1 &2995601354637242472
 GameObject:
@@ -1523,7 +1500,6 @@ GameObject:
   - component: {fileID: 4288814372300728062}
   - component: {fileID: 4288814372300728049}
   - component: {fileID: 2569284182528050698}
-  - component: {fileID: 2569284182528050697}
   m_Layer: 12
   m_Name: NPC_Laco
   m_TagString: Untagged

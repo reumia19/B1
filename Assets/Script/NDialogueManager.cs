@@ -91,7 +91,7 @@ public class NDialogueManager : MonoBehaviour
             questTalkIndex = questManager.GetQuestTalkIndex(id);
             talkNumber = id + questTalkIndex + answerNum;
              talkData = talkManager.GetTalk(talkNumber, talkIndex); //  대사 호출하기 
-            theData.Change(talkNumber.ToString());
+           
         }
 
         //EndTalk 끝나는 부분에만 실행
@@ -116,7 +116,7 @@ public class NDialogueManager : MonoBehaviour
                 questManager.CheckQuest(id);
                 Debug.Log(questManager.CheckQuest() + questManager.questActionIndex);
             }
-
+            theData.Change(talkNumber.ToString());
             talkIndex = 0;
             return "대화 종료";
         }

@@ -289,19 +289,19 @@ public class NTalkManager : MonoBehaviour
         });
 
         //장소별 대사
-        talkData.Add(40 +1000, new string[] {
-            "(여기서 지내게 되겠구나):10",
-            "(예상보다는 더 괜찮은데.):10"
+        talkData.Add(1000+51, new string[] {
+            "여기서 지내게 되겠구나:10",
+            "예상보다는 더 괜찮은데.:10"
         });
         talkData.Add(41 + 1000, new string[] {
-            "(이럴 시간이 없어. 동생의 흔적을 찾아보자):10"
+            "(이럴 시간이 없어. 동생의 흔적을 찾아보자)"
+        });
+
+        talkData.Add(53 + 1000, new string[] {
+            "(여긴 라코스테의 방이겠구나.)"
         });
 
         talkData.Add(52 + 1000, new string[] {
-            "(여긴 라코스테의 방이겠구나.):10"
-        });
-
-        talkData.Add(51 + 1000, new string[] {
             "(여기가 동생이 지내던 방인가?):10",
             "(단서가 있을지도 몰라. 어서 찾아보자):10"
         });
@@ -351,9 +351,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(60 + 3100 + 700, new string[] { //3760
             "웽알_1.:30"
         });
-        talkData.Add(60 + 3100 + 700 + 1, new string[] { //3761    
-            "웽알_2.:30"
-        });
+        
 
         //푸른수염 갤러리 대사
         talkData.Add(60 + 2001 , new string[] {
@@ -378,6 +376,10 @@ public class NTalkManager : MonoBehaviour
             "모든 걸 체념하고 자신의 운명을 받아들이는..숭고함이라니.:20"
         });
 
+        talkData.Add(2361, new string[] {
+            "좀 웃어보는 건 어때? 훨씬 예뻐보일 것 같은데.:20"
+        });
+
         //푸른수염 서재 대사
         talkData.Add(60 + 2000, new string[] {
             "책이 아주 많네요. 혹시 무슨 일을 하시는지 여쭤도 될까요?:10",
@@ -385,6 +387,24 @@ public class NTalkManager : MonoBehaviour
             "완벽한 향을 찾기위해 하나 둘 공부하다보니..이렇게 큰 서재가 만들어졌네요.:20",
             "(조향사라니.. 꽤나 특이한 직업이네):10"
         });
+
+        // 밤으로 변경
+        talkData.Add(70+ 2000, new string[] {
+            "이제 너무 늦었네요. 저택을 돌아다니느라 피곤하실 테니 일찍 들어가 쉬세요.:20"
+        });
+
+        choiceData.Add(70 + 2000, new Choice("(어떻게 할까)", new string[] { "배려해주셔서 감사해요", "괜찮아요. 평소에도 늦게 자는 편이거든요" }));
+        talkData.Add(70 + 2000+100, new string[] {
+            "배려해주셔서 감사해요. 오늘 감사했습니다.:10"
+        });
+        talkData.Add(70 + 2000 + 200, new string[] {
+            "괜찮아요. 평소에 늦게 자는 편이거든요.:10",
+            "저택의 밤은 빨리 어두워진답니다.:20",
+            "여성분이 늦게 돌아다니게 둘 수는 없죠. 위험하잖아요.:20",
+        });
+
+
+
 
 
         //시나리오 끗
