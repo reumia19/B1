@@ -1161,7 +1161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &844663862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2225,6 +2225,80 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1506249147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506249149}
+  - component: {fileID: 1506249148}
+  - component: {fileID: 1506249150}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506249148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506249147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ccec63e89e9614f830916cc25f32d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transferMapName: Ending
+  thisMapName: Day
+  doorSound: 
+  overName: GameOver_01
+--- !u!4 &1506249149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506249147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0887135, y: -4.55, z: -200.63672}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1506249150
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506249147}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &1676804967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2680,147 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1880794511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1880794513}
+  - component: {fileID: 1880794512}
+  m_Layer: 0
+  m_Name: Show_Over
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1880794512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880794511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6f61cc49d18ba48ac8991d589db051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transferMapName: Title_New
+  thisMapName: Day
+  doorSound: 
+  EndingName:
+  - GameOver_01
+  - GameOver_03
+  - GameOver_04
+  - GameEnding_01
+  - GameEnding_02
+  - GameEnding_03
+  - GameEnding_04
+  DialogueNumber: 50c3000051c3000052c3000053c3000054c3000055c3000056c30000
+--- !u!4 &1880794513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880794511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0887135, y: 1.4454195, z: -200.63672}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1899784963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899784966}
+  - component: {fileID: 1899784965}
+  - component: {fileID: 1899784964}
+  - component: {fileID: 1899784967}
+  m_Layer: 0
+  m_Name: B1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1899784964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899784963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc7a5fb57a267f4aba7e14f6a646f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DBObject: {fileID: 1899784963}
+--- !u!114 &1899784965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899784963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073bcfca23dfb224582408507cd6ecd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5000
+  isNpc: 0
+--- !u!4 &1899784966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899784963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.72, y: -4.58, z: -199.97656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1899784967
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899784963}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &2107019871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,6 +2994,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: N_start
+      objectReference: {fileID: 0}
+    - target: {fileID: 365078974433333428, guid: 1ba4a3b04b6fb6044ad1262e2e484ae6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 365078974433333432, guid: 1ba4a3b04b6fb6044ad1262e2e484ae6,
         type: 3}
@@ -3265,12 +3485,12 @@ PrefabInstance:
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switch_name.Array.size
-      value: 9
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.size
-      value: 9
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
@@ -3290,31 +3510,71 @@ PrefabInstance:
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[2]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[3]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[4]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[5]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
+        type: 3}
+      propertyPath: switch_name.Array.data[9]
+      value: GameOver_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
+        type: 3}
+      propertyPath: switch_name.Array.data[10]
+      value: GameOver_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
+        type: 3}
+      propertyPath: switch_name.Array.data[11]
+      value: GameOver_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
+        type: 3}
+      propertyPath: switch_name.Array.data[12]
+      value: GameEnding_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
+        type: 3}
+      propertyPath: switch_name.Array.data[13]
+      value: GameEnding_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
+        type: 3}
+      propertyPath: switch_name.Array.data[14]
+      value: GameEnding_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
+        type: 3}
+      propertyPath: switch_name.Array.data[15]
+      value: GameEnding_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
+        type: 3}
+      propertyPath: switches.Array.data[12]
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409225, guid: 35bf1f321037aed438842db6091f0fdb,

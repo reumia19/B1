@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/NewScenes/Night/NF1_Guest.unity
+- path: Assets/NewScenes/TestMap.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

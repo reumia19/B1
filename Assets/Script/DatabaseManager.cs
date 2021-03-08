@@ -75,4 +75,12 @@ public class DatabaseManager : MonoBehaviour
             Debug.Log("핑크색 퀘스트 완료");
         }
     }
+
+    public void Reset()
+    {
+        for (int i = 0; i < this.switch_name.Length; i++)
+        {
+            switches[i] = false;
+        }
+    }
 }
