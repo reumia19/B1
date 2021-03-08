@@ -24,7 +24,9 @@ public class QuestManager : MonoBehaviour
         questList.Add(40, new QuestData("시나리오_3", new int[] {3000, 30000}));
         questList.Add(50, new QuestData("시나리오_4", new int[] {3000,1000}));
         questList.Add(60, new QuestData("시나리오_5", new int[] { 0 }));
-        questList.Add(70, new QuestData("시나리오_끗", new int[] {0}));
+        questList.Add(70, new QuestData("밤_7", new int[] {2000,0}));
+        questList.Add(80, new QuestData("밤_8", new int[] { 0 }));
+        questList.Add(90, new QuestData("밤_9", new int[] { 0 }));
         Debug.Log(questList[10].npcId[0]);
     }
 

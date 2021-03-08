@@ -18,7 +18,7 @@ public class TransferScene : MonoBehaviour
     bool flag;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
 	   thePlayer = FindObjectOfType<PlayerManager>();
         theAudio = FindObjectOfType<AudioManager>();
@@ -27,11 +27,6 @@ public class TransferScene : MonoBehaviour
         theBGM = FindObjectOfType<BGMManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -46,8 +41,8 @@ public class TransferScene : MonoBehaviour
         }
     }
 
-
-    IEnumerator TransferCoroutine()
+    
+    protected IEnumerator TransferCoroutine()
     {
         theOrder.NotMove();
         theAudio.Play(doorSound);

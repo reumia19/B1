@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/NewScenes/Day/F1_Ryang.unity
+- path: Assets/NewScenes/Night/NF1_Guest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

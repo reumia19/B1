@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoNight : MonoBehaviour
+public class GoNight : TransferScene
 {
-    // Start is called before the first frame update
+    QuestManager theQuest;
+    public string triggerSceneName; 
     void Start()
     {
-        
+        base.Start();
+        theQuest = FindObjectOfType<QuestManager>();    
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-        
+     if(theQuest.CheckQuest()+theQuest.questActionIndex == triggerSceneName)
+        {
+            StartCoroutine(TransferCoroutine());
+        }   
     }
+
 }

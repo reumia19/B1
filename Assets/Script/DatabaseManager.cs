@@ -60,13 +60,16 @@ public class DatabaseManager : MonoBehaviour
 
     public void CheckDataBase()
     {
-        bool a = true;
+        if (theQuest.CheckQuest() != "시나리오_5")
+            return;
+
+        int countPinkQuest = 0;
 
         for (int i = 0; i < this.switches.Length; i++)
             if (!this.switches[i])
-                a = false;
+                countPinkQuest++;
 
-        if (a && theQuest.CheckQuest() == "시나리오_5")
+        if (countPinkQuest <= 6)
         {
             theQuest.CheckQuest(0);
             Debug.Log("핑크색 퀘스트 완료");
