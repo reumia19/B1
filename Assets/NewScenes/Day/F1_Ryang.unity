@@ -503,6 +503,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGM
       objectReference: {fileID: 0}
+    - target: {fileID: 5464449127712041337, guid: 85dc1d6192eac7f4d8bc9f64eac12ff8,
+        type: 3}
+      propertyPath: BGM_Num
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5464449127712041338, guid: 85dc1d6192eac7f4d8bc9f64eac12ff8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1177,7 +1182,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &208057200568191451
 GameObject:
