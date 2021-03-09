@@ -84,32 +84,18 @@ public class OrderManager : MonoBehaviour
 				while(characters[i].transform.position != thePlayer.transform.position)
 				{
 					yield return new WaitUntil(() => characters[i].queue.Count < 2);
-					bool xMove = false;
 					//x값 차이가 많이 나면 xMove를 TRUE로 바꿈
-					if (Mathf.Abs(characters[i].transform.position.x - thePlayer.transform.position.x) > 8)
+					if (Mathf.Abs(characters[i].transform.position.x - thePlayer.transform.position.x) > 1)
 					{
-						xMove = true;
-						print(Mathf.Abs(characters[i].transform.position.x - thePlayer.transform.position.x));
-					}
+						if (characters[i].transform.position.x - thePlayer.transform.position.x < 0) characters[i].Move("RIGHT");
+						else characters[i].Move("LEFT");
 
-					if (characters[i].transform.position.x - thePlayer.transform.position.x < 0 && xMove)
-					{
-						characters[i].Move("RIGHT");
 					}
-					else if (xMove)
+					else if (Mathf.Abs(characters[i].transform.position.y - thePlayer.transform.position.y) > 1)
 					{
-						characters[i].Move("LEFT");
-					}
-					if (Mathf.Abs(characters[i].transform.position.y - thePlayer.transform.position.y) > 4)
-					{
-						if (characters[i].transform.position.y - thePlayer.transform.position.y < 0 && !xMove)
-						{
-							characters[i].Move("UP");
-						}
-						else if (!xMove)
-						{
-							characters[i].Move("DOWN");
-						}
+						if (characters[i].transform.position.y - thePlayer.transform.position.y < 0) characters[i].Move("UP");
+						else characters[i].Move("DOWN");
+				
 					}
 						
 				}

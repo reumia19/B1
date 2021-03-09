@@ -55,7 +55,12 @@ public class MovingTorch : MonoBehaviour
     {
         	targetPosition.Set(thePlayer.transform.position.x, thePlayer.transform.position.y+1, this.transform.position.z);
         	this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime); // 1초에 moveSpeed만큼 이동
-        if (!theDB.Find("Light"))
+
+        if (theDB.Find("10106"))
+        {
+            torch.gameObject.SetActive(true);
+        }
+        /*if (!theDB.Find("Light"))
         {
             if (!cor && count < 101 && torch.gameObject.activeSelf)
             {
@@ -68,7 +73,7 @@ public class MovingTorch : MonoBehaviour
            
                 StartCoroutine(Countdown());
             }
-        }
+        }*/
 
     }
     IEnumerator Countdown()

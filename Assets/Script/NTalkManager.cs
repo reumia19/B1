@@ -437,6 +437,45 @@ public class NTalkManager : MonoBehaviour
             "(너무 어두워. 아까 서재에서 전등을 봤어. 잠깐 빌리자.):10"
         });
 
+        //서재
+        talkData.Add(10000 + 100 + 1, new string[] { "(푸른 수염이 받은 상들이 전시돼있어. S대 동문회 부회장, H고 동창회 회장, R 향우회 회장....많기도 해라.)" });
+        talkData.Add(10000 + 100 + 2, new string[] { "(책이 아주 많아. 모두 읽어봤을까?)" });
+        talkData.Add(10000 + 100 + 3, new string[] { "(유기화학, My friends Dahmer, A father's story... 다양한 책들이 있어.)" });
+        talkData.Add(10000 + 100 + 4, new string[] { "(지나치게 수도세가 많이 나오네. 왠지 수상한걸? 기억해두자.)" });
+        talkData.Add(10000 + 100 + 5, new string[] { "어딘가 전등이 있을 거야. 들키지 않게 조심하자" });
+        talkData.Add(10000 + 100 + 6, new string[] {
+            "(전등을 찾았다. 아까 한량의 방에서 찾은 쪽지에 뭐라고 적혀있더라? 분명 힌트가 있을거야.)"
+        });
+
+        //침실
+        talkData.Add(10000 + 90 + 1, new string[] { "(창문도 없는데 커텐은 왜 있는거지?)" });
+        talkData.Add(10000 + 90 + 2, new string[] { "(푸른 수염의 침대야. 흰 침구는 관리하기 힘들텐데. 누가 하는 걸까?)" });
+        talkData.Add(10000 + 90 + 3, new string[] { "(푸른 수염의 서랍이야. 별 건 없어.)" });
+
+        //복도
+        talkData.Add(10000 + 80 + 1, new string[] { "(커다랍 서랍이야. 동물 한 마리 쯤은 가뿐히 들어갈 수 있을 것 같은 걸.)" });
+        //갤러리
+        talkData.Add(10000 + 70 + 1, new string[] { "(뱀이 사과를 감싸고 있는 조각상이야. 불길한 느낌이 들어.)" });
+        //식당
+        talkData.Add(10000 + 60 + 1, new string[] { "(민트초코 푸딩이야. 이런 걸 누가 먹지?)" });
+        talkData.Add(10000 + 60 + 2, new string[] { "(맛있겠다. 근데 벌레는 안 꼬이나?)" });
+        talkData.Add(10000 + 60 + 3, new string[] { "(의자가 너무 무거워. 옮길 수는 없을 것 같아.)" });
+        //한량 방
+        talkData.Add(10000 + 30 + 1, new string[] { "(화장대야. 특별한 건 없어.)" });
+        talkData.Add(10000 + 30 + 2, new string[] { "(진짜같은 조화야.)" });
+        talkData.Add(10000 + 30 + 3, new string[] { "(화장대야. 특별한 건 없어.)" });
+        talkData.Add(10000 + 30 + 4, new string[] { "(아까는 못 본 종이야. Night, Hamlet이라고 적혀있어. 무슨 의미일까?)" });
+        talkData.Add(10000 + 30 + 5, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
+        //라코스테방
+        talkData.Add(10000 + 20 + 1, new string[] { "(라코스테는 게임을 좋아하는구나.)" });
+        talkData.Add(10000 + 20 + 2, new string[] { "(라코스테 방에는 덩굴들이 많구나.)" });
+        //지하실
+        talkData.Add(10000 + 120 + 1, new string[] { "(HCL, H2SO4...화학약품들이야. 모두 향수를 만들 때 사용되는 걸까?)" });
+        talkData.Add(10000 + 120 + 2, new string[] { "(강력접착제, 실, 깃털들이야. 안 어울리는 조합인걸)" });
+        talkData.Add(10000 + 120 + 3, new string[] { "(끈들이 어지럽게 널부러져있어. 왜 끈이 여기 있지..)" });
+        talkData.Add(10000 + 120 + 4, new string[] { "(이...이건 뭐야!)" });
+        talkData.Add(10000 + 120 + 5, new string[] { "(대용량 락스야.)" });
+        talkData.Add(10000 + 120 + 6, new string[] { "(여기 왜 욕조가 있지?)" });
 
 
         //시나리오 끗
