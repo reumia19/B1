@@ -50,7 +50,8 @@ public class ShowOver : TransferScene
         if (flag)
         {
             resetCountDown = resetCountDown - Time.deltaTime;
-            return;
+            Debug.Log("카운트다운 : "+resetCountDown);
+;            return;
         }
 
         if (Input.GetKeyDown(KeyCode.Z)&& !flag)

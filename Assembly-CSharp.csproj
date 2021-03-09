@@ -132,6 +132,7 @@
     <Compile Include="Assets\Script\NTransfer.cs" />
     <Compile Include="Assets\Script\NTypeEffect.cs" />
     <Compile Include="Assets\Script\NewEvent\ChangeCode.cs" />
+    <Compile Include="Assets\Script\NewEvent\GameOverLight.cs" />
     <Compile Include="Assets\Script\NewEvent\GoGameOver.cs" />
     <Compile Include="Assets\Script\NewEvent\GoNight.cs" />
     <Compile Include="Assets\Script\NewEvent\NpcMoveOrder.cs" />
