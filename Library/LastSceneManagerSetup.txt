@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/NewScenes/Night/N_Elevator 1.unity
+- path: Assets/NewScenes/Day/F3_Corridor.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

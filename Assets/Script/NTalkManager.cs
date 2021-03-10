@@ -444,7 +444,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000 + 100 + 4, new string[] { "(지나치게 수도세가 많이 나오네. 왠지 수상한걸? 기억해두자.)" });
         talkData.Add(10000 + 100 + 5, new string[] { "어딘가 전등이 있을 거야. 들키지 않게 조심하자" });
         talkData.Add(10000 + 100 + 6, new string[] {
-            "(전등을 찾았다. 아까 한량의 방에서 찾은 쪽지에 뭐라고 적혀있더라? 분명 힌트가 있을거야.)"
+            "(전등을 찾았다. 이대로 지하실에 내려가기에는 너무 위험해, 몸을 지킬만한 걸 찾아보자)"
         });
 
         //침실

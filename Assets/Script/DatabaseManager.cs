@@ -28,7 +28,7 @@ public class DatabaseManager : MonoBehaviour
     }
     private void Update()
     {
-        CheckDataBase();
+        CheckPink();
     }
     public bool Find(string _name)
     {
@@ -58,7 +58,7 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
-    public void CheckDataBase()
+    public void CheckPink()
     {
         if (theQuest.CheckQuest() != "시나리오_5")
             return;
@@ -73,6 +73,24 @@ public class DatabaseManager : MonoBehaviour
         {
             theQuest.CheckQuest(0);
             Debug.Log("핑크색 퀘스트 완료");
+        }
+    }
+
+    public void CheckEnding()
+    {
+        if (theQuest.CheckQuest() != "시나리오_80")
+            return;
+
+        int countEnding = 0;
+
+        for (int i = 0; i < this.switches.Length; i++)
+            if (!this.switches[i])
+                countEnding++;
+
+        if (countEnding<= 12)
+        {
+            theQuest.CheckQuest(0);
+            Debug.Log("지하실 조사 완료");
         }
     }
 
