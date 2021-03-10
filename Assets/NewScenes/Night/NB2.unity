@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 575467475}
   - component: {fileID: 575467474}
   - component: {fileID: 575467473}
+  - component: {fileID: 575467476}
   m_Layer: 0
   m_Name: Last
   m_TagString: Untagged
@@ -249,6 +250,20 @@ Transform:
   m_Father: {fileID: 1384653580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575467476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575467472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073bcfca23dfb224582408507cd6ecd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1000
+  isNpc: 0
 --- !u!1001 &672705673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -555,7 +570,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1384653580}
   - component: {fileID: 1384653579}
-  - component: {fileID: 1384653581}
   m_Layer: 0
   m_Name: step and show
   m_TagString: Untagged
@@ -593,20 +607,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1384653581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384653578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073bcfca23dfb224582408507cd6ecd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  isNpc: 0
 --- !u!4 &1421948733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8695144440011191006, guid: 5b5b7376f5d2e0d46a8b354ecdc8751f,
@@ -677,7 +677,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &208057200568191451
 GameObject:
