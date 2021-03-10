@@ -460,6 +460,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000 + 60 + 1, new string[] { "(민트초코 푸딩이야. 이런 걸 누가 먹지?)" });
         talkData.Add(10000 + 60 + 2, new string[] { "(맛있겠다. 근데 벌레는 안 꼬이나?)" });
         talkData.Add(10000 + 60 + 3, new string[] { "(의자가 너무 무거워. 옮길 수는 없을 것 같아.)" });
+        talkData.Add(10000 + 60 + 4, new string[] { "(나이프를 찾았어. 혹시 모르니까 챙겨가자.)" });
         //한량 방
         talkData.Add(10000 + 30 + 1, new string[] { "(화장대야. 특별한 건 없어.)" });
         talkData.Add(10000 + 30 + 2, new string[] { "(진짜같은 조화야.)" });

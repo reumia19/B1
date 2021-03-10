@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/NewScenes/Night/NF3_Studyroom.unity
+- path: Assets/NewScenes/Night/N_Elevator 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

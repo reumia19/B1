@@ -11,7 +11,7 @@ public class Elevator : MonoBehaviour
     private ChoiceManager theChoice;
     private OrderManager theOrder;
     private AudioManager theAudio;
-    private TransferScene theTransfer;
+    public TransferScene theTransfer;
     private DatabaseManager theDB;
     public string bell;
     public string move;
@@ -28,20 +28,15 @@ public class Elevator : MonoBehaviour
         theChoice = FindObjectOfType<ChoiceManager>();
         theOrder = FindObjectOfType<OrderManager>();
         theAudio = FindObjectOfType<AudioManager>();
-        theTransfer = FindObjectOfType<TransferScene>();
+        //theTransfer = FindObjectOfType<TransferScene>();
         theDB = FindObjectOfType<DatabaseManager>();
 
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(b1)
-        {
-            flag = true;
-            StartCoroutine(B1Coroutine());
-            b1 = false;
-        } 
-        else if(!flag && !b1)
+
+         if(!flag)
         {
             flag = true;
             StartCoroutine(EventCoroutine());
@@ -60,15 +55,19 @@ public class Elevator : MonoBehaviour
         {
             case 0:
                 theTransfer.transferMapName = f3;
+                Debug.Log(f3);
                 break;
             case 1:
                 theTransfer.transferMapName = f2;
+                Debug.Log(f2);
                 break;
             case 2:
                 theTransfer.transferMapName = f1;
+                Debug.Log(f1);
                 break;
             case 3:
                 theTransfer.transferMapName = b;
+                Debug.Log(b);
                 break;
         }
         
@@ -80,22 +79,5 @@ public class Elevator : MonoBehaviour
 
     }
 
-    IEnumerator B1Coroutine()
-    {
-        theOrder.PreloadCharacter();
-        theOrder.NotMove();
-        theChoice.ShowChoice(basement);
-        yield return new WaitUntil(() => !theChoice.choicing);
-        switch (theChoice.GetResult())
-        {
-            case 0:
-                theTransfer.transferMapName = "B1-Corridor";
-                theAudio.Play(bell);
-                theOrder.Move();
-                break;
-            case 1:
-                StartCoroutine(EventCoroutine());
-                break;
-        }
-    }
+    
 }
