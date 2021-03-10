@@ -39,12 +39,13 @@ public class TransferScene : MonoBehaviour
             Debug.Log("플레이어 마즘");
             StartCoroutine(TransferCoroutine());
         }
+        
     }
 
     
     protected IEnumerator TransferCoroutine()
     {
-        theOrder.NotMove();
+        thePlayer.notMove = true;
         theAudio.Play(doorSound);
         theBGM.FadeOutMusic();
         theFade.FadeOut();
@@ -54,7 +55,7 @@ public class TransferScene : MonoBehaviour
         thePlayer.currentMapName = transferMapName;
         SceneManager.LoadScene(transferMapName);
         theFade.FadeIn();
-        theOrder.Move();
+        thePlayer.notMove = false;
         flag = false;
     }
 }

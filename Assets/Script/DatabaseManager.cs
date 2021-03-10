@@ -11,7 +11,7 @@ public class DatabaseManager : MonoBehaviour
 
     public string[] switch_name;
     public bool[] switches;
-
+    private bool isNight = false;
     public bool state;
     private void Awake()
     {
@@ -61,18 +61,20 @@ public class DatabaseManager : MonoBehaviour
 
     public void CheckPink()
     {
-        if (theQuest.CheckQuest() != "시나리오_5")
+        
+        if (theQuest.CheckQuest() != "시나리오_5" || isNight)
             return;
 
         int countPinkQuest = 0;
 
         for (int i = 0; i < this.switches.Length; i++)
-            if (!this.switches[i])
+            if (this.switches[i])
                 countPinkQuest++;
-
+        Debug.Log(countPinkQuest);
         if (countPinkQuest <= 6)
         {
             theQuest.CheckQuest(0);
+            isNight = true;
             Debug.Log("핑크색 퀘스트 완료");
         }
     }
@@ -85,7 +87,7 @@ public class DatabaseManager : MonoBehaviour
         int countEnding = 0;
 
         for (int i = 0; i < this.switches.Length; i++)
-            if (!this.switches[i])
+            if (this.switches[i])
                 countEnding++;
 
         if (countEnding<= 12)

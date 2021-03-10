@@ -472,6 +472,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: N_start
       objectReference: {fileID: 0}
+    - target: {fileID: 365078974433333428, guid: 1ba4a3b04b6fb6044ad1262e2e484ae6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365078974433333431, guid: 1ba4a3b04b6fb6044ad1262e2e484ae6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 365078974433333432, guid: 1ba4a3b04b6fb6044ad1262e2e484ae6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -525,6 +535,11 @@ PrefabInstance:
     - target: {fileID: 365078974433333432, guid: 1ba4a3b04b6fb6044ad1262e2e484ae6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333100282137650582, guid: 1ba4a3b04b6fb6044ad1262e2e484ae6,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -737,7 +752,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127617999
 GameObject:
@@ -1093,7 +1108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &3123249516101865299
 Animator:
   serializedVersion: 3
@@ -1176,7 +1191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3123249516101865302
 BoxCollider2D:

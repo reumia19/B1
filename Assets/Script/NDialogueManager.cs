@@ -117,6 +117,7 @@ public class NDialogueManager : MonoBehaviour
                 Debug.Log(questManager.CheckQuest() + questManager.questActionIndex);
             }
             theData.Change(talkNumber.ToString());
+            Debug.Log(talkNumber.ToString());
             talkIndex = 0;
             return "대화 종료";
         }
