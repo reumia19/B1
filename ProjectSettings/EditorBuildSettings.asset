@@ -81,7 +81,7 @@ EditorBuildSettings:
     path: Assets/NewScenes/Day/F2_Corridor.unity
     guid: 05c7f135be3723b49944d16305cee1f7
   - enabled: 1
-    path: Assets/NewScenes/Day/F3_Studyroom 1.unity
+    path: Assets/NewScenes/Day/F3_Studyroom.unity
     guid: 22192263a9db0bc4495b99b045316726
   - enabled: 1
     path: Assets/NewScenes/Day/F3_Corridor.unity
