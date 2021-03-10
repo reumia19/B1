@@ -1237,33 +1237,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
         type: 3}
+      propertyPath: portaritArr.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
+        type: 3}
       propertyPath: portaritArr.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76,
+      objectReference: {fileID: 21300000, guid: 6a0c34eb4d7ee694698354ed56c91d16,
         type: 3}
     - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
         type: 3}
       propertyPath: portaritArr.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76,
+      objectReference: {fileID: 21300000, guid: a0049e558f952a949b62f15ddc48869c,
         type: 3}
     - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
         type: 3}
       propertyPath: portaritArr.Array.data[5]
       value: 
-      objectReference: {fileID: 21300000, guid: e15b99ffc2210ca46b4c636dc7922e76,
+      objectReference: {fileID: 21300000, guid: a0049e558f952a949b62f15ddc48869c,
         type: 3}
     - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
         type: 3}
       propertyPath: portaritArr.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 324bb09c143b2f34285563d599823527,
+      objectReference: {fileID: 21300000, guid: 6f9eedb87dad8b64e80808d65cf024dc,
         type: 3}
     - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
         type: 3}
       propertyPath: kor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
+        type: 3}
+      propertyPath: portaritArr.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: a3c1f5a6f5997234981deeb59984fc62,
+        type: 3}
+    - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
+        type: 3}
+      propertyPath: portaritArr.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b104b0f18ac70c4d86ef47739de5890,
+        type: 3}
+    - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
+        type: 3}
+      propertyPath: portaritArr.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: a862ea307cb7be44db9a557bfd980464,
+        type: 3}
+    - target: {fileID: 1304248062778614109, guid: 28a73a8649dc66a409da44c45a660a8e,
+        type: 3}
+      propertyPath: portaritArr.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 82983d613a97cb64eaa729b757f60256,
+        type: 3}
     - target: {fileID: 1304248062778614111, guid: 28a73a8649dc66a409da44c45a660a8e,
         type: 3}
       propertyPath: m_Name
@@ -2518,7 +2547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 324bb09c143b2f34285563d599823527, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f9eedb87dad8b64e80808d65cf024dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

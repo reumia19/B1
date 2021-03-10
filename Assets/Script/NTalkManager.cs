@@ -575,15 +575,6 @@ public class NTalkManager : MonoBehaviour
         //오브젝트 조사
         talkData.Add(10000 + 10 + 1, new string[] {"앗! 서랍 안에 벌레가 있잖아. 빨리 닫자."});
         talkData.Add(10000 + 10 + 2, new string[] { "가짜 나무야. 이 집에 진짜 식물은 없는걸까?." });
-        talkData.Add(10000 + 20 + 1, new string[] { "라코스테는 게임을 좋아하는구나" });
-        talkData.Add(10000 + 20 + 2, new string[] { "라코스테 방에는 덩굴들이 많구나." });
-        talkData.Add(10000 + 30 + 1, new string[] { "화장대야. 특별한 건 없어." });
-        talkData.Add(10000 + 30 + 2, new string[] { "진짜같은 조화야." });
-        talkData.Add(10000 + 30 + 3, new string[] { "아까는 못 본 종이야. Night, Hamlet이라고 적혀있어. 무슨 의미일까?" });
-        talkData.Add(10000 + 40 + 1, new string[] { "라코스테 방에는 덩굴들이 많구나." });
-        talkData.Add(10000 + 40 + 2, new string[] { "라코스테 방에는 덩굴들이 많구나." });
-
-        talkData.Add(10000 + 40 + 3, new string[] { "라코스테 방에는 덩굴들이 많구나." });
 
         //길 막는 특수 오브젝트
         talkData.Add(20000 + 50 + 1, new string[] { "여기서 너무 멀어지는 건 실례일 것 같아." });

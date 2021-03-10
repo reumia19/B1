@@ -11,6 +11,15 @@ TextureImporter:
   - first:
       213: 7182344009454081678
     second: torch_restaurante_Day_2
+  - first:
+      213: -5653265954352167042
+    second: torch_restaurante_Day_0
+  - first:
+      213: 4426626822245072719
+    second: torch_restaurante_Day_1
+  - first:
+      213: -484896344191593876
+    second: torch_restaurante_Day_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,19 +120,19 @@ TextureImporter:
       name: torch_restaurante_Day_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 30
-        height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 36.666668
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6a8612ec70135420800000000000000
-      internalID: 2617453936987507309
+      spriteID: e77870a11909b81b0800000000000000
+      internalID: -5653265954352167042
       vertices: []
       indices: 
       edges: []
@@ -132,19 +141,19 @@ TextureImporter:
       name: torch_restaurante_Day_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 36
         y: 0
-        width: 30
-        height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 36.666668
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3647ca3f0f3bfb890800000000000000
-      internalID: -7440030211931081629
+      spriteID: f4f322d34a98e6d30800000000000000
+      internalID: 4426626822245072719
       vertices: []
       indices: 
       edges: []
@@ -153,19 +162,19 @@ TextureImporter:
       name: torch_restaurante_Day_2
       rect:
         serializedVersion: 2
-        x: 77
+        x: 72
         y: 0
-        width: 30
+        width: 36.666668
         height: 54
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e865a2aa2dfcca360800000000000000
-      internalID: 7182344009454081678
+      spriteID: c621393185d4549f0800000000000000
+      internalID: -484896344191593876
       vertices: []
       indices: 
       edges: []
