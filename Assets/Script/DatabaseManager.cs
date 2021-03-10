@@ -29,6 +29,7 @@ public class DatabaseManager : MonoBehaviour
     private void Update()
     {
         CheckPink();
+        CheckEnding();
     }
     public bool Find(string _name)
     {
@@ -78,7 +79,7 @@ public class DatabaseManager : MonoBehaviour
 
     public void CheckEnding()
     {
-        if (theQuest.CheckQuest() != "시나리오_80")
+        if (theQuest.CheckQuest() != "시나리오_8")
             return;
 
         int countEnding = 0;

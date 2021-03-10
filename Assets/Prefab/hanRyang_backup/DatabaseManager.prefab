@@ -54,9 +54,21 @@ MonoBehaviour:
   - 2161
   - 2261
   - 2060
-  - 
-  - 
-  - 
-  - 
-  switches: 00000000000000000000
+  - 1063
+  - 1064
+  - 1065
+  - GameOver_01
+  - GameOver_03
+  - GameOver_04
+  - GameEnding_01
+  - GameEnding_02
+  - GameEnding_03
+  - GameEnding_04
+  - 10201
+  - 10202
+  - 10203
+  - 10204
+  - 10205
+  - 10206
+  switches: 00000000000000000000000000000000000000000000
   state: 0

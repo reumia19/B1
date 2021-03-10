@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeScene:
   - "\uC2DC\uB098\uB9AC\uC624_41"
+  - "\uC2DC\uB098\uB9AC\uC624_50"
   disposableObject: {fileID: 5220889874428231406}
 --- !u!4 &1631195320
 Transform:
