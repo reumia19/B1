@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/NewScenes/Day/F1_Guest.unity
     guid: 2331c1e7377d088499bb2d8018f5f03c
   - enabled: 1
-    path: Assets/NewScenes/Night/N_Elevator 1.unity
+    path: Assets/NewScenes/Night/N_Elevator.unity
     guid: 6bfe4792b9f13e04da0caa12ca892ebb
   - enabled: 1
     path: Assets/NewScenes/Night/NB1.unity
