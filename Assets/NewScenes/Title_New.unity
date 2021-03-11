@@ -565,26 +565,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2841834250142083145, guid: cba7bef1adc1c5e47b0b5dbb959bdaa7,
-        type: 3}
-      propertyPath: m_Text
-      value: "\uAC8C\uC784\uC744 \uD50C\uB808\uC774\uD574\uC8FC\uC154\uC11C \uAC10\uC0AC\uD569\uB2C8\uB2E4.
-        \r\n\r\n\uAE30\uD68D, \uC544\uD2B8 \uB514\uB809\uD305 \uC2EC\uC608\uB9BC\r\n\uD504\uB85C\uADF8\uB798\uBC0D,
-        \uB77C\uC774\uD305 \uC6D0\uC544\uB984\r\n\uADF8\uB798\uD53D \uC544\uD2B8
-        \uC815\uC9C0\uC6D0\r\nfrom Seoul Institute of Arts\r\n\uBC88\uC5ED \uC815\uC885\uCCA0\r\nfrom
-        Hankook University of Foreign Studies\r\n\r\nGame design, Art Direct: Yerim
-        Sim\r\nProgramming: Areum Won\r\nGraphic Art: Jiwon Jeong\r\nfrom Seoul Institute
-        of Arts\r\nTranslator: Jongchol Jeong\r\nfrom Hankook University of Foreign
-        Studies\r\n\r\n\r\nSpecial thanks to \uAE40\uB300\uD64D \uAD50\uC218\uB2D8\r\n\r\nA
-        song belongs to Nico de Napoli on Free Music Archive. You can find them here:
-        https://freemusicarchive.org/music/Nico_de_Napoli\r\n\r\nSeveral songs on
-        freesfx. You can find the here:\r\nhttps://freesfx.co.uk/Default.aspx\r\n\r\n\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841834250142083150, guid: cba7bef1adc1c5e47b0b5dbb959bdaa7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba7bef1adc1c5e47b0b5dbb959bdaa7, type: 3}
 --- !u!1 &966045597 stripped
@@ -2305,8 +2285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 50.4, y: 227.9}
-  m_SizeDelta: {x: 708.9777, y: 357.07532}
+  m_AnchoredPosition: {x: 50.4, y: 89.616}
+  m_SizeDelta: {x: 708.9777, y: 179.23125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4777353712593987019
 GameObject:
@@ -2362,16 +2342,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 6
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: "\uBAAC\uC77C\uC774\uACE0... \uBAAC\uC77C\uC774\uACE0....\u315C\u315C\u315C\uBAAC\uC77C\uC774\uACE0...
-    \uBAAC\uC77C\uC774\uACE0....\u315C\u315C\u315C\uBAAC\uC77C\uC774\uACE0... \uBAAC\uC77C\uC774\uACE0....\u315C\u315C\u315C\uBAAC\uC77C\uC774\uACE0...
-    \uBAAC\uC77C\uC774\uACE0....\u315C\u315C\u315C\uBAAC\uC77C\uC774\uACE0... \uBAAC\uC77C\uC774\uACE0....\u315C\u315C\u315C\uBAAC\uC77C\uC774\uACE0...
-    \uBAAC\uC77C\uC774\uACE0....\u315C\u315C\u315C\uBAAC\uC77C\uC774\uACE0... \uBAAC\uC77C\uC774\uACE0....\u315C\u315C\u315C"
+  m_Text: "\uBAAC\uC77C\uC774\uACE0... \uBAAC\uC77C\uC774\uACE0....\u315C\u315C\u315C"
 --- !u!82 &4777353712593987022
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3048,68 +3025,68 @@ PrefabInstance:
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.size
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[9]
       value: 
-      objectReference: {fileID: 8300000, guid: 4330db27fdf3a614ead0742b149c0771, type: 3}
+      objectReference: {fileID: 8300000, guid: 4fb0731cb43bcee4bbbfe14f0df3a5fc, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[10]
       value: 
-      objectReference: {fileID: 8300000, guid: 344c2ccd9ece5aa43a52e9e721d6eb1f, type: 3}
+      objectReference: {fileID: 8300000, guid: a588851e9fea26b4a9eabe9eba0fa26b, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[11]
       value: 
-      objectReference: {fileID: 8300000, guid: fe91c64e4180bf24698058e2adfab485, type: 3}
+      objectReference: {fileID: 8300000, guid: 4ada5dcc3c86c44fcba6a1ce3be9c888, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[12]
       value: 
-      objectReference: {fileID: 8300000, guid: 1d8129aa7fa05654b9073d348491273e, type: 3}
+      objectReference: {fileID: 8300000, guid: 71151f2155dda1d418f47f78440ab0ae, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[8]
       value: 
-      objectReference: {fileID: 8300000, guid: 7437bba5e86e4f140b7ebf9f56b17ef5, type: 3}
+      objectReference: {fileID: 8300000, guid: 71151f2155dda1d418f47f78440ab0ae, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[7]
       value: 
-      objectReference: {fileID: 8300000, guid: 9c0f2d4ec6a5ae1408e78f1e6513be0c, type: 3}
+      objectReference: {fileID: 8300000, guid: 35f8649a81ce74bdf995a8c8ea8f4a59, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[6]
       value: 
-      objectReference: {fileID: 8300000, guid: 5a5be53f118693b439cf55a02f4f3c83, type: 3}
+      objectReference: {fileID: 8300000, guid: fc097ef6fbb3b054a813e81b66b0e5d2, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[5]
       value: 
-      objectReference: {fileID: 8300000, guid: 18d2e2d2ad3408248981385e6d485759, type: 3}
+      objectReference: {fileID: 8300000, guid: 3e4ff6730ba78a5479eb37711d808966, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 95c9dec1b9918e2498a3ccece1bbc704, type: 3}
+      objectReference: {fileID: 8300000, guid: 80aa6a18ce88e244982692ecec5d0e6f, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 937d3a7bab909c64aa687f3dd4dbfa46, type: 3}
+      objectReference: {fileID: 8300000, guid: 23ea3efe472822a46abf8b6551068a16, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 6098d8b74a0e780479351bf25eb5c465, type: 3}
+      objectReference: {fileID: 8300000, guid: 1d8129aa7fa05654b9073d348491273e, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[4]
       value: 
-      objectReference: {fileID: 8300000, guid: 80aa6a18ce88e244982692ecec5d0e6f, type: 3}
+      objectReference: {fileID: 8300000, guid: 3e4ff6730ba78a5479eb37711d808966, type: 3}
     - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: clips.Array.data[0]
