@@ -1031,8 +1031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ece2fb998664d2eb46c1a7be5d190e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: F2_Corridor
-  thisMapName: F2_Restaurante
+  transferMapName: NF2_Corridor
+  thisMapName: NF2_Restaurante
   doorSound: door
 --- !u!61 &1569964660502299979
 BoxCollider2D:
