@@ -149,6 +149,8 @@ public class NDialogueManager : MonoBehaviour
                 }
                 questManager.CheckQuest(0);
             }
+            theData.CheckPink();
+            theData.CheckEnding();
             return "대화 종료";
         }
         

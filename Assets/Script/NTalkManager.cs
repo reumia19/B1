@@ -647,7 +647,6 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(60 + 3100 + 700, new string[] { //
             "뭐야?.:30"
         });
-        talkData.Add(5000, new string[] { "지하실에는 들어가지 말란 말이야. 왜들 그리 멍청한지.:20" });
 
         //푸른수염 갤러리 대사
         talkData.Add(60 + 2001 , new string[] {
@@ -760,7 +759,7 @@ public class NTalkManager : MonoBehaviour
         //한량 방
         talkData.Add(10000 + 30 + 1, new string[] { "(화장대야. 특별한 건 없어.)" });
         talkData.Add(10000 + 30 + 2, new string[] { "(진짜같은 조화야.)" });
-        talkData.Add(10000 + 30 + 3, new string[] { "(아까는 못 본 종이야. Night, Hamlet이라고 적혀있어. 무슨 의미일까?)" });
+        talkData.Add(10000 + 30 + 3, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
         talkData.Add(10000 + 30 + 4, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
         //라코스테방
         talkData.Add(10000 + 20 + 1, new string[] { "(라코스테는 게임을 좋아하는구나.)" });

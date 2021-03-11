@@ -26,11 +26,7 @@ public class DatabaseManager : MonoBehaviour
         }
         theQuest = FindObjectOfType<QuestManager>();
     }
-    private void Update()
-    {
-        CheckPink();
-        CheckEnding();
-    }
+
     public bool Find(string _name)
     {
         state = false;
