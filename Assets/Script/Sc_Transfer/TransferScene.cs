@@ -9,7 +9,7 @@ public class TransferScene : MonoBehaviour
     public string thisMapName;
     public string doorSound;
 
-    private PlayerManager thePlayer;
+    protected PlayerManager thePlayer;
     private AudioManager theAudio;
     private BGMManager theBGM;
     private FadeManager theFade;

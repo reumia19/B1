@@ -17,11 +17,18 @@ public class GoNight : TransferScene
     // Update is called once per frame
     void Update()
     {
-     if(theQuest.CheckQuest()+theQuest.questActionIndex == triggerSceneName || !flag)
+     if(theQuest.CheckQuest()+theQuest.questActionIndex == triggerSceneName && !flag)
         {
-            flag = true;
-            StartCoroutine(TransferCoroutine());
+            StartCoroutine(Go());
         }   
+    }
+
+    IEnumerator Go()
+    {
+        flag = true;
+        StartCoroutine(TransferCoroutine());
+        yield return new WaitUntil(()=> !base.thePlayer.notMove);
+        Destroy(this.gameObject);
     }
 
 }
