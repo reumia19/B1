@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 392}
   m_MaxSize: {x: 22006, y: 14042}
   vertical: 0
-  controlID: 177
+  controlID: 178
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 635, y: 392}
   m_MaxSize: {x: 18005, y: 14042}
   vertical: 1
-  controlID: 178
+  controlID: 19
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 635, y: 271}
   m_MaxSize: {x: 18005, y: 10021}
   vertical: 0
-  controlID: 179
+  controlID: 20
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -432,19 +432,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab
+    - Assets/NewScenes
   m_ViewMode: 1
   m_StartGridSize: 48
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/NewScenes
   m_LastFoldersGridSize: 48
   m_LastProjectPath: "C:\\Users\\ahreu\\OneDrive\\\uBB38\uC11C\\GitHub\\B1"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c0460000
-    m_LastClickedID: 18112
+    m_SelectedIDs: be460000
+    m_LastClickedID: 18110
     m_ExpandedIDs: 00000000dc3f0000bc460000be460000c0460000c246000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -565,9 +565,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.024541, y: 0.2967378, z: -13.697572}
+    m_Target: {x: 1.8376213, y: -0.7761721, z: -5.4560547}
     speed: 2
-    m_Value: {x: 4.024541, y: 0.2967378, z: -13.697572}
+    m_Value: {x: 1.8376213, y: -0.7761721, z: -5.4560547}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -617,9 +617,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.230818
+    m_Target: 7.1901865
     speed: 2
-    m_Value: 8.230818
+    m_Value: 7.528991
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -865,23 +865,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 34fbfffff4ffffff
+      m_SelectedIDs: 22870000
+      m_LastClickedID: 34594
+      m_ExpandedIDs: 2ebdffff02c0ffffbac2ffff16c4ffff5ec8ffff2cceffff02dcffff72dcffffb6deffffcadeffffa4e0ffffd8e0ffffe6e3fffff8e3ffff28e4ffff7ce4ffff56e6ffff72e6ffff02e7ffff14e7ffff04eaffff20eaffff46eaffff86eaffff1cecffff64ecffff78ecffffc2ecffffe2edffff34efffff88efffff9aefffffd4effffff6efffff18f0ffff3ef0ffff60f1ffff6af1ffffb6f8ffff34fbfffff271000064810000c88400002887000046880000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: BGM
+        m_OriginalName: BGM
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -17192
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 

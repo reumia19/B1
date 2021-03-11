@@ -474,7 +474,7 @@ public class NTalkManager : MonoBehaviour
     void GenerateKorData()
     {
 
-        TestData();
+
 
         //일반대사
         talkData.Add(1000, new string[] { "..... :10" }); //없으면 오류나서 넣어둔 것..
@@ -492,7 +492,7 @@ public class NTalkManager : MonoBehaviour
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
         // 인트로
         talkData.Add(1000 + 10, new string[] {
-            "동생과 연락이 끊긴 지 벌써 qks년이 지났다.:11",
+            "동생과 연락이 끊긴 지 벌써 반년이 지났다.:11",
             "수소문해서 알게 된 이 저택. 부디 이곳에서는 동생을 찾을 수 있기를.....:11",
             "들어오시죠. 2층으로 안내하겠습니다.:20",
             "(내가 누군지 말하지도 않았는데...? 모든 일이 익숙한 듯 보인다.):11"
