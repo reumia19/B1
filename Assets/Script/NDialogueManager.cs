@@ -150,6 +150,12 @@ public class NDialogueManager : MonoBehaviour
                 }
                 questManager.CheckQuest(0);
             }
+            if(talkNumber == 1181)
+            {
+                questManager.questId = 90;
+                questManager.questActionIndex = 1;
+            }
+            if (talkNumber == 1281) questManager.CheckQuest(1281);
             theData.CheckPink();
             theData.CheckEnding();
             return "대화 종료";
