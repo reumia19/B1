@@ -114,6 +114,10 @@ public class NDialogueManager : MonoBehaviour
                 isAction = false;
                 //이거 지우면 안 됨..!!! 다음 퀘스트로 안 넘어감
                 questManager.CheckQuest(id);
+                if(talkNumber == 2170 || talkNumber == 2270)
+                {
+                    questManager.CheckQuest(10);
+                }
                 Debug.Log(questManager.CheckQuest() + questManager.questActionIndex);
             }
             theData.Change(talkNumber.ToString());
