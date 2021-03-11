@@ -159,11 +159,11 @@ public class NTalkManager : MonoBehaviour
             "Well, if you have any questions, you can ask. :30"
         });
 
-        talkData.Add(3000, new string[] { "You see the frame on that wall? You'd better read it.:30" }); //라코스테 기본(고유)대사
+        talkData.Add(40 + 3000, new string[] { "You see the frame on that wall? You'd better read it.:30" }); //라코스테 기본(고유)대사
 
         talkData.Add(40 + 30000, new string[] { "It's written...'First. Do not go into the basement. Second. Do not walk around at night.'" });
 
-        talkData.Add(40 + 3000, new string[] {
+        talkData.Add(50 + 3000, new string[] {
             "There were rules written on the wall. What happens if I break them?:10",
             "I don't know? I've never broken one.  :30",
             "You don't mean to betray him. do you?:30",
