@@ -130,21 +130,22 @@ public class NDialogueManager : MonoBehaviour
                 Animator endingAnim = Ending.GetComponent<Animator>();
                 endingAnim.SetTrigger("Play");
             }
-            else if (id == 4000)
+            if (id == 4000)
             {
+                Debug.Log("4000번 확인~");
                 if (theData.Find("2161"))
                 {
-                    if (talkNumber == 4190)
+                    if (talkNumber == 4191)
                         theData.Change("GameEnding_01");
-                    else if (talkNumber == 4290)
+                    else if (talkNumber == 4291)
                         theData.Change("GameEnding_02");
                 }
 
                 else if (theData.Find("2261"))
                 {
-                    if (talkNumber == 4190)
+                    if (talkNumber == 4191)
                         theData.Change("GameEnding_03");
-                    else if (talkNumber == 4290)
+                    else if (talkNumber == 4291)
                         theData.Change("GameEnding_04");
                 }
                 questManager.CheckQuest(0);
