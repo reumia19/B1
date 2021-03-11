@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ece2fb998664d2eb46c1a7be5d190e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: D_Elevator
+  transferMapName: N_Elevator
   thisMapName: NF1_Corridor
   doorSound: door
 --- !u!61 &1742173966

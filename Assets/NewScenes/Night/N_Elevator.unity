@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: F1_Corridor
-  thisMapName: D_Elevator
+  thisMapName: N_Elevator
   doorSound: door
 --- !u!61 &1569964660502299979
 BoxCollider2D:
