@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/NewScenes/Day/F2_Gallery.unity
     guid: 6f0f12ff767716c4c91d8a454364b686
   - enabled: 1
+    path: Assets/NewScenes/Night/NB2.unity
+    guid: 96f989f9eefeb654b8856658635a9f59
+  - enabled: 1
     path: Assets/NewScenes/Day/F2_Restaurante.unity
     guid: 59629a630ad881e46aebe6b5cbc8e3d4
   - enabled: 1
