@@ -911,8 +911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ece2fb998664d2eb46c1a7be5d190e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: F3_Corridor
-  thisMapName: F3_Blue
+  transferMapName: NF3_Corridor
+  thisMapName: NF3_Blue
   doorSound: door
 --- !u!61 &1569964660502299979
 BoxCollider2D:
@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadb4359e78e44bdea7257335e6b9ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beforeMap: F3_Corridor
+  beforeMap: NF3_Corridor
   doorSound: door
 --- !u!1 &3117861610476343967
 GameObject:

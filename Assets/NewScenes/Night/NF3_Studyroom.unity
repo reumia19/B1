@@ -1116,6 +1116,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5559175114319106583, guid: 6b41ee4571e5b1e44b83acfe57b79478,
+        type: 3}
+      propertyPath: id
+      value: 10166
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b41ee4571e5b1e44b83acfe57b79478, type: 3}
 --- !u!1 &5883460062360387532
@@ -1269,6 +1274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: studyroom_start_dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757663209558604357, guid: a29756e7230d6314bbfa2adaebed7251,
+        type: 3}
+      propertyPath: id
+      value: 10165
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a29756e7230d6314bbfa2adaebed7251, type: 3}

@@ -125,10 +125,29 @@ public class NDialogueManager : MonoBehaviour
             theData.Change(talkNumber.ToString());
             Debug.Log(talkNumber.ToString());
             talkIndex = 0;
-            if(thePlayer.currentMapName == "Ending")
+            if (thePlayer.currentMapName == "Ending")
             {
-               Animator endingAnim = Ending.GetComponent<Animator>();
+                Animator endingAnim = Ending.GetComponent<Animator>();
                 endingAnim.SetTrigger("Play");
+            }
+            else if (id == 4000)
+            {
+                if (theData.Find("2161"))
+                {
+                    if (talkNumber == 4190)
+                        theData.Change("GameEnding_01");
+                    else if (talkNumber == 4290)
+                        theData.Change("GameEnding_02");
+                }
+
+                else if (theData.Find("2261"))
+                {
+                    if (talkNumber == 4190)
+                        theData.Change("GameEnding_03");
+                    else if (talkNumber == 4290)
+                        theData.Change("GameEnding_04");
+                }
+                questManager.CheckQuest(0);
             }
             return "대화 종료";
         }
