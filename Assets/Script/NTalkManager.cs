@@ -463,7 +463,7 @@ public class NTalkManager : MonoBehaviour
         portraitData.Add(20 + 1, portaritArr[4]);
         portraitData.Add(20 + 2, portaritArr[5]);
         portraitData.Add(30 + 0, portaritArr[6]);
-        portraitData.Add(40 + 0, portaritArr[7]);
+        portraitData.Add(40 + 0, portaritArr[8]);
 
         nameData.Add(10, "Pandora");
         nameData.Add(20, "Houseowner");
@@ -853,7 +853,7 @@ public class NTalkManager : MonoBehaviour
             "\"여러모로 짜증나게 하네.\"",
             "\"조금만 기다려. 곧 동생 곁으로 보내줄 테니.\"",
             " 점점 시야가 흐려지고,몸이 말을 듣지 않았다. 다행히 경찰이 도착하며 푸른 수염의 저택에서 빠져나올 수 있었다.",
-            "\"한 도심 주택에서 세입자 여성을 연속 살해 및 시체를 유기한 사건이 밝혀져 화제입니다.\"",
+            "\"속보입니다. 한 도심 주택에서 세입자 여성을 연속 살해 및 시체를 유기한 사건이 밝혀져 화제입니다.\"",
             " 화학약품과 수도시설을 이용해 시체를 처리한 잔혹한 유기 방식에 더욱이 충격을 주고 있습니다.\"",
             " 한편 범인은 중년의 뱁새 남성으로, 평소 독수리로 행세했으며 직업은 무직인 것으로 밝혀졌습니다.\"","\" 육식동물에 대한 자격지심이 범행 동기로 지적됐으며.............\"",
             "\"현장에선..생존자 1명과 피해자 사체 1구가 발견됐습니다..... \""
@@ -899,7 +899,7 @@ public class NTalkManager : MonoBehaviour
         portraitData.Add(20+1, portaritArr[4]);
         portraitData.Add(20+2, portaritArr[5]);
         portraitData.Add(30+0, portaritArr[6]);
-        portraitData.Add(40 + 0, portaritArr[7]);
+        portraitData.Add(40 + 0, portaritArr[8]);
 
         nameData.Add(10, "한도아");
         nameData.Add(20, "푸른수염");
