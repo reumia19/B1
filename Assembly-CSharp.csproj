@@ -136,6 +136,7 @@
     <Compile Include="Assets\Script\NewEvent\GoGameOver.cs" />
     <Compile Include="Assets\Script\NewEvent\GoNight.cs" />
     <Compile Include="Assets\Script\NewEvent\NpcMoveOrder.cs" />
+    <Compile Include="Assets\Script\NewEvent\ShowEndingCredit.cs" />
     <Compile Include="Assets\Script\NewEvent\ShowOver.cs" />
     <Compile Include="Assets\Script\NewEvent\StartandShow.cs" />
     <Compile Include="Assets\Script\NewEvent\StepAndShow.cs" />

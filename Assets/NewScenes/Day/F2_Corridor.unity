@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 245976097}
   - component: {fileID: 245976096}
   - component: {fileID: 245976098}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: "\uB85C\uBE44-\uC120\uBC18 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2206,7 +2206,7 @@ GameObject:
   - component: {fileID: 633061014}
   - component: {fileID: 633061013}
   - component: {fileID: 633061015}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: "\uB85C\uBE44-\uC120\uBC18"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

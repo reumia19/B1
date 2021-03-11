@@ -7,12 +7,13 @@ public class NDialogueManager : MonoBehaviour
 {
     
     public Text NameSpace;
-    
+    public GameObject Ending;
     NTalkManager talkManager;
     QuestManager questManager;
     ChoiceManager choiceManager;
     DatabaseManager theData;
     NTypeEffect talk;
+    PlayerManager thePlayer;
 
     public Image portraitImage;
     public Animator portraitAnim;
@@ -38,6 +39,7 @@ public class NDialogueManager : MonoBehaviour
         questManager = FindObjectOfType<QuestManager>();
         talkManager = FindObjectOfType<NTalkManager>();
         talk = FindObjectOfType<NTypeEffect>();
+        thePlayer = FindObjectOfType<PlayerManager>();
         questManager.CheckQuest();
 
     }
@@ -123,6 +125,11 @@ public class NDialogueManager : MonoBehaviour
             theData.Change(talkNumber.ToString());
             Debug.Log(talkNumber.ToString());
             talkIndex = 0;
+            if(thePlayer.currentMapName == "Ending")
+            {
+               Animator endingAnim = Ending.GetComponent<Animator>();
+                endingAnim.SetTrigger("Play");
+            }
             return "대화 종료";
         }
         
