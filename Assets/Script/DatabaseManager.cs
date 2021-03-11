@@ -71,7 +71,7 @@ public class DatabaseManager : MonoBehaviour
             if (this.switches[i])
                 countPinkQuest++;
         Debug.Log(countPinkQuest);
-        if (countPinkQuest <= 6)
+        if (countPinkQuest >= 6)
         {
             theQuest.CheckQuest(0);
             isNight = true;
@@ -90,7 +90,7 @@ public class DatabaseManager : MonoBehaviour
             if (this.switches[i])
                 countEnding++;
 
-        if (countEnding<= 12)
+        if (countEnding>= 12)
         {
             theQuest.CheckQuest(0);
             Debug.Log("지하실 조사 완료");
