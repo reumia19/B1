@@ -74,7 +74,7 @@ public class NTalkManager : MonoBehaviour
         //물건 조사
         talkData.Add(10000, new string[] { "I think I've come too far.","...","Let's go back." });
         talkData.Add(20000, new string[] { "It's a luxurious, fluffy sofa.","Hmm...", "It's too white to sit down." });
-        talkData.Add(20001, new string[] { "Hmm...", "It's too white to sit down.." });
+        talkData.Add(20001, new string[] { "Hmm..."});
 
         talkData.Add(30000, new string[] { "'It's written...'First. Do not go into the basement. Second. Do not walk around at night." });
         talkData.Add(30001, new string[] { "It's a well-cleaned table. Who cleaned this?" });
@@ -266,6 +266,9 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(2361, new string[] {
             "Why don't you smile? I think it'll look much prettier.:20"
         });
+        talkData.Add(2300, new string[] {
+            "Why don't you smile? I think it'll look much prettier.:20"
+        });
 
         //푸른수염 서재 대사
         talkData.Add(60 + 2000, new string[] {
@@ -366,7 +369,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000 + 120 + 6, new string[] { "(Why is there a bathtub here?)" });
 
         //지하실 입장
-        talkData.Add(1000 + 80, new string[] { "What the hell is this place..!:10", "Tons of suspicious items. Let's search through it." });
+        talkData.Add(1000 + 80, new string[] { "What the hell is this place..!:10", "Tons of suspicious items. Let's search through it.:11" });
 
         //조사완료
 

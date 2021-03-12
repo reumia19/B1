@@ -591,12 +591,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floor:
-    question: "\uBA87 \uCE35\uC73C\uB85C \uAC00\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+    question: Which floor would you like to go to?
     answers:
-    - "3\uCE35"
-    - "2\uCE35"
-    - "1\uCE35"
-    - "\uC9C0\uD5581\uCE35"
+    - 3
+    - 2
+    - 1
+    - B1
   basement:
     question: 
     answers: []
