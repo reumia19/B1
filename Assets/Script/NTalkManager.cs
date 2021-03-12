@@ -369,7 +369,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000 + 120 + 6, new string[] { "(Why is there a bathtub here?)" });
 
         //지하실 입장
-        talkData.Add(1000 + 80, new string[] { "What the hell is this place..!:10", "Tons of suspicious items. Let's search through it.:11" });
+        talkData.Add(1000 + 80, new string[] { "What the hell is this place..!:10", "Tons of suspicious items. Let's search through it.:11sladmf" });
 
         //조사완료
 
@@ -384,7 +384,7 @@ public class NTalkManager : MonoBehaviour
         {
             "There is a phone.:10" }); //보험용 없어도 될 수 있음
 
-        talkData.Add(4000 + 91, new string[]
+        talkData.Add(4000 + 90, new string[]
         {
             "This is police office:40",
             "I think there was a murder here!!:10",
@@ -497,7 +497,7 @@ public class NTalkManager : MonoBehaviour
         portraitData.Add(20 + 1, portaritArr[4]);
         portraitData.Add(20 + 2, portaritArr[5]);
         portraitData.Add(30 + 0, portaritArr[6]);
-        portraitData.Add(40 + 0, portaritArr[7]);
+        portraitData.Add(40 + 0, portaritArr[8]);
 
         nameData.Add(10, "Pandora");
         nameData.Add(20, "Houseowner");
