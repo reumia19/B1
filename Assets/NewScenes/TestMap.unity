@@ -1102,7 +1102,12 @@ PrefabInstance:
     - target: {fileID: 1981759265373748856, guid: fe48e3d5900dc7c4792176b97ace4848,
         type: 3}
       propertyPath: questId
-      value: 90
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981759265373748856, guid: fe48e3d5900dc7c4792176b97ace4848,
+        type: 3}
+      propertyPath: questActionIndex
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7954930692974711761, guid: fe48e3d5900dc7c4792176b97ace4848,
         type: 3}
@@ -2198,7 +2203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360924722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -5.5, z: 0}
+  m_LocalPosition: {x: -19.45, y: -2.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 831277349}
@@ -4036,8 +4041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ece2fb998664d2eb46c1a7be5d190e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: NF1_Corridor
-  thisMapName: Test
+  transferMapName: NB2
+  thisMapName: NB1
   doorSound: door
 --- !u!61 &1569964660502299979
 BoxCollider2D:
@@ -4809,32 +4814,32 @@ PrefabInstance:
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[19]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[20]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[21]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[22]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[18]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[17]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}

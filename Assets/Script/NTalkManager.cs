@@ -369,7 +369,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000 + 120 + 6, new string[] { "(Why is there a bathtub here?)" });
 
         //지하실 입장
-        talkData.Add(1000 + 80, new string[] { "What the hell is this place..!:10", "Tons of suspicious items. Let's search through it.:11sladmf" });
+        talkData.Add(1000 + 80, new string[] { "What the hell is this place..!:10", "Tons of suspicious items. Let's search through it.:11" });
 
         //조사완료
 
