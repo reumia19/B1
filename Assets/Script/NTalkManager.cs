@@ -67,6 +67,18 @@ public class NTalkManager : MonoBehaviour
     }
     void GenerateEngData()
     {
+                //일반대사
+        talkData.Add(1000, new string[] { "..... :10" }); //없으면 오류나서 넣어둔 것..
+        talkData.Add(2000, new string[] { "Why don't you smile? You'll look much prettier.:20" });
+
+        //물건 조사
+        talkData.Add(10000, new string[] { "I think I've come too far.","...","Let's go back." });
+        talkData.Add(20000, new string[] { "It's a luxurious, fluffy sofa.","Hmm...", "It's too white to sit down." });
+        talkData.Add(20001, new string[] { "Hmm...", "It's too white to sit down.." });
+
+        talkData.Add(30000, new string[] { "'It's written...'First. Do not go into the basement. Second. Do not walk around at night." });
+        talkData.Add(30001, new string[] { "It's a well-cleaned table. Who cleaned this?" });
+
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
         // 인트로
         talkData.Add(1000 + 10, new string[] {
@@ -147,11 +159,11 @@ public class NTalkManager : MonoBehaviour
             "Well, if you have any questions, you can ask. :30"
         });
 
-        talkData.Add(3000, new string[] { "You see the frame on that wall? You'd better read it.:30" }); //라코스테 기본(고유)대사
+        talkData.Add(40 + 3000, new string[] { "You see the frame on that wall? You'd better read it.:30" }); //라코스테 기본(고유)대사
 
         talkData.Add(40 + 30000, new string[] { "It's written...'First. Do not go into the basement. Second. Do not walk around at night.'" });
 
-        talkData.Add(40 + 3000, new string[] {
+        talkData.Add(50 + 3000, new string[] {
             "There were rules written on the wall. What happens if I break them?:10",
             "I don't know? I've never broken one.  :30",
             "You don't mean to betray him. do you?:30",
@@ -224,7 +236,7 @@ public class NTalkManager : MonoBehaviour
         });
         //여기부터 추가대사
         talkData.Add(60 + 3100 + 700, new string[] { //3760
-            "웽알_1.:30"
+            "뭐야?.:30"
         });
 
 
@@ -297,7 +309,7 @@ public class NTalkManager : MonoBehaviour
             "((Somehow I ended up back in here.)):10",
             "((I can't waste today in a vain.)):10"
         });
-        choiceData.Add(71 + 1000, new Choice("((What's this noise outside? Should I go check it out?))", new string[] { "(오늘 먼 곳을 오느라 너무 피곤했어. 이만 침대로 가자)","(Let's go check it out.)" }));
+        choiceData.Add(71 + 1000, new Choice("((What's this noise outside? Should I go check it out?))", new string[] { "(I am so tired. Let's go to bed.)","(Let's go check it out.)" }));
         talkData.Add(71 + 1000+100, new string[] {
             "What's this sound? Am I hearing it wrong?:10",
             "I can't sleep like this. Let's go outside:10",
@@ -339,9 +351,9 @@ public class NTalkManager : MonoBehaviour
         //한량 방
         talkData.Add(10000 + 30 + 1, new string[] { "(Dressing table. Nothing special. )" });
         talkData.Add(10000 + 30 + 2, new string[] { "(Extremely well-made artificial flower.)" });
-        talkData.Add(10000 + 30 + 3, new string[] { "(Extremely well-made artificial flower.)" });
+        talkData.Add(10000 + 30 + 3, new string[] { "(Pink nail polisher. She used to like this color. Where are you...)" });
         talkData.Add(10000 + 30 + 4, new string[] { "(Pink nail polisher. She used to like this color. Where are you...)" });
-        talkData.Add(10000 + 30 + 5, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
+        talkData.Add(10000 + 30 + 5, new string[] { "(Pink nail polisher. She used to like this color. Where are you...)" });
         //라코스테방
         talkData.Add(10000 + 20 + 1, new string[] { "I guess Sebasitian like playing games.)" });
         talkData.Add(10000 + 20 + 2, new string[] { "(There are a lot of vines growing in this room.)" });
@@ -364,16 +376,35 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(1000 + 81 + 200, new string[] { "(This is a crime scene.):10", "(Blood stained floor, strong acids, and the knife...),  (the knife...):10", "Is..he a serial killer? and Mollie's one of his victims?:10", "I think I saw the phone on the second floor. Let's hurry.:10" });
 
         //저나
-        talkData.Add(1000 + 91, new string[]
+
+                talkData.Add(4000, new string[]
         {
-            "This is police office:10",
+            "There is a phone.:10" }); //보험용 없어도 될 수 있음
+
+        talkData.Add(4000 + 91, new string[]
+        {
+            "This is police office:40",
             "I think there was a murder here!!:10",
-            "Calm down ma'am. Do you have the evidence and the location?:10",
+            "Calm down ma'am. Do you have the evidence and the location?:40",
             "There's..There's the blooded knife and.. and..:10",
-            "Hm..Have you witness the murder scence or the dead body?:10",
+            "Hm..Have you witness the murder scence or the dead body?:40",
             "No. Not exactly but..!:10"
            });
-        choiceData.Add(1000 + 91, new Choice("", new string[] { "" }));
+
+        choiceData.Add(4000 + 90, new Choice("((What should I say?))", new string[] { "(All those chemicals and high bills are suspicious.))", "(He must of striked the victim with a blunt weapon.)"}));
+        talkData.Add(4000 + 90+100, new string[]
+        {
+            "The suspect used cheimals to despose the dead bodies. :10",
+            "He must have used hydrochloric acid to melt down the flesh through the tub.:10",
+            "Got that. We'll head to your location.:40"
+           });
+        talkData.Add(4000 + 90+200, new string[]
+        {
+            "(He must of striked the victim with a blunt weapon.):10",
+            "He used a blunt weapon for the murder.:10",
+            "Ok..sure. We'll head to your location.:40"
+           });
+
 
 
         //시나리오 끗
@@ -473,7 +504,6 @@ public class NTalkManager : MonoBehaviour
 
     void GenerateKorData()
     {
-
 
 
         //일반대사
