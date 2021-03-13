@@ -18,7 +18,7 @@ public class Disposable : MonoBehaviour
     }
     private void Update()
     {
-        string thisQuest = theQuest.CheckQuest() + theQuest.questActionIndex;
+        string thisQuest = theQuest.CheckQuest() + theQuest.questActionIndex.ToString();
 
         if (beforeQuest != thisQuest) //일회용 오브젝트 && 시나리오 넘어감 
         {

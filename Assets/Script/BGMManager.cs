@@ -9,7 +9,7 @@ public class BGMManager : MonoBehaviour
     public AudioClip[] clips;
 
     public AudioSource source;
-
+    public float volume;
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
     #region Singleton
 
@@ -51,7 +51,7 @@ public class BGMManager : MonoBehaviour
 
     IEnumerator FadeOutMusicCouroutine()
     {
-        for(float i = 1.0f; i>=0f; i -= 0.02f)
+        for(float i = volume; i>=0f; i -= 0.02f)
         {
             source.volume = i;
             yield return waitTime;
@@ -65,7 +65,7 @@ public class BGMManager : MonoBehaviour
 
     IEnumerator FadeInMusicCouroutine()
     {
-        for (float i = 0f; i <= 1f; i += 0.02f)
+        for (float i = 0f; i <=volume; i += 0.02f)
         {
             source.volume = i;
             yield return waitTime;

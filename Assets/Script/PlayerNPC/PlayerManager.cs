@@ -103,6 +103,7 @@ public class PlayerManager : MovingObject
     void Update()
     {
         RenderCheck();
+        RenderCheck_2();
         if (canMove && !notMove)
         {
             //Move Value
@@ -165,13 +166,37 @@ public class PlayerManager : MovingObject
         void RenderCheck()
         {
             Debug.DrawRay(rigid.position,Vector3.up, new Color(1, 0, 0)) ;
-            RaycastHit2D findTopObj = Physics2D.Raycast(rigid.position, Vector3.up, 1, LayerMask.GetMask("Object"));
+            
+            RaycastHit2D findTopObj = Physics2D.Raycast(rigid.position, Vector3.up, 2, LayerMask.GetMask("Object"));
 
             if (findTopObj.collider != null)
             {
-                render.sortingOrder = 7;
-            }else
-                render.sortingOrder = 5;
+                
+                //render.sortingOrder = 8;
+                SpriteRenderer theOBJ = findTopObj.collider.gameObject.GetComponent<SpriteRenderer>();
+                if (theOBJ == null) return;
+                //render.sortingOrder = 8;
+                theOBJ.sortingOrder = 4;
+            }
+            //else
+               // render.sortingOrder = 4;
+
+        }
+        void RenderCheck_2()
+        {
+            Debug.DrawRay(rigid.position, Vector3.down, new Color(1, 0, 0));
+
+            RaycastHit2D findBotObj = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Object"));
+
+            if (findBotObj.collider != null)
+            {
+                SpriteRenderer theOBJ =  findBotObj.collider.gameObject.GetComponent<SpriteRenderer>();
+                //render.sortingOrder = 8;
+                if (theOBJ == null) return;
+                theOBJ.sortingOrder = 7;
+            }
+           // else
+               // render.sortingOrder = 4;
 
         }
     }

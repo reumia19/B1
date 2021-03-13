@@ -17,7 +17,7 @@ public class GoNight : TransferScene
     // Update is called once per frame
     void Update()
     {
-     if(theQuest.CheckQuest()+theQuest.questActionIndex == triggerSceneName && !flag)
+     if(theQuest.CheckQuest()+theQuest.questActionIndex == triggerSceneName && !flag&& thePlayer.currentMapName != "Ending")
         {
             StartCoroutine(Go());
         }   

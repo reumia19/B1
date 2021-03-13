@@ -1102,7 +1102,7 @@ PrefabInstance:
     - target: {fileID: 1981759265373748856, guid: fe48e3d5900dc7c4792176b97ace4848,
         type: 3}
       propertyPath: questId
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1981759265373748856, guid: fe48e3d5900dc7c4792176b97ace4848,
         type: 3}
@@ -2182,7 +2182,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 1341951855039238538, guid: fcefc53c62ebc7940b089161a6d81c35,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2203,7 +2203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360924722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.45, y: -2.93, z: 0}
+  m_LocalPosition: {x: 0.05, y: -4.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 831277349}
@@ -4041,8 +4041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ece2fb998664d2eb46c1a7be5d190e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: NB2
-  thisMapName: NB1
+  transferMapName: D_Elevator
+  thisMapName: F1_Corridor
   doorSound: door
 --- !u!61 &1569964660502299979
 BoxCollider2D:
@@ -4809,7 +4809,7 @@ PrefabInstance:
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[5]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
@@ -4844,12 +4844,12 @@ PrefabInstance:
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[8]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409224, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}
       propertyPath: switches.Array.data[6]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4195873812202409225, guid: 35bf1f321037aed438842db6091f0fdb,
         type: 3}

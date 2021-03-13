@@ -162,7 +162,7 @@ public class ChoiceManager : MonoBehaviour
     }
     IEnumerator TypingAnswer_3()
     {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.7f);
         for (int i = 0; i < answerList[3].Length; i++)
         {
             answer_Text[3].text += answerList[3][i];

@@ -1641,10 +1641,20 @@ PrefabInstance:
       propertyPath: clips.Array.data[13]
       value: 
       objectReference: {fileID: 8300000, guid: b382cbede06331b4a9af7e523a43ffb9, type: 3}
+    - target: {fileID: 6260027814941745930, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
+        type: 3}
+      propertyPath: volume
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6260027814941745931, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}
       propertyPath: m_Name
       value: BGMManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260027814941745932, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6260027814941745933, guid: 6d6d36a387c7a0a48907a82d3207e1a5,
         type: 3}

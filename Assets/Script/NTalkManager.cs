@@ -70,11 +70,17 @@ public class NTalkManager : MonoBehaviour
                 //일반대사
         talkData.Add(1000, new string[] { "..... :10" }); //없으면 오류나서 넣어둔 것..
         talkData.Add(2000, new string[] { "Why don't you smile? You'll look much prettier.:20" });
+        talkData.Add(2001, new string[] { "I hope she'll be a fool. That's the best thing a girl can be in this world, a beautiful little fool.:20" });
 
         //물건 조사
         talkData.Add(10000, new string[] { "I think I've come too far.","...","Let's go back." });
         talkData.Add(20000, new string[] { "It's a luxurious, fluffy sofa.","Hmm...", "It's too white to sit down." });
-        talkData.Add(20001, new string[] { "Hmm..."});
+        talkData.Add(20001, new string[] { "Hmm...", "Not a right place. " });
+        //talkData.Add(20042, new string[] { "" }); // 41 액자 찾기 
+        talkData.Add(20052, new string[] { "I need to go to my room first." });
+        talkData.Add(20061, new string[] { "Hmm...", "Not a right place. " });
+        talkData.Add(20002, new string[] {" The houseowner must be sleeping here.Had better not to go in." });
+        talkData.Add(20003, new string[] { "Had better not to go." });
 
         talkData.Add(30000, new string[] { "'It's written...'First. Do not go into the basement. Second. Do not walk around at night." });
         talkData.Add(30001, new string[] { "It's a well-cleaned table. Who cleaned this?" });
@@ -236,7 +242,7 @@ public class NTalkManager : MonoBehaviour
         });
         //여기부터 추가대사
         talkData.Add(60 + 3100 + 700, new string[] { //3760
-            "뭐야?.:30"
+            "뭐야?:30"
         });
 
 
@@ -264,7 +270,7 @@ public class NTalkManager : MonoBehaviour
         });
 
         talkData.Add(2361, new string[] {
-            "Why don't you smile? I think it'll look much prettier.:20"
+            "I hope she'll be a fool. That's the best thing a girl can be in this world, a beautiful little fool.:20"
         });
         talkData.Add(2300, new string[] {
             "Why don't you smile? I think it'll look much prettier.:20"
@@ -309,10 +315,10 @@ public class NTalkManager : MonoBehaviour
 
         //밤 시작
         talkData.Add(71 + 1000, new string[] {
-            "((Somehow I ended up back in here.)):10",
-            "((I can't waste today in a vain.)):10"
+            "(Somehow I ended up back in here.):10",
+            "(I can't waste today in a vain.):10"
         });
-        choiceData.Add(71 + 1000, new Choice("((What's this noise outside? Should I go check it out?))", new string[] { "(I am so tired. Let's go to bed.)","(Let's go check it out.)" }));
+        choiceData.Add(71 + 1000, new Choice("(What's this noise outside? Should I go check it out?)", new string[] { "(I am so tired. Let's go to bed.)","(Let's go check it out.)" }));
         talkData.Add(71 + 1000+100, new string[] {
             "What's this sound? Am I hearing it wrong?:10",
             "I can't sleep like this. Let's go outside:10",
@@ -345,15 +351,15 @@ public class NTalkManager : MonoBehaviour
         //복도
         talkData.Add(10000 + 130 + 1, new string[] { "(Quite a big drawer. It'll surely fit an animal inside.)" });
         //갤러리
-        talkData.Add(10000 + 220 + 1, new string[] { "(Sculpture of snake coiled around an apple. It has an ominous aura.)" });
+        talkData.Add(11000 + 220 + 1, new string[] { "(Sculpture of snake coiled around an apple. It has an ominous aura.)" });
         //식당
         talkData.Add(10000 + 110 + 1, new string[] { "(Mint chocolate pudding. Who the heck eats this kind of stuff?)" });
         talkData.Add(10000 + 110 + 2, new string[] { "(Looks delicious. Won't it attract bugs?)" });
         talkData.Add(10000 + 110 + 3, new string[] { "(The chair's too heavy to move.)" });
-        talkData.Add(10000 + 110 + 4, new string[] { "(I found the knife. Let's take it just in case.)" });
+        talkData.Add(10000 + 110 + 4, new string[] { "(I found the knife. Let's take it just in case.)", "I think I'm ready to go to the basement." });
         //한량 방
         talkData.Add(10000 + 30 + 1, new string[] { "(Dressing table. Nothing special. )" });
-        talkData.Add(10000 + 30 + 2, new string[] { "(Extremely well-made artificial flower.)" });
+        talkData.Add(10000 + 30 + 2, new string[] { "(Nothing special.)" });
         talkData.Add(10000 + 30 + 3, new string[] { "(Pink nail polisher. She used to like this color. Where are you...)" });
         talkData.Add(10000 + 30 + 4, new string[] { "(Pink nail polisher. She used to like this color. Where are you...)" });
         talkData.Add(10000 + 30 + 5, new string[] { "(Pink nail polisher. She used to like this color. Where are you...)" });
@@ -419,9 +425,9 @@ public class NTalkManager : MonoBehaviour
         {
             "The basement smelled awful.",
             "In the deep dark, something attacked me and I lost my mind.",
-            "\"“I thought you were wiser than your sister” \"",
+            "\"I thought you were wiser than your sister\"",
             "I wanted to speak, but my body didn’t listen.",
-            " \" “It’s an honorable sacrifice to create the perfect scent. Isn’t it so?”\"",
+            " \"It’s an honorable sacrifice to create the perfect scent. Isn’t it so?\"",
             "\"Mollie, that idiot also came down here and faced the same ending. \"",
             "\" Say hi to her for me, won’t you? Well, goodbye now.\""
         });
@@ -440,12 +446,13 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(50000 + 3, new string[] //GameEnding_01
         {
             "Suddenly the lights went out. The house owner appeared out of nowhere and dragged me down to the basement. I resisted as hard as I could, and I bit his arm.",
-            "\"“If you continue to resist, I won’t be kind enough to kill you in no pain.” \"",
+            "\"If you continue to resist, I won’t be kind enough to kill you in no pain.\"",
             "Luckily, the cops managed to come in time and break-in. Hence, he was arrested and I was able to run free. ",
-            "\"“Breaking news. It’s found that a tenant woman was killed in a row\"",
+            "\"Breaking news. It’s found that a tenant woman was killed in a row\"",
             "\" and the bodies were disposed of with chemicals through the drain in the mansion. \"",
-            "\"Meanwhile, it turned out that the criminal was a middle-aged unemployed man. " +
-            "It was pointed out that he committed the crime because of his vanity and inferiority complex about power.\"","\"Additionally, two sisters were found alive at the scene.\""
+            "\"Meanwhile, it turned out that the criminal was a middle-aged unemployed man. \"" ,
+            "\"It was pointed out that he committed the crime because of his vanity and inferiority complex about power.\"",
+            "\"Additionally, two sisters were found alive at the scene.\""
         });
         talkData.Add(50000 + 4, new string[] {
             "Suddenly the lights went out. The house owner appeared out of nowhere and dragged me down to the basement",
@@ -454,8 +461,9 @@ public class NTalkManager : MonoBehaviour
             "  My sight was getting darker and my body wasn’t listening. Luckily, the cops managed to come in time and break-in. Hence, he was arrested and I was able to run free.",
             "\"Breaking news. It’s found that a tenant woman was killed in a row \"",
             " and the bodies were disposed of with chemicals through the drain in the mansion.\"",
-            " Meanwhile, it turned out that the criminal was a middle-aged unemployed man.\"","\"  It was pointed out that he committed the crime because of his vanity and inferiority complex about power. \"",
-            "\"현One survivor and her sister was found dead at the scene. \""
+            "\" Meanwhile, it turned out that the criminal was a middle-aged unemployed man.\"",
+            "\"It was pointed out that he committed the crime because of his vanity and inferiority complex about power.\"",
+            "\"One survivor and her sister was found dead at the scene. \""
         });
         talkData.Add(50000 + 5, new string[] {
             "Suddenly the lights went out, and something in the darkness attacked me. ",
@@ -463,13 +471,13 @@ public class NTalkManager : MonoBehaviour
             "\"I think my wife made a prank call earlier so I made the call to clear it out. There’s nothing wrong here. My wife’s been out of her mind recently\"",
             "\"Can I hear her voice?\"",
             "I wanted to shout out for help, but I couldn’t make any noise because of the gag in my mouth.",
-            "\"하Oh, she’s currently out now. Are you doubting me?\"",
+            "\"Oh, she’s currently out now. Are you doubting me?\"",
             "\"It’s a set procedure. Please change the phone now sir. Otherwise, we’ll have to be on our way.\"",
             "\"Hey! Who do you think I am?\"",
-            "삐이이------....",
+            "(Beep)",
             "I could hear mad and breathing heavily. At that moment, I was struck by something and lost my mind.",
             "\"Can you hear me? Here! I found a survivor!\"",
-            "hanks to the officers, I made it out from the mansion. ",
+            "hanks to the officers, I made it out from the mansion.",
             "Reports of the house owner, the Blue Beard, were being reported on TV. An investigation was being planned.",
             "Mollie, however, was still not found in the mansion."
         });
