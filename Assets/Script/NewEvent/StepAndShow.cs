@@ -7,16 +7,17 @@ public class StepAndShow : MonoBehaviour
     NDialogueManager theDialogue;
     public GameObject DBObject;
     private bool collide;
-    private bool flag;
+    private int flag;
     void Start()
     {
-        flag = false;
+        flag = 0;
         theDialogue = FindObjectOfType<NDialogueManager>();
     }
 
     private void Update()
     {
-        if(collide&&Input.GetKeyDown(KeyCode.Z)&& !flag) if (theDialogue.Action(DBObject) == "대화 종료") flag = true;
+        if(collide&&Input.GetKeyDown(KeyCode.Z)&& flag < 2) if (theDialogue.Action(DBObject) == "대화 종료") flag ++;
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

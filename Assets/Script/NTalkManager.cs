@@ -281,7 +281,7 @@ public class NTalkManager : MonoBehaviour
             "You sure have a lot of books. May I ask what you do for a living?:10",
             "I'm a perfumer. :20",
             "I've been studying to create a perfect scent and ended up with this huge library.:20",
-            "(Perfumer. Quite an unsual job.):10"
+            "(Perfumer. Quite an unusual job.):10"
         });
 
         //지하1층
@@ -340,7 +340,7 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000 + 160 + 4, new string[] { "(The water bill is exceptionally high. I don't know why. Let's keep that in mind.)" });
         talkData.Add(10000 + 160 + 5, new string[] { "(There should be the lantern somewhere here. Need to be careful not to get caught.)" });
         talkData.Add(10000 + 160 + 6, new string[] {
-            "(Found it. It's too dangerous to go down the basement like this. Let's find something to protect ourselves.)"
+            "(Found it. It's too dangerous to go down the basement like this. Let's find something to protect myself.)"
         });
 
         //침실
@@ -448,35 +448,35 @@ public class NTalkManager : MonoBehaviour
             "Suddenly the lights went out. The house owner appeared out of nowhere and dragged me down to the basement. I resisted as hard as I could, and I bit his arm.",
             "\"If you continue to resist, I won’t be kind enough to kill you in no pain.\"",
             "Luckily, the cops managed to come in time and break-in. Hence, he was arrested and I was able to run free. ",
-            "\"Breaking news. It’s found that a tenant woman was killed in a row\"",
-            "\" and the bodies were disposed of with chemicals through the drain in the mansion. \"",
-            "\"Meanwhile, it turned out that the criminal was a middle-aged unemployed man. \"" ,
-            "\"It was pointed out that he committed the crime because of his vanity and inferiority complex about power.\"",
-            "\"Additionally, two sisters were found alive at the scene.\""
+            " News Announcer: \"Breaking news. It’s found that a tenant woman was killed in a row\"",
+            "  News Announcer: \" and the bodies were disposed of with chemicals through the drain in the mansion. \"",
+            " News Announcer: \"Meanwhile, it turned out that the criminal was a middle-aged unemployed man. \"" ,
+            " News Announcer: \"It was pointed out that he committed the crime because of his vanity and inferiority complex about power.\"",
+            " News Announcer: \"Additionally, two sisters were found alive at the scene.\""
         });
         talkData.Add(50000 + 4, new string[] {
             "Suddenly the lights went out. The house owner appeared out of nowhere and dragged me down to the basement",
             "\" God, you are making this hard.\"",
             "\"Just hold on. I’ll send you next to your sister.\"",
             "  My sight was getting darker and my body wasn’t listening. Luckily, the cops managed to come in time and break-in. Hence, he was arrested and I was able to run free.",
-            "\"Breaking news. It’s found that a tenant woman was killed in a row \"",
-            " and the bodies were disposed of with chemicals through the drain in the mansion.\"",
-            "\" Meanwhile, it turned out that the criminal was a middle-aged unemployed man.\"",
-            "\"It was pointed out that he committed the crime because of his vanity and inferiority complex about power.\"",
-            "\"One survivor and her sister was found dead at the scene. \""
+            " News Announcer: \"Breaking news. It’s found that a tenant woman was killed in a row \"",
+            " News Announcer: \"and the bodies were disposed of with chemicals through the drain in the mansion.\"",
+            " News Announcer: \" Meanwhile, it turned out that the criminal was a middle-aged unemployed man.\"",
+            " News Announcer: \"It was pointed out that he committed the crime because of his vanity and inferiority complex about power.\"",
+            " News Announcer: \"One survivor and her sister was found dead at the scene. \""
         });
         talkData.Add(50000 + 5, new string[] {
             "Suddenly the lights went out, and something in the darkness attacked me. ",
-            " . When I woke up, the musty smell of mold and chemicals caught my nose. I must be in the basement. ",
-            "\"I think my wife made a prank call earlier so I made the call to clear it out. There’s nothing wrong here. My wife’s been out of her mind recently\"",
-            "\"Can I hear her voice?\"",
+            " When I woke up, the musty smell of mold and chemicals caught my nose. I must be in the basement. ",
+            "Houseowner : \"I think my wife made a prank call earlier so I made the call to clear it out. There’s nothing wrong here. My wife’s been out of her mind recently\"",
+            "Police : \"Can I hear her voice?\"",
             "I wanted to shout out for help, but I couldn’t make any noise because of the gag in my mouth.",
-            "\"Oh, she’s currently out now. Are you doubting me?\"",
-            "\"It’s a set procedure. Please change the phone now sir. Otherwise, we’ll have to be on our way.\"",
-            "\"Hey! Who do you think I am?\"",
+            "Houseowner : \"Oh, she’s currently out now. Are you doubting me?\"",
+            "Police : \"It’s a set procedure. Please change the phone now sir. Otherwise, we’ll have to be on our way.\"",
+            "Houseowner : \"Hey! Who do you think I am?\"",
             "(Beep)",
             "I could hear mad and breathing heavily. At that moment, I was struck by something and lost my mind.",
-            "\"Can you hear me? Here! I found a survivor!\"",
+            "Police : \"Can you hear me? Here! I found a survivor!\"",
             "hanks to the officers, I made it out from the mansion.",
             "Reports of the house owner, the Blue Beard, were being reported on TV. An investigation was being planned.",
             "Mollie, however, was still not found in the mansion."
@@ -491,7 +491,7 @@ public class NTalkManager : MonoBehaviour
             "\"Phew. You little prat making things hard. Well, you succeeded in making me mad.\"",
             " I was stuck on the head with something hard and plummeted to the floor. My body wasn’t listening at all. ",
             "The last thing I saw was..",
-            "a finger cut off on the groundd with its nail colored in pink."
+            "a finger cut off on the ground with its nail colored in pink."
         });
 
 

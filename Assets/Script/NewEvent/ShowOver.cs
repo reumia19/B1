@@ -13,7 +13,7 @@ public class ShowOver : TransferScene
     NDataBase nData;
 
     bool flag = false;
-    float resetCountDown = 10;
+    float resetCountDown = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -41,10 +41,11 @@ public class ShowOver : TransferScene
     {
         if(resetCountDown < 0)
         {
-            Reset();
+           // Reset();
             //데이터베이스 초기화, 
             //퀘스트 초기화
-            StartCoroutine(TransferCoroutine());
+            //StartCoroutine(TransferCoroutine());
+            Application.Quit();
         }
 
         if (flag)

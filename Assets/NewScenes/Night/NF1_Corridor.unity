@@ -2413,7 +2413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073bcfca23dfb224582408507cd6ecd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 20002
+  id: 20001
   isNpc: 0
 --- !u!61 &221690032730988871
 BoxCollider2D:
