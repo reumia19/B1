@@ -520,15 +520,21 @@ public class NTalkManager : MonoBehaviour
         //일반대사
         talkData.Add(1000, new string[] { "..... :10" }); //없으면 오류나서 넣어둔 것..
         talkData.Add(2000, new string[] { "오늘따라 꽃향기가 좋군요:20" });
+        talkData.Add(2001, new string[] { "I hope she'll be a fool. That's the best thing a girl can be in this world, a beautiful little fool.:20" });
 
         //물건 조사
         talkData.Add(100, new string[] { "오 캡틴 마이 캡틴?" });
         talkData.Add(10000, new string[] { "너무 멀리 온 것 같다","...","되돌아가자" });
         talkData.Add(20000, new string[] { "고급지고 푹신해보이는 소파다.","음...", "앉기엔 너무 하얗다." });
         talkData.Add(20001, new string[] { "음...", "앉기엔 너무 하얗다." });
-        talkData.Add(25000, new string[] { "빛이 너무 강해서 밖이 보이지 않는다","..?", "그게 가능한가?" });
+        //talkData.Add(20042, new string[] { "" }); // 41 액자 찾기 
+        talkData.Add(20052, new string[] { " 내 방부터 먼저 가보자." });
+        talkData.Add(20061, new string[] { " 음...", " 여기가 아닌 것 같아. " });
+        talkData.Add(20002, new string[] { " 여긴 아마 주인이 자는 곳 일거야. 들어가지 않는 게 좋겠어." });
+        talkData.Add(20003, new string[] { " 들어가지 않는 게 좋겠어." });
+
         talkData.Add(30000, new string[] { "'첫번째, 지하실에 들어가지 않는다.'", "'두번째, 밤 늦게 돌아다니지 않는다.'라고 적혀있다." });
-        talkData.Add(30001, new string[] { "파리도 미끄러지겠어." });
+        talkData.Add(30001, new string[] { " 파리도 미끄러지겠어." });
 
         //QuestTalk (퀘스트 번호, 오브젝트 번호)
         // 인트로
@@ -713,6 +719,9 @@ public class NTalkManager : MonoBehaviour
         });
 
         talkData.Add(2361, new string[] {
+            "I hope she'll be a fool. That's the best thing a girl can be in this world, a beautiful little fool.:20"
+        });
+        talkData.Add(2300, new string[] {
             "좀 웃어보는 건 어때? 훨씬 예뻐보일 것 같은데.:20"
         });
 
@@ -796,12 +805,13 @@ public class NTalkManager : MonoBehaviour
         talkData.Add(10000 + 110 + 1, new string[] { "(민트초코 푸딩이야. 이런 걸 누가 먹지?)" });
         talkData.Add(10000 + 110 + 2, new string[] { "(맛있겠다. 근데 벌레는 안 꼬이나?)" });
         talkData.Add(10000 + 110 + 3, new string[] { "(의자가 너무 무거워. 옮길 수는 없을 것 같아.)" });
-        talkData.Add(10000 + 110 + 4, new string[] { "(나이프를 찾았어. 혹시 모르니까 챙겨가자.)" });
+        talkData.Add(10000 + 110 + 4, new string[] { "(나이프를 찾았어. 혹시 모르니까 챙겨가자.)", " 이제 지하실로 가보자. " });
         //한량 방
         talkData.Add(10000 + 30 + 1, new string[] { "(화장대야. 특별한 건 없어.)" });
         talkData.Add(10000 + 30 + 2, new string[] { "(진짜같은 조화야.)" });
         talkData.Add(10000 + 30 + 3, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
         talkData.Add(10000 + 30 + 4, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
+        talkData.Add(10000 + 30 + 5, new string[] { "(분홍색 매니큐어야. 동생이 좋아하던 색이야. 동생이 너무 보고싶어.)" });
         //라코스테방
         talkData.Add(10000 + 20 + 1, new string[] { "(라코스테는 게임을 좋아하는구나.)" });
         talkData.Add(10000 + 20 + 2, new string[] { "(라코스테 방에는 덩굴들이 많구나.)" });
@@ -920,7 +930,7 @@ public class NTalkManager : MonoBehaviour
             "정신을 차리니 곰팡이 냄새와 매캐한 화학물질 냄새가 났다. 지하실인게 분명하다.",
             "\".. 부인이 아까 장난전화를 한 것 같아서요. 확인 차 전화드렸습니다. 뭐..별 건 아니구요, 빨간 페인트를 보고 착각을 한 모양이에요.\"",
             "\"하하, 요즘 집사람이 정신이 좀 오락가락해서...허허...\"",
-            "입의 재갈 때문에 아무 말도 할 수 없었다.",
+            "살려달라고 외치고 싶지만 입의 재갈 때문에 아무 말도 할 수 없었다.",
             "\"서장님은 잘 계시죠? 조만간 찾아 뵙겠다고 말씀 좀 전해 주십쇼..허허.. 그럼 이만 끊겠습니다.\"",
             "\"휴우...너 까짓거 때문에 애먹었잖아. 짜증나게 하네...\"",
             "둔기로 머리를 맞고 바닥으로 곤두박질쳤다. 몸이 말을 듣지 않았다.",
